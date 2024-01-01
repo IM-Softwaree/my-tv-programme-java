@@ -35,6 +35,33 @@ public class Person {
 
 
 
+
+
+    public int searchVideoHelper(Video obj,Video temp)
+    {
+        int check=0;
+
+        if(obj.getTitle()!=null && temp.getTitle().contains(obj.getTitle()) )  //to exei epilexei o xristis gia search k einai paromoia
+        {
+            check++;
+        }
+        if(obj.getProtagonists()!=null && temp.getProtagonists().contains(obj.getProtagonists()) )
+        {
+            check++;
+        }
+        if(obj.getAppropriateness()!=null && temp.getAppropriateness().equals(obj.getAppropriateness()) )
+        {
+            check++;
+        }
+        if(obj.getCategory()!=null && temp.getCategory().equals(obj.getCategory()) )
+        {
+            check++;
+        }
+
+        return check;
+    }
+
+
     public ArrayList<Video> searchVideo (Video obj)
     {
         ArrayList<Video> searchResults = new ArrayList<>();
@@ -51,6 +78,8 @@ public class Person {
         if(obj.getCategory()!=null)
             criteria++;
 
+        //!!!!!!!!1
+
         if(obj instanceof Movie) {
             filename = "Movies.dat";
             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))) {
@@ -60,22 +89,7 @@ public class Person {
                 while(true) {  // repeat until end of file
                     Movie temp = (Movie) oos.readObject();  //read obj
 
-                    if(obj.getTitle()!=null && temp.getTitle().equals(obj.getTitle()) )  //to exei epilexei o xristis gia search k einai isa
-                    {
-                        check++;
-                    }
-                    if(obj.getProtagonists()!=null && temp.getProtagonists().equals(obj.getProtagonists()) )  //!!!!!!
-                    {
-                        check++;
-                    }
-                    if(obj.getAppropriateness()!=null && temp.getAppropriateness().equals(obj.getAppropriateness()) )
-                    {
-                        check++;
-                    }
-                    if(obj.getCategory()!=null && temp.getCategory().equals(obj.getCategory()) )
-                    {
-                        check++;
-                    }
+                    check = searchVideoHelper(obj,temp);
 
                     if(check==criteria)
                         searchResults.add(temp);
