@@ -57,6 +57,10 @@ public class Person {
         {
             check++;
         }
+        if(obj.getAverageRating()!=-1 && temp.getAverageRating() == obj.getAverageRating() )
+        {
+            check++;
+        }
 
         return check;
     }
@@ -76,8 +80,9 @@ public class Person {
             criteria++;
         if(obj.getCategory()!=null)
             criteria++;
+        if(obj.getAverageRating()!=-1)
+            criteria++;
 
-        //!!!!!!!!1
 
             if(!(obj instanceof Serie)) {  //diladi einai Video h Movie
                 try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
