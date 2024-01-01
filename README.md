@@ -5,6 +5,6 @@
 ℹ Please insert here your names and IDs (AEM)  
 
 Team Member A: <Ιωακείμ> <Μερτέκης> <2905> \
-Team Member B: <name> <surname> <AEM> 
+Team Member B: <Ευαγγελία> <Ανδριώτη> <4362> 
 
 ⚠ Please keep the submission deadline
