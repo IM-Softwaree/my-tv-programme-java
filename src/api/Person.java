@@ -65,7 +65,6 @@ public class Person {
     public ArrayList<Video> searchVideo (Video obj)
     {
         ArrayList<Video> searchResults = new ArrayList<>();
-        String filename;
         int criteria=0;
         int check=0;
 
@@ -80,14 +79,39 @@ public class Person {
 
         //!!!!!!!!1
 
-        if(obj instanceof Movie) {
-            filename = "Movies.dat";
-            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))) {
+            if(!(obj instanceof Serie)) {  //diladi einai Video h Movie
+                try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
-                //ta diabazo apo to binary file Movies
+                    //ta diabazo apo to binary file Movies
+
+                    while (true) {  // repeat until end of file
+                        Video temp = (Video) oos.readObject();  //read obj
+
+                        check = searchVideoHelper(obj, temp);
+
+                        if (check == criteria)
+                            searchResults.add(temp);
+                    }
+
+                } catch (EOFException end) {
+                    System.out.println("Reached the end of file");
+
+                } catch (IOException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(obj instanceof Movie)
+            {
+                return searchResults;
+            }
+
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
+
+                //ta diabazo apo to binary file Series
 
                 while(true) {  // repeat until end of file
-                    Movie temp = (Movie) oos.readObject();  //read obj
+                    Serie temp = (Serie) oos.readObject();  //read obj
 
                     check = searchVideoHelper(obj,temp);
 
@@ -97,24 +121,12 @@ public class Person {
 
             } catch (EOFException end) {
                 System.out.println("Reached the end of file");
-                return searchResults;
 
             }catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
 
-        }
-
-        else if(obj instanceof Serie)
-            filename="Series.dat";
-        else
-        {
-            filename="Movies.dat";
-
-            filename="Series.dat";
-        }
-
-        return searchResults;
+            return searchResults;
 
     }
 
