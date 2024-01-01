@@ -4,10 +4,20 @@
  * <p>
  * ************* ΜΗ ΣΒΗΣΕΤΕ ΑΥΤΗ ΤΗΝ ΚΛΑΣΗ ************
  */
+
+import api.FileReaderForPersons;
+import api.PersonAdderToFile;
+
 public class Main {
     public static void main(String[] args) {
 
         // ADD YOUR CODE HERE
+
+        //Initialization of files Admins.txt and Subscribers.txt
+        FileReaderForPersons fileReader = new FileReaderForPersons();
+
+        //Send as a parameter the name of the file where you want to write
+        PersonAdderToFile fileWriter = new PersonAdderToFile("Admins.txt", "Subscribers.txt");
 
     }
 }
