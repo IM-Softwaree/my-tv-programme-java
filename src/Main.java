@@ -12,16 +12,6 @@ import api.FirstInitializationForAdminsSubscribers;
 public class Main {
     public static void main(String[] args) {
 
-        // ADD YOUR CODE HERE
-
-        //Initialization of files Admins.txt and Subscribers.txt
-        FileReaderForPersons fileReader = new FileReaderForPersons();
-
-        /**
-         //Send as a parameter the name of the file where you want to write
-         PersonAdderToFile fileWriter = new PersonAdderToFile("Admins.txt", "Subscribers.txt");
-         */
-
         //Initialization of files Movies.dat and Series.dat
         InitializationOfFiles in= new InitializationOfFiles();
 
