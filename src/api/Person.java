@@ -1,5 +1,11 @@
 package api;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.EOFException;
+import java.util.ArrayList;
+
 public class Person {
 
     private String password;
@@ -27,5 +33,75 @@ public class Person {
     }
 
 
+
+
+    public ArrayList<Video> searchVideo (Video obj)
+    {
+        ArrayList<Video> searchResults = new ArrayList<>();
+        String filename;
+        int criteria=0;
+        int check=0;
+
+        if(obj.getTitle()!=null)
+            criteria++;
+        if(obj.getProtagonists()!=null)
+            criteria++;
+        if(obj.getAppropriateness()!=null)
+            criteria++;
+        if(obj.getCategory()!=null)
+            criteria++;
+
+        if(obj instanceof Movie) {
+            filename = "Movies.dat";
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))) {
+
+                //ta diabazo apo to binary file Movies
+
+                while(true) {  // repeat until end of file
+                    Movie temp = (Movie) oos.readObject();  //read obj
+
+                    if(obj.getTitle()!=null && temp.getTitle().equals(obj.getTitle()) )  //to exei epilexei o xristis gia search k einai isa
+                    {
+                        check++;
+                    }
+                    if(obj.getProtagonists()!=null && temp.getProtagonists().equals(obj.getProtagonists()) )  //!!!!!!
+                    {
+                        check++;
+                    }
+                    if(obj.getAppropriateness()!=null && temp.getAppropriateness().equals(obj.getAppropriateness()) )
+                    {
+                        check++;
+                    }
+                    if(obj.getCategory()!=null && temp.getCategory().equals(obj.getCategory()) )
+                    {
+                        check++;
+                    }
+
+                    if(check==criteria)
+                        searchResults.add(temp);
+                }
+
+            } catch (EOFException end) {
+                System.out.println("Reached the end of file");
+                return searchResults;
+
+            }catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        else if(obj instanceof Serie)
+            filename="Series.dat";
+        else
+        {
+            filename="Movies.dat";
+
+            filename="Series.dat";
+        }
+
+        return searchResults;
+
+    }
 
 }
