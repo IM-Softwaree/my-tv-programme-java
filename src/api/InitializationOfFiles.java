@@ -93,8 +93,8 @@ public class InitializationOfFiles {
             a.setSeasons(a_2);
 
             Serie b = new Serie("Alice in Borderland","Obsessed gamer Arisu suddenly finds himself in a strange, emptied-out version of Tokyo in which he and his friends must compete in dangerous games in order to survive.","TV-MA","Action","Kento Yamazaki,Tao Tsuchiya");
-            b.addAssessment("name1","Great quality, great actors",5,"15/10/2023");
-            b.addAssessment("name2","Nice job",5,"27/12/2023");
+            b.addAssessment("name1","Great quality, great actors",5,"29/3/2022");
+            b.addAssessment("name2","Good",4,"4/6/2023");
 
             Season b_1 = new Season(1,2020);
             Episode one3 = new Episode("Episode 1",49);
@@ -135,6 +135,8 @@ public class InitializationOfFiles {
             b.setSeasons(b_2);
 
             Serie c = new Serie("The Alienist","Newspaper illustrator John Moore meets with criminal psychologist (alienist) Dr. Laszlo Kreizler to investigate a serial killer in New York during the late 19th century.","TV-MA","Thriller","Daniel Brühl,Luke Evans");
+            c.addAssessment("name1","Great story!",5,"10/7/2023");
+            c.addAssessment("name2","It was fine...not anything special",3,"30/8/2023");
 
             Season c_1 = new Season(1,2018);
             Episode one5 = new Episode("The Boy on the Bridge",49);
@@ -179,6 +181,8 @@ public class InitializationOfFiles {
             c.setSeasons(c_2);
 
             Serie d = new Serie("Monk","The series follows Adrian Monk, a brilliant former San Francisco detective, who now consults the police as a private consultant whilst battling with an obsessive-compulsive disorder.","TV-PG","Comedy","Tony Shalhoub,Stanley Kamel");
+            d.addAssessment("name1","Not very fond of it",2,"22/4/2015");
+            d.addAssessment("name2","Did not like the actors, but the story was fine",2,"1/6/2017");
 
             Season d_1 = new Season(1,2002);
             Episode one7 = new Episode("Mr. Monk and the Candidate",78);
@@ -208,6 +212,8 @@ public class InitializationOfFiles {
             d.setSeasons(d_3);
 
             Serie e = new Serie("Stranger Things","When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.","TV-14","Sci-Fi","Winona Ryder,David Harbour");
+            e.addAssessment("name1","Not a fan, a bit boring",2,"3/11/2021");
+            e.addAssessment("name2","First seasons were good, now the story is repeating itself",3,"23/5/2023");
 
             Season e_1 = new Season(1,2016);
             Episode one10 = new Episode("Chapter One: The Vanishing of Will Byers",49);
