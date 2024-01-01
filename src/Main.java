@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Initialization of files Movies.dat and Series.dat
-        InitializationOfFiles in= new InitializationOfFiles();
+        InitializationOfSeriesMovies in= new InitializationOfSeriesMovies();
 
         FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
 

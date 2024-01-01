@@ -1,5 +1,6 @@
 package api;
 
+import java.util.Random;
 public class FirstInitializationForAdminsSubscribers {
 
     public FirstInitializationForAdminsSubscribers(){
@@ -8,5 +9,6 @@ public class FirstInitializationForAdminsSubscribers {
 
         //Send as a parameter the name of the file where you want to write
         PersonAdderToFile fileWriter = new PersonAdderToFile("Subscribers.txt");
+
     }
 }

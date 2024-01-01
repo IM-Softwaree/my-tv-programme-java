@@ -2,8 +2,8 @@ package api;
 
 import java.io.*;
 
-public class InitializationOfFiles {
-    public InitializationOfFiles()
+public class InitializationOfSeriesMovies {
+    public InitializationOfSeriesMovies()
     {
         //ARXIKOPOISI ARXEIOU MOVIES
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
