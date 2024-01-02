@@ -77,7 +77,6 @@ public class PersonAdderToFile {
                                     answer = console.next();
                                 } while ((!answer.equals("Y")) && (!answer.equals("N")));
                             }while (answer.equals("Y"));
-                            writer2.newLine(); // Add a new line
 
                             // EMFANIZW TIS SEIRES KAI RWTAW POIES APO AYTES THELEI O USER NA MPOUNE STA FAVOURITES
                             ArrayList<String> tempSeries = new ArrayList<>();
@@ -112,8 +111,9 @@ public class PersonAdderToFile {
                                     answer = console.next();
                                 } while ((!answer.equals("Y")) && (!answer.equals("N")));
                             }while (answer.equals("Y"));
-                            writer2.newLine(); // Add a new line
+
                         }
+                        writer2.newLine(); // Add a new line
 
                     } catch (IOException e) {
                         e.printStackTrace();
