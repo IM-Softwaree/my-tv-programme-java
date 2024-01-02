@@ -105,10 +105,4 @@ public class Login extends JFrame {
         newWindow.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            Login login = new Login();
-            login.start();
-        });
-    }
 }
