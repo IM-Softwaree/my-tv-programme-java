@@ -41,10 +41,10 @@ public class FileReaderForPersons {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("Favourites.txt"))) {
 
             // Write each line to the file
-            writer.write("Barbie Alice in Borderland");
+            writer.write("Barbie , Alice in Borderland");
             writer.newLine(); // Add a new line
 
-            writer.write("Inception Monk");
+            writer.write("Inception , Monk");
             writer.newLine(); // Add a new line
 
         } catch (IOException e) {
