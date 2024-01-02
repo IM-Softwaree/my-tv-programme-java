@@ -24,7 +24,7 @@ public class AddMovie extends JFrame{
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
-        JLabel label1 = new JLabel("Give movies information");
+        JLabel label1 = new JLabel("Give movie information");
         this.add(label1);
 
         title = new JTextField("TITLE");

@@ -47,12 +47,12 @@ public class AddObject extends JFrame {
                 {
                     new AddMovie().addMovie();
                 }
-                /**
-                 else if(choice2.isSelected())
+                 else if(serie.isSelected())
                  {
-
+                     new AddSerie().addSerie();
                  }
-                 else if(choice3.isSelected())
+                 /**
+                 else if(season.isSelected())
                  {
 
                  }
