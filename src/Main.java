@@ -15,5 +15,10 @@ public class Main {
 
         FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
 
+        Video MovieForSearch = new Video(null,null,null,"Drama",null);
+        Admin aaa =  new Admin("aaaa","eee");
+        for (Video video : aaa.searchVideo(MovieForSearch)) {
+            System.out.println(video.getTitle()+" "+video.getCategory());
+        }
     }
 }

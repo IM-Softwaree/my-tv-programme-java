@@ -31,10 +31,4 @@ public class Movie extends Video
         return this.movieDuration;
     }
 
-    public ArrayList<Video> similarVideos()
-    {
-        ArrayList<Video> similar = new ArrayList<>();
-        return similar;
-    }
-
 }

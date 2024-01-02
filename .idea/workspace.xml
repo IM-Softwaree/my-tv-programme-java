@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="Commit">
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="aA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Series.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Series.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/FileReaderForPersons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FileReaderForPersons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Evangelia/IdeaProjects/VideoMovieSerie&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Evangelia/IdeaProjects/test_person&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -123,11 +131,61 @@
       <option name="project" value="LOCAL" />
       <updated>1704109765862</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="a">
+      <created>1704110284720</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704110284720</updated>
+    </task>
+    <task id="LOCAL-00007" summary="a">
+      <created>1704117680304</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704117680304</updated>
+    </task>
+    <task id="LOCAL-00008" summary="a">
+      <created>1704127994871</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704127994871</updated>
+    </task>
+    <task id="LOCAL-00009" summary="a">
+      <created>1704128674416</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704128674416</updated>
+    </task>
+    <task id="LOCAL-00010" summary="aA">
+      <created>1704129970711</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704129970711</updated>
+    </task>
+    <task id="LOCAL-00011" summary="aA">
+      <created>1704135359337</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704135359337</updated>
+    </task>
+    <task id="LOCAL-00012" summary="aA">
+      <created>1704135560391</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704135560391</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="aA" />
+    <option name="LAST_COMMIT_MESSAGE" value="aA" />
   </component>
 </project>

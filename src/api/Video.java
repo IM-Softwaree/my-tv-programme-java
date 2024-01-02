@@ -3,7 +3,7 @@ package api;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public abstract class Video implements Serializable {
+public class Video implements Serializable {
 
     private String title;
     private String description;
@@ -86,6 +86,10 @@ public abstract class Video implements Serializable {
         this.assessments.add(temp);
     }
 
-    public abstract ArrayList<Video> similarVideos();
+    public ArrayList<Video> similarVideos()
+    {
+        ArrayList<Video> similar = new ArrayList<>();
+        return similar;
+    }
 
 }

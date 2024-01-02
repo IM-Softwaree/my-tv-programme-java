@@ -7,7 +7,7 @@ public class Subscriber extends Person {
 
     private String name;
     private String surname;
-    private HashSet favourites;
+    private HashSet favourites;  //!!!!Q!!!!
 
     public Subscriber(String username, String password, String name, String surname){
         super(username, password);
@@ -35,5 +35,5 @@ public class Subscriber extends Person {
     public void addFavourite(Video fav)
     {
         this.favourites.add(fav);
-    }
+    }  //!!!!Q!!!!
 }

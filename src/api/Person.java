@@ -57,7 +57,7 @@ public class Person {
         {
             check++;
         }
-        if(obj.getAverageRating()!=-1 && temp.getAverageRating() == obj.getAverageRating() )
+        if(obj.getAverageRating()!=-1 && obj.getAverageRating() >= temp.getAverageRating() )
         {
             check++;
         }

@@ -10,11 +10,6 @@ public class Serie extends Video {
         super(t,d,a,c,p);
     };
 
-    public ArrayList<Video> similarVideos(){
-        ArrayList<Video> similarSeries = new ArrayList<>();
-        return similarSeries;
-    }
-
     public void setSeasons(Season ex){
         seasons.add(ex);
     }
