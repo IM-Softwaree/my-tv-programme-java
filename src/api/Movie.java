@@ -1,6 +1,9 @@
 package api;
 
-import java.util.ArrayList;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class Movie extends Video
 {
@@ -29,6 +32,15 @@ public class Movie extends Video
     public int getMovieDuration()
     {
         return this.movieDuration;
+    }
+
+    public void addMovieToFile(Movie neo)
+    {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
+            oos.writeObject(neo);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

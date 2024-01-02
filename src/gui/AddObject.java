@@ -2,6 +2,8 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AddObject extends JFrame {
 
@@ -38,6 +40,30 @@ public class AddObject extends JFrame {
         group.add(serie);
         group.add(season);
         group.add(episode);
+
+        next.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(movie.isSelected())
+                {
+                    new AddMovie().addMovie();
+                }
+                /**
+                 else if(choice2.isSelected())
+                 {
+
+                 }
+                 else if(choice3.isSelected())
+                 {
+
+                 }
+                 else
+                 {
+
+                 }
+                 */
+
+            }
+        });
 
 
 
