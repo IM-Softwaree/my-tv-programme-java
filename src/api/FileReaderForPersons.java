@@ -36,6 +36,21 @@ public class FileReaderForPersons {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        // EDW DHMIOYRGW ENA FILE "Favourites.txt" KAI VAZW MESA TYXAIA FAVOURITE GIA TOUS 2 USERS (OI GRAMMES TOU FILE "Subscribers.txt" ANTISTOIXOUN ME TIS GRAMMES TOU FILE "Favourites.txt")
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Favourites.txt"))) {
+
+            // Write each line to the file
+            writer.write("Barbie Alice in Borderland");
+            writer.newLine(); // Add a new line
+
+            writer.write("Inception Monk");
+            writer.newLine(); // Add a new line
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     // SYNARTHSH POU DEXETAI 2 ONOMATA ARXEIEWN 1 GIA ADMINS KAI 1 GIA SUBSCRIBERS TA DIAVAZEI KAI EPISTREFEI ENA HASHMAP ME OLA TA USERNAME(ADMIN KAI SUBSCRIBER)

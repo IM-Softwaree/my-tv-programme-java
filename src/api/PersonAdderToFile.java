@@ -1,10 +1,9 @@
 package api;
 
-import java.io.IOException;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.Scanner;
 import java.util.HashSet;
+import java.util.ArrayList;
 
 public class PersonAdderToFile {
     private String filenameForSubscribers;
@@ -37,6 +36,90 @@ public class PersonAdderToFile {
                     surName = console.next();
                     writer.write(userName + " " + password + " " + name + " " + surName);
                     writer.newLine(); // Add a new line
+                    try (BufferedWriter writer = new BufferedWriter(new FileWriter("Favourites.txt"))) {
+
+                        System.out.println("Do you want to add a favourite Movie/Series? (Y/N)");
+                        do {
+                            answer = console.next();
+                        } while ((!answer.equals("Y")) && (!answer.equals("N")));
+                        if(answer.equals("Y")){
+
+                            // EMFANIZW TIS TAINIES KAI RWTAW POIES APO AYTES THELEI O USER NA MPOUNE STA FAVOURITES
+                            ArrayList<String> tempMovies = new ArrayList<>();
+
+                            System.out.println("Movies : ");
+                            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
+
+                                // Ta diabazw apo to binary file Movies
+
+                                while (true) {  // repeat until end of file
+                                    Video temp = (Video) oos.readObject();  //read obj
+                                    tempMovies.add(temp.getTitle());
+                                    System.out.println(temp.getTitle() + ", ");
+                                }
+                            } catch (EOFException end) {
+                                System.out.println("Reached the end of file");
+
+                            } catch (IOException | ClassNotFoundException e) {
+                                e.printStackTrace();
+                            }
+
+                            do {
+                                System.out.println("Which of those Movies do you want : ");
+                                answer = console.next();
+                                for (String tempStr : tempMovies){
+                                    if (answer.equals(tempStr)){
+                                        writer.write(answer + " ");
+                                    }
+                                }
+                                System.out.println("Do you want to add another favourite Movie? (Y/N)");
+                                do {
+                                    answer = console.next();
+                                } while ((!answer.equals("Y")) && (!answer.equals("N")));
+                            }while (answer.equals("Y"));
+                            writer.newLine(); // Add a new line
+
+                            // EMFANIZW TIS SEIRES KAI RWTAW POIES APO AYTES THELEI O USER NA MPOUNE STA FAVOURITES
+                            ArrayList<String> tempSeries = new ArrayList<>();
+
+                            System.out.println("Series : ");
+                            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
+
+                                // Ta diabazw apo to binary file Series
+
+                                while (true) {  // repeat until end of file
+                                    Video temp = (Video) oos.readObject();  //read obj
+                                    tempSeries.add(temp.getTitle());
+                                    System.out.println(temp.getTitle() + ", ");
+                                }
+                            } catch (EOFException end) {
+                                System.out.println("Reached the end of file");
+
+                            } catch (IOException | ClassNotFoundException e) {
+                                e.printStackTrace();
+                            }
+
+                            do {
+                                System.out.println("Which of those Movies do you want : ");
+                                answer = console.next();
+                                for (String tempStr : tempSeries){
+                                    if (answer.equals(tempStr)){
+                                        writer.write(answer + " ");
+                                    }
+                                }
+                                System.out.println("Do you want to add another favourite Movie? (Y/N)");
+                                do {
+                                    answer = console.next();
+                                } while ((!answer.equals("Y")) && (!answer.equals("N")));
+                            }while (answer.equals("Y"));
+                            writer.newLine(); // Add a new line
+                        }
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
