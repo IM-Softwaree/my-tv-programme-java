@@ -14,7 +14,18 @@ public class Login extends JFrame {
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
+        //bazei username kai password
 
+        //AN EINAI ADMIN
+
+
+
+
+
+
+
+
+        //AN EINAI SUBSCRIBER
 
 
 
