@@ -1,3 +1,5 @@
+package gui;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,11 +11,11 @@ public class Login extends JFrame {
         setTitle("NEXTFLIX");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setSize(new Dimension(1000, 500));
+        setSize(new Dimension(500, 300));
         setResizable(true);
 
         // Set layout manager to center the components vertically
-        setLayout(new FlowLayout(FlowLayout.CENTER, 0, 150));
+        setLayout(new FlowLayout(FlowLayout.CENTER, 0, 75));
 
         // Create a blue button
         JButton loginButton = new JButton("Log In");
@@ -78,7 +80,7 @@ public class Login extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(5, 5, 5, 5); // KENA ANAMESA TOUS
+        gbc.insets = new Insets(5, 5, 5, 5); // Add some spacing
 
         newWindow.add(usernameLabel, gbc);
 
