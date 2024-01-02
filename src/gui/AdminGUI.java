@@ -1,7 +1,11 @@
 package gui;
 
+import api.*;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AdminGUI extends JFrame {
 
@@ -40,6 +44,29 @@ public class AdminGUI extends JFrame {
         group.add(choice3);
         group.add(choice4);
 
+        next.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(choice1.isSelected())
+                {
+                  new AddObject().add();
+                }
+                /**
+                else if(choice2.isSelected())
+                {
+
+                }
+                else if(choice3.isSelected())
+                {
+
+                }
+                else
+                {
+
+                }
+                 */
+
+            }
+        });
 
 
         setVisible(true);
