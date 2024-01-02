@@ -36,7 +36,7 @@ public class PersonAdderToFile {
                     surName = console.next();
                     writer.write(userName + " " + password + " " + name + " " + surName);
                     writer.newLine(); // Add a new line
-                    try (BufferedWriter writer = new BufferedWriter(new FileWriter("Favourites.txt"))) {
+                    try (BufferedWriter writer2 = new BufferedWriter(new FileWriter("Favourites.txt"))) {
 
                         System.out.println("Do you want to add a favourite Movie/Series? (Y/N)");
                         do {
@@ -69,7 +69,7 @@ public class PersonAdderToFile {
                                 answer = console.next();
                                 for (String tempStr : tempMovies){
                                     if (answer.equals(tempStr)){
-                                        writer.write(answer + " ");
+                                        writer2.write(answer + " ");
                                     }
                                 }
                                 System.out.println("Do you want to add another favourite Movie? (Y/N)");
@@ -77,7 +77,7 @@ public class PersonAdderToFile {
                                     answer = console.next();
                                 } while ((!answer.equals("Y")) && (!answer.equals("N")));
                             }while (answer.equals("Y"));
-                            writer.newLine(); // Add a new line
+                            writer2.newLine(); // Add a new line
 
                             // EMFANIZW TIS SEIRES KAI RWTAW POIES APO AYTES THELEI O USER NA MPOUNE STA FAVOURITES
                             ArrayList<String> tempSeries = new ArrayList<>();
@@ -104,7 +104,7 @@ public class PersonAdderToFile {
                                 answer = console.next();
                                 for (String tempStr : tempSeries){
                                     if (answer.equals(tempStr)){
-                                        writer.write(answer + " ");
+                                        writer2.write(answer + " ");
                                     }
                                 }
                                 System.out.println("Do you want to add another favourite Movie? (Y/N)");
@@ -112,7 +112,7 @@ public class PersonAdderToFile {
                                     answer = console.next();
                                 } while ((!answer.equals("Y")) && (!answer.equals("N")));
                             }while (answer.equals("Y"));
-                            writer.newLine(); // Add a new line
+                            writer2.newLine(); // Add a new line
                         }
 
                     } catch (IOException e) {
