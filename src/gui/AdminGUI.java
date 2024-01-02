@@ -13,7 +13,7 @@ public class AdminGUI extends JFrame {
         setTitle("Administrator");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(200, 250));
+        this.setSize(new Dimension(300, 200));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
