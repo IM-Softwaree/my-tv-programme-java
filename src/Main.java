@@ -14,7 +14,7 @@ public class Main {
         //Initialization of files Movies.dat and Series.dat
         InitializationOfSeriesMovies in= new InitializationOfSeriesMovies();
 
-        FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
+       // FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
 
 
 
