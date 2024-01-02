@@ -69,7 +69,7 @@ public class PersonAdderToFile {
                                 answer = console.next();
                                 for (String tempStr : tempMovies){
                                     if (answer.equals(tempStr)){
-                                        writer2.write(answer + " ");
+                                        writer2.write(answer + ", ");
                                     }
                                 }
                                 System.out.println("Do you want to add another favourite Movie? (Y/N)");
@@ -104,7 +104,7 @@ public class PersonAdderToFile {
                                 answer = console.next();
                                 for (String tempStr : tempSeries){
                                     if (answer.equals(tempStr)){
-                                        writer2.write(answer + " ");
+                                        writer2.write(answer + ", ");
                                     }
                                 }
                                 System.out.println("Do you want to add another favourite Movie? (Y/N)");
