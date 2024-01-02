@@ -5,6 +5,9 @@ import java.io.*;
 public class InitializationOfSeriesMovies {
     public InitializationOfSeriesMovies()
     {
+        Subscriber subscriber1 = new Subscriber("user1", "password1", "name1", "surname1");
+        Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
+
         //ARXIKOPOISI ARXEIOU MOVIES
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
 
@@ -28,6 +31,9 @@ public class InitializationOfSeriesMovies {
             Movie e = new Movie("Gladiator","A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.","R","Action","Russell Crowe,Joaquin Phoenix",2000,155);
             e.addAssessment("name1","Mediocre",3,"2/10/2000");
             e.addAssessment("name2","Okay...",2,"7/9/2001");
+
+            subscriber1.addFavourite(a);
+            subscriber2.addFavourite(b);
 
             //ta grafo sto binary file Movies
             oos.writeObject(a);
@@ -259,6 +265,8 @@ public class InitializationOfSeriesMovies {
             e_4.setEpisodes(four13);
             e.setSeasons(e_4);
 
+            subscriber1.addFavourite(c);
+            subscriber2.addFavourite(a);
 
             //ta grafo sto binary file Series
             oos.writeObject(a);
