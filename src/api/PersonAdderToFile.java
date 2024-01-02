@@ -47,7 +47,7 @@ public class PersonAdderToFile {
                             // EMFANIZW TIS TAINIES KAI RWTAW POIES APO AYTES THELEI O USER NA MPOUNE STA FAVOURITES
                             ArrayList<String> tempMovies = new ArrayList<>();
 
-                            System.out.println("Movies : ");
+                            System.out.println("\nMovies : ");
                             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
                                 // Ta diabazw apo to binary file Movies
@@ -58,7 +58,8 @@ public class PersonAdderToFile {
                                     System.out.println(temp.getTitle() + ", ");
                                 }
                             } catch (EOFException end) {
-                                System.out.println("Reached the end of file");
+                                System.out.println("none \n");
+                                System.out.println("\n(Reached the end of file)\n");
 
                             } catch (IOException | ClassNotFoundException e) {
                                 e.printStackTrace();
@@ -74,6 +75,9 @@ public class PersonAdderToFile {
                                         flag = true;
                                     }
                                 }
+                                if ("none".equals(answer)){
+                                    flag = true;
+                                }
                                 if (!flag){
                                     System.out.println("Movie isn't available or movie doesn't exist");
                                 }
@@ -86,7 +90,7 @@ public class PersonAdderToFile {
                             // EMFANIZW TIS SEIRES KAI RWTAW POIES APO AYTES THELEI O USER NA MPOUNE STA FAVOURITES
                             ArrayList<String> tempSeries = new ArrayList<>();
 
-                            System.out.println("Series : ");
+                            System.out.println("\nSeries : ");
                             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
                                 // Ta diabazw apo to binary file Series
@@ -97,7 +101,8 @@ public class PersonAdderToFile {
                                     System.out.println(temp.getTitle() + ", ");
                                 }
                             } catch (EOFException end) {
-                                System.out.println("Reached the end of file");
+                                System.out.println("none \n");
+                                System.out.println("\n(Reached the end of file)\n");
 
                             } catch (IOException | ClassNotFoundException e) {
                                 e.printStackTrace();
@@ -112,6 +117,9 @@ public class PersonAdderToFile {
                                         writer2.write(answer + ", ");
                                         flag = true;
                                     }
+                                }
+                                if ("none".equals(answer)){
+                                    flag = true;
                                 }
                                 if (!flag){
                                     System.out.println("Serie isn't available or serie doesn't exist");
