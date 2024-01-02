@@ -26,6 +26,6 @@ public class Main {
         }
          */
 
-        new Login().start();
+        new AdminGUI().admin();
     }
 }
