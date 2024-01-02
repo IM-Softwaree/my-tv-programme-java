@@ -16,6 +16,8 @@ public class Main {
 
         FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
 
+
+
         /**
         Video MovieForSearch = new Video(null,null,null,null,null);
         MovieForSearch.setAverageRatingForSearch(5);
