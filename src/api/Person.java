@@ -57,7 +57,7 @@ public class Person {
         {
             check++;
         }
-        if(obj.getAverageRating()!=-1 && obj.getAverageRating() >= temp.getAverageRating() )
+        if(obj.getAverageRatingForSearch()!=-1 && temp.findAverageRating() >= obj.getAverageRatingForSearch() )
         {
             check++;
         }
@@ -80,7 +80,7 @@ public class Person {
             criteria++;
         if(obj.getCategory()!=null)
             criteria++;
-        if(obj.getAverageRating()!=-1)
+        if(obj.getAverageRatingForSearch()!=-1)
             criteria++;
 
 

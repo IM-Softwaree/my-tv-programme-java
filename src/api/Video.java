@@ -12,7 +12,7 @@ public class Video implements Serializable {
     private String protagonists;
 
     private ArrayList<Assessment> assessments = new ArrayList<>();
-    private float averageRating;
+    private float averageRatingForSearch;
 
     public Video(){}
     public Video(String t,String d,String a,String c,String p){
@@ -43,18 +43,18 @@ public class Video implements Serializable {
     {
         this.protagonists=x;
     }
-    public void setAverageRating(float x)
+    public void setAverageRatingForSearch(float x)
     {
-        this.averageRating=x;
+        this.averageRatingForSearch=x;
     }
 
-    public void findAverageRating()
+    public float findAverageRating()
     {
         int sum=0;
         for (Assessment assessment : assessments) {
             sum += assessment.getRating();
         }
-        this.averageRating = (float) sum/ assessments.size();
+        return (float) sum/ assessments.size();
     }
 
     public String getTitle(){
@@ -76,9 +76,9 @@ public class Video implements Serializable {
     public String getProtagonists(){
         return this.protagonists;
     }
-    public float getAverageRating()
+    public float getAverageRatingForSearch()
     {
-        return this.averageRating;
+        return this.averageRatingForSearch;
     }
     public void addAssessment(String username,String text, int rating, String date)
     {

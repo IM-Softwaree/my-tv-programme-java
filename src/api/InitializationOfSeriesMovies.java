@@ -22,7 +22,7 @@ public class InitializationOfSeriesMovies {
             c.addAssessment("name2","Mind-blowing!LOVE IT",5,"10/1/2012");
 
             Movie d = new Movie("The Silence of the Lambs","A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.","R","Thriller","Jodie Foster,Anthony Hopkins",1991,118);
-            d.addAssessment("name1","Would not recommend it",1,"4/5/1995");
+            d.addAssessment("name1","Would not recommend it",2,"4/5/1995");
             d.addAssessment("name2","Very bad.. did not like it",1,"18/7/1999");
 
             Movie e = new Movie("Gladiator","A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.","R","Action","Russell Crowe,Joaquin Phoenix",2000,155);

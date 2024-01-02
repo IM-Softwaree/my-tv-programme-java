@@ -15,7 +15,9 @@ public class Main {
 
         FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
 
-        Video MovieForSearch = new Video(null,null,null,"Drama",null);
+        Video MovieForSearch = new Video(null,null,null,null,null);
+        MovieForSearch.setAverageRatingForSearch(5);
+
         Admin aaa =  new Admin("aaaa","eee");
         for (Video video : aaa.searchVideo(MovieForSearch)) {
             System.out.println(video.getTitle()+" "+video.getCategory());
