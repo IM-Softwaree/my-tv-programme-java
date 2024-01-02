@@ -34,4 +34,9 @@ public class Subscriber extends Person {
     {
         this.favourites.add(fav);
     }
+
+    public ArrayList<Video> getFavourites()
+    {
+        return this.favourites;
+    }
 }

@@ -30,18 +30,8 @@ public class FileReaderForPersons {
             writer.write("user1 password1 name1 surname1");
             writer.newLine(); // Add a new line
 
-            /**
-            Subscriber subscriber1 = new Subscriber("user1", "password1", "name1", "surname1");
-            subscriber1.addFavourite();
-             */
-
             writer.write("user2 password2 name2 surname2");
             writer.newLine(); // Add a new line
-
-            /**
-            Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
-            subscriber2.addFavourite();
-             */
 
         } catch (IOException e) {
             e.printStackTrace();

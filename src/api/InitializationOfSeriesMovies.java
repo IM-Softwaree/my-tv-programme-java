@@ -325,6 +325,15 @@ public class InitializationOfSeriesMovies {
          */
 
 
+        /**
+        for (Video favourite : subscriber1.getFavourites()) {
+            System.out.println("Favourite1 " + favourite.getTitle());
+        }
+        for (Video favourite : subscriber2.getFavourites()) {
+            System.out.println("Favourite2 " + favourite.getTitle());
+        }
+         */
+
 
     }
 
