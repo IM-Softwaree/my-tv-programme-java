@@ -34,9 +34,11 @@ public class Movie extends Video
         return this.movieDuration;
     }
 
+
+    //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
     public void addMovieToFile(Movie neo)
     {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
             oos.writeObject(neo);
         }catch (IOException e) {
             e.printStackTrace();
