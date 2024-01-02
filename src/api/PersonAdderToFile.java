@@ -36,7 +36,7 @@ public class PersonAdderToFile {
                     surName = console.next();
                     writer.write(userName + " " + password + " " + name + " " + surName);
                     writer.newLine(); // Add a new line
-                    try (BufferedWriter writer2 = new BufferedWriter(new FileWriter("Favourites.txt"))) {
+                    try (BufferedWriter writer2 = new BufferedWriter(new FileWriter("Favourites.txt", true))) {
 
                         System.out.println("Do you want to add a favourite Movie/Series? (Y/N)");
                         do {
@@ -65,12 +65,17 @@ public class PersonAdderToFile {
                             }
 
                             do {
-                                System.out.println("Which of those Movies do you want : ");
+                                System.out.println("Which one of those Movies do you want to add to favorites : ");
                                 answer = console.next();
+                                boolean flag = false;
                                 for (String tempStr : tempMovies){
                                     if (answer.equals(tempStr)){
                                         writer2.write(answer + ", ");
+                                        flag = true;
                                     }
+                                }
+                                if (!flag){
+                                    System.out.println("Movie isn't available or movie doesn't exist");
                                 }
                                 System.out.println("Do you want to add another favourite Movie? (Y/N)");
                                 do {
@@ -99,14 +104,19 @@ public class PersonAdderToFile {
                             }
 
                             do {
-                                System.out.println("Which of those Movies do you want : ");
+                                System.out.println("Which one of those Series do you want to add to favorites : ");
                                 answer = console.next();
+                                boolean flag = false;
                                 for (String tempStr : tempSeries){
                                     if (answer.equals(tempStr)){
                                         writer2.write(answer + ", ");
+                                        flag = true;
                                     }
                                 }
-                                System.out.println("Do you want to add another favourite Movie? (Y/N)");
+                                if (!flag){
+                                    System.out.println("Serie isn't available or serie doesn't exist");
+                                }
+                                System.out.println("Do you want to add another favourite Serie? (Y/N)");
                                 do {
                                     answer = console.next();
                                 } while ((!answer.equals("Y")) && (!answer.equals("N")));
