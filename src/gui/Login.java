@@ -48,13 +48,65 @@ public class Login extends JFrame {
         newWindow.setSize(new Dimension(400, 300));
         newWindow.setLocationRelativeTo(this);
 
-        // Add components or customize the new window as needed
-        JLabel welcomeLabel = new JLabel("Welcome to Nextflix!");
-        welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
-        newWindow.add(welcomeLabel);
+        // Set layout manager for the new window
+        newWindow.setLayout(new GridBagLayout());
+
+        // Create labels
+        JLabel usernameLabel = new JLabel("Username:");
+        JLabel passwordLabel = new JLabel("Password:");
+
+        // Create two JTextFields on the left
+        JTextField textField1 = new JTextField(15);
+        JTextField textField2 = new JTextField(15);
+
+        // Create a button on the right
+        JButton actionButton = new JButton("LOGIN");
+        actionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Action to perform when the button is clicked
+                // You can access the contents of the text fields here
+                String text1 = textField1.getText();
+                String text2 = textField2.getText();
+                System.out.println("Text 1: " + text1);
+                System.out.println("Text 2: " + text2);
+            }
+        });
+
+        // Set GridBagConstraints for the labels and text fields on the left
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.insets = new Insets(5, 5, 5, 5); // KENA ANAMESA TOUS
+
+        newWindow.add(usernameLabel, gbc);
+
+        gbc.gridy = 1;
+        newWindow.add(passwordLabel, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        newWindow.add(textField1, gbc);
+
+        gbc.gridy = 1;
+        newWindow.add(textField2, gbc);
+
+        // Set GridBagConstraints for the button on the right
+        gbc.gridx = 2;
+        gbc.gridy = 0;
+        gbc.gridheight = 2;
+        gbc.anchor = GridBagConstraints.EAST;
+        newWindow.add(actionButton, gbc);
 
         // Make the new window visible
         newWindow.setVisible(true);
     }
 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Login login = new Login();
+            login.start();
+        });
+    }
 }
