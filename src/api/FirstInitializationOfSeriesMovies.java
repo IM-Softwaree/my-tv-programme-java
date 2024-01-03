@@ -2,8 +2,8 @@ package api;
 
 import java.io.*;
 
-public class InitializationOfSeriesMovies {
-    public InitializationOfSeriesMovies()
+public class FirstInitializationOfSeriesMovies {
+    public FirstInitializationOfSeriesMovies()
     {
         Subscriber subscriber1 = new Subscriber("user1", "password1", "name1", "surname1");
         Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
