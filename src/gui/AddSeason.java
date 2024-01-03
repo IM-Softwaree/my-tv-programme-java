@@ -14,7 +14,7 @@ public class AddSeason extends JFrame {
         JTextField number, year;
         JButton ok,addepisode;
 
-        setTitle("Add a new serie");
+        setTitle("Add a new season");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setSize(new Dimension(300, 200));
@@ -42,12 +42,9 @@ public class AddSeason extends JFrame {
                 int y = Integer.parseInt(year.getText());
 
                 Season neo = new Season(n,y);
-
-                //  neo.addMovieToFile(neo);  //!!!APPEND TO BINARY FILE
+                s.setSeasons(neo);
 
                 dispose();
-
-
             }
         });
 
@@ -68,6 +65,7 @@ public class AddSeason extends JFrame {
             }
         });
 
+        setVisible(true);
     }
 
 }

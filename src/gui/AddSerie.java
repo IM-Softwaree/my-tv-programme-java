@@ -48,15 +48,17 @@ public class AddSerie extends JFrame {
         this.add(protagonists);
 
         this.add(ok);
+
+        String t = title.getText();
+        String d = description.getText();
+        String a = appropriateness.getText();
+        String c = category.getText();
+        String p = protagonists.getText();
+
+        Serie neo = new Serie(t,d,a,c,p);
+
         ok.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String t = title.getText();
-                String d = description.getText();
-                String a = appropriateness.getText();
-                String c = category.getText();
-                String p = protagonists.getText();
-
-                Serie neo = new Serie(t,d,a,c,p);
 
                 neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
 
@@ -68,14 +70,11 @@ public class AddSerie extends JFrame {
         this.add(addseason);
         addseason.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                new AddSeason().addSeason(neo);
 
                 dispose();
-
-
             }
         });
-
 
 
         setVisible(true);
