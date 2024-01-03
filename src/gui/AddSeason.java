@@ -44,7 +44,6 @@ public class AddSeason extends JFrame {
                 Season neo = new Season(n,y);
 
                 s.setSeasons(neo);
-                s.addSerieToFile();  //!!!APPEND TO BINARY FILE
 
                 dispose();
             }
@@ -59,12 +58,11 @@ public class AddSeason extends JFrame {
 
                 Season neo = new Season(n,y);
 
-                new AddEpisode().addEpisode(neo,s);
+                new AddEpisode().addEpisode(neo);
             }
         });
 
         setVisible(true);
-
     }
 
 }

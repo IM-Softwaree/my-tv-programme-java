@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class AddEpisode extends JFrame{
 
-    public void addEpisode(Season se,Serie f)
+    public void addEpisode(Season se)
     {
         JTextField name, duration;
         JButton ok;
@@ -43,7 +43,6 @@ public class AddEpisode extends JFrame{
 
                 Episode neo = new Episode(n,d);
                 se.setEpisodes(neo);
-                f.addSerieToFile();
 
                 dispose();
             }

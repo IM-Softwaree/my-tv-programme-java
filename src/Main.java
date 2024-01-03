@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Initialization of files Movies.dat and Series.dat
-        InitializationOfSeriesMovies in= new InitializationOfSeriesMovies();
+        FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
 
        // FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
 

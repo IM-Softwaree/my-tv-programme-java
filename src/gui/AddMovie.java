@@ -5,10 +5,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 
 public class AddMovie extends JFrame{
 
@@ -24,7 +20,7 @@ public class AddMovie extends JFrame{
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
-        JLabel label1 = new JLabel("Give movie information");
+        JLabel label1 = new JLabel("Give movies information");
         this.add(label1);
 
         title = new JTextField("TITLE");
@@ -71,9 +67,7 @@ public class AddMovie extends JFrame{
 
                 Movie neo = new Movie(t,d,a,c,p,y,dur);
 
-                neo.addMovieToFile();  //!!!APPEND TO BINARY FILE
-
-                dispose();
+                neo.addMovieToFile(neo);
 
             }
         });

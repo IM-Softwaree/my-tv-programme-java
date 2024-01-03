@@ -50,6 +50,9 @@ public class Login extends JFrame {
         newWindow.setSize(new Dimension(400, 300));
         newWindow.setLocationRelativeTo(this);
 
+        // Set default close operation to EXIT_ON_CLOSE
+        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         // Set layout manager for the new window
         newWindow.setLayout(new GridBagLayout());
 
@@ -104,5 +107,4 @@ public class Login extends JFrame {
         // Make the new window visible
         newWindow.setVisible(true);
     }
-
 }

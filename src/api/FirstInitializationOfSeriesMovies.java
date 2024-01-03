@@ -2,14 +2,14 @@ package api;
 
 import java.io.*;
 
-public class InitializationOfSeriesMovies {
-    public InitializationOfSeriesMovies()
+public class FirstInitializationOfSeriesMovies {
+    public FirstInitializationOfSeriesMovies()
     {
         Subscriber subscriber1 = new Subscriber("user1", "password1", "name1", "surname1");
         Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
 
         //ARXIKOPOISI ARXEIOU MOVIES
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
 
             //ftiaxno antikeimena Movie
             Movie a = new Movie("Barbie","Barbie suffers a crisis that leads her to question her world and her existence.","PG-13","Comedy","Margot Robbie,Ryan Gosling",2023,114);
@@ -47,7 +47,7 @@ public class InitializationOfSeriesMovies {
         }
 
         //ARXIKOPOISI ARXEIOU SERIES
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
 
             //ftiaxno antikeimena Serie Season k Episode
             Serie a = new Serie("Mindhunter","In the late 1970s, two FBI agents broaden the realm of criminal science by investigating the psychology behind murder and end up getting too close to real-life monsters.","TV-MA","Drama","Jonathan Groff,Anna Torv");
