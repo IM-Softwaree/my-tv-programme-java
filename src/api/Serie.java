@@ -21,6 +21,7 @@ public class Serie extends Video {
 
 
 
+
     //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
     public void addSerieToFile()
     {

@@ -42,6 +42,7 @@ public class AddSeason extends JFrame {
                 int y = Integer.parseInt(year.getText());
 
                 Season neo = new Season(n,y);
+
                 s.setSeasons(neo);
 
                 dispose();
@@ -52,16 +53,12 @@ public class AddSeason extends JFrame {
         this.add(addepisode);
         addepisode.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-              //  int n = Integer.parseInt(number.getText());
-              //  int y = Integer.parseInt(year.getText());
+                int n = Integer.parseInt(number.getText());
+                int y = Integer.parseInt(year.getText());
 
-              //  Season neo = new Season(n,y);
+                Season neo = new Season(n,y);
 
-                //  neo.addMovieToFile(neo);  //!!!APPEND TO BINARY FILE
-
-                dispose();
-
-
+                new AddEpisode().addEpisode(neo);
             }
         });
 

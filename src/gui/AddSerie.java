@@ -71,8 +71,6 @@ public class AddSerie extends JFrame {
         addseason.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new AddSeason().addSeason(neo);
-
-                dispose();
             }
         });
 
