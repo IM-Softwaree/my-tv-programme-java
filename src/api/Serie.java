@@ -1,7 +1,10 @@
 package api;
 
-import java.io.*;
 import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.EOFException;
 
 public class Serie extends Video {
 

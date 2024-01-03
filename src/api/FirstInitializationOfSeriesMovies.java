@@ -9,7 +9,7 @@ public class FirstInitializationOfSeriesMovies {
         Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
 
         //ARXIKOPOISI ARXEIOU MOVIES
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
 
             //ftiaxno antikeimena Movie
             Movie a = new Movie("Barbie","Barbie suffers a crisis that leads her to question her world and her existence.","PG-13","Comedy","Margot Robbie,Ryan Gosling",2023,114);
@@ -47,7 +47,7 @@ public class FirstInitializationOfSeriesMovies {
         }
 
         //ARXIKOPOISI ARXEIOU SERIES
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
 
             //ftiaxno antikeimena Serie Season k Episode
             Serie a = new Serie("Mindhunter","In the late 1970s, two FBI agents broaden the realm of criminal science by investigating the psychology behind murder and end up getting too close to real-life monsters.","TV-MA","Drama","Jonathan Groff,Anna Torv");
