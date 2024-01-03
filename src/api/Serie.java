@@ -38,7 +38,7 @@ public class Serie extends Video {
             }
 
         } catch (EOFException end) {
-            System.out.println("Reached the end of file");
+           // System.out.println("Reached the end of file");
 
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
@@ -55,12 +55,21 @@ public class Serie extends Video {
         }
 
 
+        //!!!!!!!!!!!!!!!!!!
          try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
 
          while (true) {  // repeat until end of file
          Serie temp = (Serie) oos.readObject();  //read obj
 
          System.out.println(temp.getTitle());
+
+             for (Season season : temp.getSeasons()) {
+                 System.out.println(season.getNumber());
+                 for (Episode episode : season.getEpisodes()) {
+                     System.out.println(episode.getName());
+                 }
+             }
+
          }
          } catch (EOFException end) {
          System.out.println("Reached the end of file");

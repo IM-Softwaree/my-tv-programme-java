@@ -12,7 +12,7 @@ public class AddSerie extends JFrame {
     public void addSerie()
     {
         JTextField title, description, appropriateness,category, protagonists;
-        JButton ok,addseason;
+        JButton ok,addseason,back;
 
         setTitle("Add a new serie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -49,16 +49,15 @@ public class AddSerie extends JFrame {
 
         this.add(ok);
 
-        String t = title.getText();
-        String d = description.getText();
-        String a = appropriateness.getText();
-        String c = category.getText();
-        String p = protagonists.getText();
-
-        Serie neo = new Serie(t,d,a,c,p);
-
         ok.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String t = title.getText();
+                String d = description.getText();
+                String a = appropriateness.getText();
+                String c = category.getText();
+                String p = protagonists.getText();
+
+                Serie neo = new Serie(t,d,a,c,p);
 
                 neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
 
@@ -70,10 +69,26 @@ public class AddSerie extends JFrame {
         this.add(addseason);
         addseason.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String t = title.getText();
+                String d = description.getText();
+                String a = appropriateness.getText();
+                String c = category.getText();
+                String p = protagonists.getText();
+
+                Serie neo = new Serie(t,d,a,c,p);
+
                 new AddSeason().addSeason(neo);
+
             }
         });
 
+        back = new JButton("Back");
+        this.add(back);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
 
         setVisible(true);
     }

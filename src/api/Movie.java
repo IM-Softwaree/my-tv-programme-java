@@ -34,6 +34,8 @@ public class Movie extends Video
     }
 
 
+
+
     //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
     public void addMovieToFile()
     {
@@ -50,7 +52,7 @@ public class Movie extends Video
             }
 
         } catch (EOFException end) {
-            System.out.println("Reached the end of file");
+          //  System.out.println("Reached the end of file");
 
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
@@ -65,21 +67,6 @@ public class Movie extends Video
         }catch (IOException e) {
             e.printStackTrace();
         }
-
-        /**
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
-
-            while (true) {  // repeat until end of file
-                Movie temp = (Movie) oos.readObject();  //read obj
-
-                System.out.println(temp.getTitle());
-            }
-        } catch (EOFException end) {
-            System.out.println("Reached the end of file");
-        } catch (IOException | ClassNotFoundException ee) {
-            ee.printStackTrace();
-        }
-         */
 
     }
 
