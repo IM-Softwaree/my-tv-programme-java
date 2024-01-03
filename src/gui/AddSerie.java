@@ -12,7 +12,7 @@ public class AddSerie extends JFrame {
     public void addSerie()
     {
         JTextField title, description, appropriateness,category, protagonists;
-        JButton ok;
+        JButton ok,addseason;
 
         setTitle("Add a new serie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -62,24 +62,18 @@ public class AddSerie extends JFrame {
 
                 dispose();
 
-                /**
-                 try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
 
-                 //ta diabazo apo to binary file Movies
+            }
+        });
 
-                 while (true) {  // repeat until end of file
-                 Video temp = (Video) oos.readObject();  //read obj
+        addseason = new JButton("Add a season");
+        this.add(addseason);
+        addseason.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
 
-                 System.out.println(temp.getTitle());
-                 }
 
-                 } catch (EOFException end) {
-                 System.out.println("Reached the end of file");
+                dispose();
 
-                 } catch (IOException | ClassNotFoundException ee) {
-                 ee.printStackTrace();
-                 }
-                 */
 
             }
         });
