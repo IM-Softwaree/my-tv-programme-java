@@ -67,6 +67,7 @@ public class Movie extends Video
         }
 
 
+        /**
         //!!!!!!!!!!!!!!!!!!TEST
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
 
@@ -81,8 +82,7 @@ public class Movie extends Video
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
         }
-
-
+         */
 
     }
 

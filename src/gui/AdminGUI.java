@@ -11,7 +11,7 @@ public class AdminGUI extends JFrame {
 
     public void admin()
     {
-        JRadioButton choice1, choice2, choice3, choice4;
+        JRadioButton choice1, choice2;
         JButton next;
 
         setTitle("Administrator");
@@ -26,23 +26,18 @@ public class AdminGUI extends JFrame {
 
         // radio buttons
         choice1 = new JRadioButton("Add a new object");
-        choice2 = new JRadioButton("Edit an existing object");
-        choice3 = new JRadioButton("Delete an object");
-        choice4 = new JRadioButton("Search for an object");
+        choice2 = new JRadioButton("See list of movies and series");
 
         next = new JButton("Next");
 
         this.add(choice1);
         this.add(choice2);
-        this.add(choice3);
-        this.add(choice4);
+
         this.add(next);
 
         ButtonGroup group = new ButtonGroup();
         group.add(choice1);
         group.add(choice2);
-        group.add(choice3);
-        group.add(choice4);
 
         next.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -51,14 +46,6 @@ public class AdminGUI extends JFrame {
                   new AddObject().add();
                 }
                 /**
-                else if(choice2.isSelected())
-                {
-
-                }
-                else if(choice3.isSelected())
-                {
-
-                }
                 else
                 {
 
