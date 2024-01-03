@@ -71,28 +71,9 @@ public class AddMovie extends JFrame{
 
                 Movie neo = new Movie(t,d,a,c,p,y,dur);
 
-                neo.addMovieToFile(neo);  //!!!APPEND TO BINARY FILE
+                neo.addMovieToFile();  //!!!APPEND TO BINARY FILE
 
                 dispose();
-
-                /**
-                try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
-
-                    //ta diabazo apo to binary file Movies
-
-                    while (true) {  // repeat until end of file
-                        Video temp = (Video) oos.readObject();  //read obj
-
-                        System.out.println(temp.getTitle());
-                    }
-
-                } catch (EOFException end) {
-                    System.out.println("Reached the end of file");
-
-                } catch (IOException | ClassNotFoundException ee) {
-                    ee.printStackTrace();
-                }
-                 */
 
             }
         });

@@ -1,9 +1,8 @@
 package api;
 
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.ArrayList;
 
 public class Movie extends Video
 {
@@ -36,13 +35,52 @@ public class Movie extends Video
 
 
     //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
-    public void addMovieToFile(Movie neo)
+    public void addMovieToFile()
     {
+        ArrayList<Movie> movies = new ArrayList<>();
+
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+
+            //ta diabazo ola apo to binary file Movies
+
+            while (true) {  // repeat until end of file
+                Movie temp = (Movie) oos.readObject();  //read obj
+
+                movies.add(temp);
+            }
+
+        } catch (EOFException end) {
+            System.out.println("Reached the end of file");
+
+        } catch (IOException | ClassNotFoundException ee) {
+            ee.printStackTrace();
+        }
+
+        movies.add(this);
+
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
-            oos.writeObject(neo);
+            for (Movie movie : movies) {
+                oos.writeObject(movie);
+            }
         }catch (IOException e) {
             e.printStackTrace();
         }
+
+        /**
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+
+            while (true) {  // repeat until end of file
+                Movie temp = (Movie) oos.readObject();  //read obj
+
+                System.out.println(temp.getTitle());
+            }
+        } catch (EOFException end) {
+            System.out.println("Reached the end of file");
+        } catch (IOException | ClassNotFoundException ee) {
+            ee.printStackTrace();
+        }
+         */
+
     }
 
 }

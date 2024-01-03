@@ -9,7 +9,7 @@ public class InitializationOfSeriesMovies {
         Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
 
         //ARXIKOPOISI ARXEIOU MOVIES
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
 
             //ftiaxno antikeimena Movie
             Movie a = new Movie("Barbie","Barbie suffers a crisis that leads her to question her world and her existence.","PG-13","Comedy","Margot Robbie,Ryan Gosling",2023,114);
