@@ -51,6 +51,23 @@ public class AddSeason extends JFrame {
             }
         });
 
+        addepisode = new JButton("Add an episode");
+        this.add(addepisode);
+        addepisode.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+              //  int n = Integer.parseInt(number.getText());
+              //  int y = Integer.parseInt(year.getText());
+
+              //  Season neo = new Season(n,y);
+
+                //  neo.addMovieToFile(neo);  //!!!APPEND TO BINARY FILE
+
+                dispose();
+
+
+            }
+        });
+
     }
 
 }

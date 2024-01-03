@@ -58,11 +58,9 @@ public class AddSerie extends JFrame {
 
                 Serie neo = new Serie(t,d,a,c,p);
 
-              //  neo.addMovieToFile(neo);  //!!!APPEND TO BINARY FILE
+                neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
 
                 dispose();
-
-
             }
         });
 

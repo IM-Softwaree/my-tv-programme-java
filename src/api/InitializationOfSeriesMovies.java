@@ -47,7 +47,7 @@ public class InitializationOfSeriesMovies {
         }
 
         //ARXIKOPOISI ARXEIOU SERIES
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
 
             //ftiaxno antikeimena Serie Season k Episode
             Serie a = new Serie("Mindhunter","In the late 1970s, two FBI agents broaden the realm of criminal science by investigating the psychology behind murder and end up getting too close to real-life monsters.","TV-MA","Drama","Jonathan Groff,Anna Torv");
