@@ -19,7 +19,7 @@ public class AddSerie extends JFrame {
         setTitle("Add a new serie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(260, 420));
+        this.setSize(new Dimension(270, 420));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
@@ -141,7 +141,7 @@ public class AddSerie extends JFrame {
 
                 Episode newEp = new Episode(episodeName,episodeDuration);
 
-           //     neo.addEpisodeToFile(neo,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
+                neo.addEpisodeToFile(neo,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
 
             }
         });
