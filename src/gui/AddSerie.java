@@ -19,7 +19,7 @@ public class AddSerie extends JFrame {
         setTitle("Add a new serie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(260, 370));
+        this.setSize(new Dimension(260, 420));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
@@ -89,7 +89,6 @@ public class AddSerie extends JFrame {
         });
 
 
-
         // Button to add new season
         JButton addSeasonButton = new JButton("Add Season");
         addSeasonButton.addActionListener(new ActionListener() {
@@ -114,6 +113,43 @@ public class AddSerie extends JFrame {
         });
 
         this.add(addSeasonButton);
+
+
+
+
+        JLabel labelC = new JLabel("    To add an episode click bellow:    ");
+        this.add(labelC);
+
+
+        // Button to add new episode
+        JButton addEpisodeButton = new JButton("Add Episode");
+        addEpisodeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String t = title.getText();
+                String d = description.getText();
+                String a = appropriateness.getText();
+                String c = category.getText();
+                String p = protagonists.getText();
+
+                neo = new Serie(t,d,a,c,p);
+
+                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
+
+                String episodeName = JOptionPane.showInputDialog("Enter episode name:");
+                int episodeDuration = Integer.parseInt(JOptionPane.showInputDialog("Enter episode duration:"));
+
+                Episode newEp = new Episode(episodeName,episodeDuration);
+
+           //     neo.addEpisodeToFile(neo,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
+
+            }
+        });
+
+        this.add(addEpisodeButton);
+
+
+
 
         JLabel labelB = new JLabel("                                                    ");
         this.add(labelB);
