@@ -217,7 +217,7 @@ public class Serie extends Video {
         }
 
 
-/**
+
  //!!!!!!!!!!!!!!!!!!
  try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
 
@@ -239,7 +239,7 @@ public class Serie extends Video {
  } catch (IOException | ClassNotFoundException ee) {
  ee.printStackTrace();
  }
- */
+
 
     }
 
