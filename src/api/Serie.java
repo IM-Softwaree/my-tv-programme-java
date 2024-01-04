@@ -15,18 +15,12 @@ public class Serie extends Video {
         super(t, d, a, c, p);
     }
 
-    ;
-
     public void setSeasons(Season ex) {
         seasons.add(ex);
     }
 
     public ArrayList<Season> getSeasons() {
         return this.seasons;
-    }
-
-    public void resetSeasons(ArrayList<Season> neo) {
-        this.seasons = neo;
     }
 
 
@@ -59,14 +53,6 @@ public class Serie extends Video {
                 serie.setAppropriateness(ex.getAppropriateness());
                 serie.setCategory(ex.getCategory());
                 serie.setProtagonists(ex.getProtagonists());
-
-                /**
-                 for (Season season : serie.getSeasons()) {
-                 if(season.getNumber()!=.getNumber())
-                 serie.setSeasons(temp);
-                 }
-                 */
-                //episodes
             }
         }
 
@@ -80,9 +66,7 @@ public class Serie extends Video {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
+/**
          //!!!!!!!!!!!!!!!!!!
          try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
 
@@ -104,10 +88,8 @@ public class Serie extends Video {
          } catch (IOException | ClassNotFoundException ee) {
          ee.printStackTrace();
          }
-
-
+*/
     }
-
 
 
     public void addSeasonToFile(Serie ex,Season f)
@@ -141,7 +123,6 @@ public class Serie extends Video {
                 serie.setCategory(ex.getCategory());
                 serie.setProtagonists(ex.getProtagonists());
 
-                System.out.println("MESAA");
                 serie.setSeasons(f);
 
                 //episodes
@@ -160,7 +141,7 @@ public class Serie extends Video {
         }
 
 
-
+/**
          //!!!!!!!!!!!!!!!!!!
          try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
 
@@ -182,8 +163,9 @@ public class Serie extends Video {
          } catch (IOException | ClassNotFoundException ee) {
          ee.printStackTrace();
          }
-
-
+*/
     }
+
+
 
 }
