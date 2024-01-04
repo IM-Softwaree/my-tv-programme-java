@@ -9,12 +9,12 @@ import java.awt.*;
 
 public class AddEpisode extends JFrame{
 
+    private Episode neoep;
+
     public Episode addEpisode()
     {
         JTextField name, duration;
         JButton ok;
-        String n;
-        int d;
 
         setTitle("Add a new episode");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -29,7 +29,7 @@ public class AddEpisode extends JFrame{
         name = new JTextField("Name of episode");
         name.setPreferredSize(new Dimension(100, name.getPreferredSize().height));
 
-        duration = new JTextField("0");
+        duration = new JTextField("DURATION");
         duration.setPreferredSize(new Dimension(100, duration.getPreferredSize().height));
 
         ok = new JButton("Ok");
@@ -40,25 +40,21 @@ public class AddEpisode extends JFrame{
 
         ok.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String n = name.getText();
+                int d = Integer.parseInt(duration.getText());
 
+                neoep = new Episode(n,d);
 
                 dispose();
             }
         });
 
-        n = name.getText();
-        d = Integer.parseInt(duration.getText());
-
-        Episode neoep = new Episode(n,d);
-
         setVisible(true);
 
-        System.out.println("FFAAAAAAAAAK");
+        System.out.println(neoep.getName()+" "+neoep.getDuration());
 
-        return neoep;
+        return this.neoep;
 
     }
-
-
 
 }

@@ -58,7 +58,9 @@ public class AddSeason extends JFrame {
 
                 Season neo = new Season(n,y);
 
-                new AddEpisode().addEpisode();
+                Episode fak =  new AddEpisode().addEpisode();
+
+                System.out.println(fak.getName()+" "+fak.getDuration());
             }
         });
 
