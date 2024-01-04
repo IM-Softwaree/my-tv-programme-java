@@ -78,7 +78,20 @@ public class LoginGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Action to perform when the "Log In" button is clicked
-                openNewWindow3();
+                String text1 = textField1.getText();
+                String text2 = textField2.getText();
+
+                if (LoginAPI.isAdminUserNothing(text1, text2) == 'A'){
+                    // Action to perform when the "Log In" button is clicked
+                    openNewWindowAdmin();
+                } else if (LoginAPI.isAdminUserNothing(text1, text2) == 'U'){
+                    // Action to perform when the "Log In" button is clicked
+                    openNewWindowUser();
+                } else {
+                    // Show the message dialog
+                    JOptionPane.showMessageDialog(newWindow, "WRONG USERNAME OR PASSWORD", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    openNewWindow1();
+                }
 
                 // Dispose of the current JFrame (make it disappear)
                 newWindow.dispose();
@@ -180,10 +193,12 @@ public class LoginGUI extends JFrame {
                 if(!PersonAdderToFile.findUsername(text1)) {
                     // Show the message dialog
                     JOptionPane.showMessageDialog(newWindow, "USERNAME ALREADY EXISTS", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    openNewWindow2();
                 } else {
                     PersonAdderToFile.addSubscriberViaForm(text1, text2, text3, text4);
                     // Show the message dialog
                     JOptionPane.showMessageDialog(newWindow, "SUBSCRIPTION SUCCESSFUL!", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    openNewWindow1();
                 }
 
                 // Dispose of the current JFrame (make it disappear)
@@ -234,17 +249,36 @@ public class LoginGUI extends JFrame {
     }
 
     //-----------------------------------------------------------------------
-    private void openNewWindow3() {
+    private void openNewWindowAdmin() {
 
         // Create and configure a new JFrame for the new window
-        JFrame newWindow = new JFrame("Nextflix Admin/Subscriber");
+        JFrame newWindow = new JFrame("Nextflix Admin");
         newWindow.setSize(new Dimension(400, 300));
         newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Show the message dialog
-        JOptionPane.showMessageDialog(newWindow, "YOU HAVE SUCCESSFULLY LOGGED IN", "Message", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(newWindow, "YOU HAVE SUCCESSFULLY LOGGED IN AS AN ADMIN", "Message", JOptionPane.INFORMATION_MESSAGE);
 
-        JLabel welcomeLabel = new JLabel("WELCOME");
+        JLabel welcomeLabel = new JLabel("WELCOME DEAR ADMIN");
+        welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
+
+        newWindow.add(welcomeLabel);
+
+        // Make the new window visible
+        newWindow.setVisible(true);
+    }
+
+    private void openNewWindowUser() {
+
+        // Create and configure a new JFrame for the new window
+        JFrame newWindow = new JFrame("Nextflix Subscriber");
+        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Show the message dialog
+        JOptionPane.showMessageDialog(newWindow, "YOU HAVE SUCCESSFULLY LOGGED IN AS A SUBSCRIBER", "Message", JOptionPane.INFORMATION_MESSAGE);
+
+        JLabel welcomeLabel = new JLabel("WELCOME DEAR SUBSCRIBER");
         welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
 
         newWindow.add(welcomeLabel);

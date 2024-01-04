@@ -1,5 +1,8 @@
 package api;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,5 +33,48 @@ public class LoginAPI {
             PersonAdderToFile fileWriter = new PersonAdderToFile();
             System.out.println("File '" + fileName + "' does not exist.\n");
         }
+    }
+
+    public static char isAdminUserNothing(String tempStr, String tempPassword){
+        if(isAdmin(tempStr, tempPassword)){
+            return 'A';
+        } else if(isUser(tempStr, tempPassword)){
+            return 'U';
+        }
+        return 'N';
+    }
+
+    private static boolean isAdmin(String tempAdmin, String tempPassword){
+        try (BufferedReader buffer = new BufferedReader(new FileReader("Admins.txt"))) {
+            String line = buffer.readLine();
+            while (line != null) {
+                // Split the line into words using whitespace as the delimiter
+                String[] words = line.split("\\s+");
+                if(words[0].equals(tempAdmin) && words[1].equals(tempPassword)){  // Onoma admin
+                    return true;
+                }
+                line = buffer.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private static boolean isUser(String tempUser, String tempPassword){
+        try (BufferedReader buffer = new BufferedReader(new FileReader("Subscribers.txt"))) {
+            String line = buffer.readLine();
+            while (line != null) {
+                // Split the line into words using whitespace as the delimiter
+                String[] words = line.split("\\s+");
+                if(words[0].equals(tempUser) && words[1].equals(tempPassword)){  // Onoma Subscriber
+                    return true;
+                }
+                line = buffer.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

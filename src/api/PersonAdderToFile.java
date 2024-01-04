@@ -1,9 +1,7 @@
 package api;
 
 import java.io.*;
-import java.util.Scanner;
 import java.util.HashSet;
-import java.util.ArrayList;
 
 public class PersonAdderToFile {
 
@@ -18,10 +16,6 @@ public class PersonAdderToFile {
             }
         }
         return true;
-    }
-
-    public void firstInitializationAdder(){
-
     }
 
     // SYNARTHSH POU DEXETAI 2 ONOMATA ARXEIEWN 1 GIA ADMINS KAI 1 GIA SUBSCRIBERS TA DIAVAZEI KAI EPISTREFEI ENA HASHMAP ME OLA TA USERNAME(ADMIN KAI SUBSCRIBER)
@@ -57,7 +51,7 @@ public class PersonAdderToFile {
     public static void addSubscriberViaForm(String userName,String password, String name, String surName){
 
         //File for Subscribers
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Subscribers.txt"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Subscribers.txt", true))) {
 
             // Write each line to the file
             writer.write(userName + " " + password + " " + name + " " + surName);
