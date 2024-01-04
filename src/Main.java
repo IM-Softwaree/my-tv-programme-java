@@ -7,15 +7,15 @@
 
 import api.*;
 import gui.*;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Initialization of files Movies.dat and Series.dat
-        FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
-
-       // FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
-
+        SwingUtilities.invokeLater(() -> {
+            LoginGUI loginGUI = new LoginGUI();
+            loginGUI.start();
+        });
 
 
         /**
