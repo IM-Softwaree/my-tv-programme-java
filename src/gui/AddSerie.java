@@ -115,8 +115,6 @@ public class AddSerie extends JFrame {
         this.add(addSeasonButton);
 
 
-
-
         JLabel labelC = new JLabel("    To add an episode click bellow:    ");
         this.add(labelC);
 
@@ -149,8 +147,6 @@ public class AddSerie extends JFrame {
         this.add(addEpisodeButton);
 
 
-
-
         JLabel labelB = new JLabel("                                                    ");
         this.add(labelB);
 
@@ -161,8 +157,6 @@ public class AddSerie extends JFrame {
                  dispose();
             }
         });
-
-
 
         setVisible(true);
     }

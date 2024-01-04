@@ -11,7 +11,7 @@ public class AddMovie extends JFrame{
     public void addMovie()
     {
         JTextField title, description, appropriateness,category, protagonists, year, duration;
-        JButton save;
+        JButton save,back;
         JPanel panel,panel2,panel3,panel4,panel5,panel6,panel7;
 
         setTitle("Add a new movie");
@@ -86,6 +86,7 @@ public class AddMovie extends JFrame{
         save = new JButton("Save");
 
         this.add(save);
+
         save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
@@ -103,7 +104,13 @@ public class AddMovie extends JFrame{
             }
         });
 
-
+        back = new JButton("Back");
+        this.add(back);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
 
         setVisible(true);
     }

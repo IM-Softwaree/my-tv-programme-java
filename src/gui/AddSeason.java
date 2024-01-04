@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class AddSeason extends JFrame {
 
-    public void addSeason(Serie s)
+    public AddSeason()
     {
         JTextField number, year;
         JButton ok,addepisode;
@@ -43,7 +43,7 @@ public class AddSeason extends JFrame {
 
                 Season neo = new Season(n,y);
 
-                s.setSeasons(neo);
+               // s.setSeasons(neo);
 
                 dispose();
             }
