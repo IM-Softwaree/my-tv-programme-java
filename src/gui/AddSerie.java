@@ -8,11 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddSerie extends JFrame {
+    private Serie neo;
 
-    public void addSerie()
+    public AddSerie()
     {
         JTextField title, description, appropriateness,category, protagonists;
-        JButton ok;
+        JButton save;
         JPanel panel,panel2,panel3,panel4,panel5;
 
         setTitle("Add a new serie");
@@ -66,10 +67,11 @@ public class AddSerie extends JFrame {
         this.add(panel5);
 
 
-        ok = new JButton("Ok");
-        this.add(ok);
+        save = new JButton("Save");
+        this.add(save);
 
-        ok.addActionListener(new ActionListener() {
+
+        save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
                 String d = description.getText();
@@ -77,13 +79,46 @@ public class AddSerie extends JFrame {
                 String c = category.getText();
                 String p = protagonists.getText();
 
-                Serie neo = new Serie(t,d,a,c,p);
+                neo = new Serie(t,d,a,c,p);
 
                 neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
 
                 dispose();
             }
         });
+
+
+
+        // Button to add new season
+        JButton addSeasonButton = new JButton("Add Season");
+        addSeasonButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String t = title.getText();
+                String d = description.getText();
+                String a = appropriateness.getText();
+                String c = category.getText();
+                String p = protagonists.getText();
+
+                neo = new Serie(t,d,a,c,p);
+
+                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
+                int seasonYear = Integer.parseInt(JOptionPane.showInputDialog("Enter season year:"));
+
+                Season newSeason = new Season(seasonNumber,seasonYear);
+                neo.setSeasons(newSeason);
+
+                neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
+
+            //    dispose();
+
+            }
+        });
+
+        this.add(addSeasonButton);
+
+
+
 
 
         setVisible(true);

@@ -66,8 +66,10 @@ public class Serie extends Video {
          Serie temp = (Serie) oos.readObject();  //read obj
 
          System.out.println(temp.getTitle());
+             System.out.println("EXXOXOXOXOX");
 
              for (Season season : temp.getSeasons()) {
+                 System.out.println("mesaaa");
                  System.out.println(season.getNumber());
                  for (Episode episode : season.getEpisodes()) {
                      System.out.println(episode.getName());

@@ -50,7 +50,7 @@ public class AddObject extends JFrame {
 
                  else if(serie.isSelected())
                  {
-                     new AddSerie().addSerie();
+                     new AddSerie();
                  }
                  /**
                  else if(choice3.isSelected())
