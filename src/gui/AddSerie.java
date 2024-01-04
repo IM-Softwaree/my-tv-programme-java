@@ -81,7 +81,7 @@ public class AddSerie extends JFrame {
 
                 neo = new Serie(t,d,a,c,p);
 
-                neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
+                neo.addSerieToFile(neo);  //!!!APPEND TO BINARY FILE
 
                 dispose();
             }
@@ -108,9 +108,9 @@ public class AddSerie extends JFrame {
                 Season newSeason = new Season(seasonNumber,seasonYear);
                 neo.setSeasons(newSeason);
 
-                neo.addSerieToFile();  //!!!APPEND TO BINARY FILE
+                neo.addSerieToFile(neo);  //!!!APPEND TO BINARY FILE
 
-            //    dispose();
+                dispose();
 
             }
         });

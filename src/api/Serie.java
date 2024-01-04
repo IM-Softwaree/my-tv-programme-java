@@ -26,8 +26,10 @@ public class Serie extends Video {
 
 
 
+
+
     //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
-    public void addSerieToFile()
+    public void addSerieToFile(Serie ex)
     {
         ArrayList<Serie> series = new ArrayList<>();
 
@@ -48,15 +50,25 @@ public class Serie extends Video {
             ee.printStackTrace();
         }
 
-        series.add(this);
+        boolean pass=true;
+        for (Serie serie : series) {
+            if(serie.getTitle().equals(ex.getTitle()))
+            {
+                pass=false;
+                //copy objects
+            }
+        }
+
+        if(pass==true)
+            series.add(this);
 
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
-            for (Serie serie : series) {
-                oos.writeObject(serie);
+                for (Serie serie : series) {
+                    oos.writeObject(serie);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
 
 
         //!!!!!!!!!!!!!!!!!!
@@ -66,10 +78,8 @@ public class Serie extends Video {
          Serie temp = (Serie) oos.readObject();  //read obj
 
          System.out.println(temp.getTitle());
-             System.out.println("EXXOXOXOXOX");
 
              for (Season season : temp.getSeasons()) {
-                 System.out.println("mesaaa");
                  System.out.println(season.getNumber());
                  for (Episode episode : season.getEpisodes()) {
                      System.out.println(episode.getName());
