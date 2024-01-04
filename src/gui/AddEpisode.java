@@ -4,15 +4,17 @@ import api.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
 
 public class AddEpisode extends JFrame{
 
-    public void addEpisode(Season se)
+    public Episode addEpisode()
     {
         JTextField name, duration;
         JButton ok;
+        String n;
+        int d;
 
         setTitle("Add a new episode");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -24,10 +26,10 @@ public class AddEpisode extends JFrame{
         JLabel label1 = new JLabel("Give episode information");
         this.add(label1);
 
-        name = new JTextField("NAME");
+        name = new JTextField("Name of episode");
         name.setPreferredSize(new Dimension(100, name.getPreferredSize().height));
 
-        duration = new JTextField("DURATION");
+        duration = new JTextField("0");
         duration.setPreferredSize(new Dimension(100, duration.getPreferredSize().height));
 
         ok = new JButton("Ok");
@@ -38,17 +40,25 @@ public class AddEpisode extends JFrame{
 
         ok.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String n = name.getText();
-                int d = Integer.parseInt(duration.getText());
 
-                Episode neo = new Episode(n,d);
-                se.setEpisodes(neo);
 
                 dispose();
             }
         });
 
+        n = name.getText();
+        d = Integer.parseInt(duration.getText());
+
+        Episode neoep = new Episode(n,d);
+
         setVisible(true);
+
+        System.out.println("FFAAAAAAAAAK");
+
+        return neoep;
+
     }
+
+
 
 }

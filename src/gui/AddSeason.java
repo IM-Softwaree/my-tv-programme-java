@@ -58,7 +58,7 @@ public class AddSeason extends JFrame {
 
                 Season neo = new Season(n,y);
 
-                new AddEpisode().addEpisode(neo);
+                new AddEpisode().addEpisode();
             }
         });
 
