@@ -8,7 +8,7 @@ public class LoginAPI {
 
     public LoginAPI(){
         //Initialization of files Movies.dat and Series.dat
-        //FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
+        FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
 
         String fileName = "Subscribers.txt"; // VLEPW AN TO ARXEIO YPARXEI KAI AN DEN TOTE TO DHMIOYRGW ALLIWS TO ANOIGW GIA EGRAFH H ANAGNWSH
 

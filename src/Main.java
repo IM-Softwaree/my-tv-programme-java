@@ -15,6 +15,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             LoginGUI loginGUI = new LoginGUI();
             loginGUI.start();
+            new AdminGUI().admin();
         });
 
 
@@ -27,7 +28,5 @@ public class Main {
             System.out.println(video.getTitle()+" "+video.getCategory());
         }
          */
-
-        new AdminGUI().admin();
     }
 }
