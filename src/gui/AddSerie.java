@@ -13,17 +13,17 @@ public class AddSerie extends JFrame {
     public AddSerie()
     {
         JTextField title, description, appropriateness,category, protagonists;
-        JButton save;
+        JButton save,back;
         JPanel panel,panel2,panel3,panel4,panel5;
 
         setTitle("Add a new serie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(300, 350));
+        this.setSize(new Dimension(260, 370));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
-        JLabel label1 = new JLabel("    Give serie information:    ");
+        JLabel label1 = new JLabel("    Give serie information and then click save:    ");
         this.add(label1);
 
         panel = new JPanel();
@@ -70,6 +70,8 @@ public class AddSerie extends JFrame {
         save = new JButton("Save");
         this.add(save);
 
+        JLabel labelA = new JLabel("    To add a season click bellow:    ");
+        this.add(labelA);
 
         save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -83,7 +85,6 @@ public class AddSerie extends JFrame {
 
                 neo.addSerieToFile(neo);  //!!!APPEND TO BINARY FILE
 
-                dispose();
             }
         });
 
@@ -106,18 +107,24 @@ public class AddSerie extends JFrame {
                 int seasonYear = Integer.parseInt(JOptionPane.showInputDialog("Enter season year:"));
 
                 Season newSeason = new Season(seasonNumber,seasonYear);
-                neo.setSeasons(newSeason);
 
-                neo.addSerieToFile(neo);  //!!!APPEND TO BINARY FILE
-
-                dispose();
+                neo.addSeasonToFile(neo,newSeason);  //!!!APPEND TO BINARY FILE
 
             }
         });
 
         this.add(addSeasonButton);
 
+        JLabel labelB = new JLabel("                                                    ");
+        this.add(labelB);
 
+        back = new JButton("Back");
+        this.add(back);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                 dispose();
+            }
+        });
 
 
 
