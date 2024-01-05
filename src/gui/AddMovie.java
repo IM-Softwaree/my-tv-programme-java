@@ -122,7 +122,6 @@ public class AddMovie extends JFrame{
                 else
                     JOptionPane.showMessageDialog(newWindow, "Adding a movie not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
-
             }
         });
 

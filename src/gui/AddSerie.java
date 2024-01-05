@@ -16,6 +16,16 @@ public class AddSerie extends JFrame {
         JButton save,back;
         JPanel panel,panel2,panel3,panel4,panel5;
 
+        JFrame newWindow = new JFrame("Adding a serie");
+        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setLocationRelativeTo(null);
+
+        // Set default close operation to EXIT_ON_CLOSE
+        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set layout manager for the new window
+        newWindow.setLayout(new FlowLayout());
+
         setTitle("Add a new serie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -83,7 +93,11 @@ public class AddSerie extends JFrame {
 
                 neo = new Serie(t,d,a,c,p);
 
-                neo.addSerieToFile(neo);  //!!!APPEND TO BINARY FILE
+                boolean result = neo.addSerieToFile(neo);  //!!!APPEND TO BINARY FILE
+                if(result)
+                    JOptionPane.showMessageDialog(newWindow, "Adding a serie successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(newWindow, "Adding a serie not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
@@ -101,7 +115,11 @@ public class AddSerie extends JFrame {
 
                 Season newSeason = new Season(seasonNumber,seasonYear);
 
-                neo.addSeasonToFile(t,newSeason);  //!!!APPEND TO BINARY FILE
+                boolean result2 = neo.addSeasonToFile(t,newSeason);
+                if(result2)
+                    JOptionPane.showMessageDialog(newWindow, "Adding a season successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(newWindow, "Adding a season not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });

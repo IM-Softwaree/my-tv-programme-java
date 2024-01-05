@@ -27,7 +27,9 @@ public class Serie extends Video {
 
 
     //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
-    public void addSerieToFile(Serie ex) {
+    public boolean addSerieToFile(Serie ex) {
+        boolean pass = true;
+
         ArrayList<Serie> series = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
@@ -47,27 +49,29 @@ public class Serie extends Video {
             ee.printStackTrace();
         }
 
-        boolean pass = true;
         for (Serie serie : series) {
             if (serie.getTitle().equals(ex.getTitle())) {
                 pass = false;
-                serie.setDescription(ex.getDescription());
-                serie.setAppropriateness(ex.getAppropriateness());
-                serie.setCategory(ex.getCategory());
-                serie.setProtagonists(ex.getProtagonists());
+            //    serie.setDescription(ex.getDescription());
+            //    serie.setAppropriateness(ex.getAppropriateness());
+            //    serie.setCategory(ex.getCategory());
+            //    serie.setProtagonists(ex.getProtagonists());
             }
         }
 
-        if (pass == true)
+        if (pass) {
             series.add(this);
 
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
-            for (Serie serie : series) {
-                oos.writeObject(serie);
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+                for (Serie serie : series) {
+                    oos.writeObject(serie);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
+        return pass;
 /**
          //!!!!!!!!!!!!!!!!!!
          try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
@@ -94,8 +98,10 @@ public class Serie extends Video {
     }
 
 
-    public void addSeasonToFile(String ex,Season f)
+    public boolean addSeasonToFile(String ex,Season f)
     {
+        boolean pass = false;  //ipotheto oti i seira den iparxei
+
         ArrayList<Serie> series = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
@@ -118,20 +124,24 @@ public class Serie extends Video {
 
         for (Serie serie : series) {
 
-            if(serie.getTitle().equals(ex))
+            if(serie.getTitle().equals(ex))  //an i seira iparxei bale season k graxtin sto file
             {
                 serie.setSeasons(f);
+                pass=true;
             }
         }
 
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
-            for (Serie serie : series) {
-                oos.writeObject(serie);
+        if(pass) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+                for (Serie serie : series) {
+                    oos.writeObject(serie);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
+        return pass;
 
 /**
          //!!!!!!!!!!!!!!!!!!
