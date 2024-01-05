@@ -51,7 +51,7 @@ public class AddObject extends JFrame {
         group.add(movie);
         group.add(serie);
         group.add(season);
-//AAA
+
         next.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(movie.isSelected())

@@ -35,8 +35,10 @@ public class Movie extends Video
 
 
     //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
-    public void addMovieToFile()
+    public boolean addMovieToFile()
     {
+        boolean result=true;  //theoro oti i tainia den iparxei
+
         ArrayList<Movie> movies = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
@@ -56,17 +58,25 @@ public class Movie extends Video
             ee.printStackTrace();
         }
 
-        movies.add(this);
-
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
-            for (Movie movie : movies) {
-                oos.writeObject(movie);
-            }
-        }catch (IOException e) {
-            e.printStackTrace();
+        for (Movie movie : movies) {
+            if(movie.getTitle().equals(this.getTitle()))  //an i tainia iparxei min kaneis tpt
+                result=false;
         }
 
+        if(result==true)  //an den iparxei balti
+        {
+            movies.add(this);
 
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
+                for (Movie movie : movies) {
+                    oos.writeObject(movie);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return result;
         /**
         //!!!!!!!!!!!!!!!!!!TEST
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {

@@ -14,10 +14,21 @@ public class AddMovie extends JFrame{
         JButton save,back;
         JPanel panel,panel2,panel3,panel4,panel5,panel6,panel7;
 
+        JFrame newWindow = new JFrame("Adding a movie");
+        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setLocationRelativeTo(null);
+
+        // Set default close operation to EXIT_ON_CLOSE
+        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set layout manager for the new window
+        newWindow.setLayout(new FlowLayout());
+
+
         setTitle("Add a new movie");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(300, 380));
+        this.setSize(new Dimension(350, 380));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
@@ -65,7 +76,7 @@ public class AddMovie extends JFrame{
         this.add(panel5);
 
         panel6 = new JPanel();
-        JLabel label7 = new JLabel("Year of first appearance:");
+        JLabel label7 = new JLabel("Year of first appearance(integer):");
         year = new JTextField();
         year.setPreferredSize(new Dimension(100, year.getPreferredSize().height));
         panel6.add(label7);
@@ -73,20 +84,29 @@ public class AddMovie extends JFrame{
         this.add(panel6);
 
         panel7 = new JPanel();
-        JLabel label8 = new JLabel("Movie duration:");
+        JLabel label8 = new JLabel("Movie duration(in minutes):");
         duration = new JTextField();
         duration.setPreferredSize(new Dimension(100, duration.getPreferredSize().height));
         panel7.add(label8);
         panel7.add(duration);
         this.add(panel7);
 
-        JLabel labelB = new JLabel("                                                    ");
-        this.add(labelB);
+
+        back = new JButton("Back");
+        this.add(back);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
+    //    JLabel labelB = new JLabel("                                                    ");
+    //    this.add(labelB);
 
         save = new JButton("Save");
 
         this.add(save);
-        //AAA
+
         save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
@@ -99,15 +119,13 @@ public class AddMovie extends JFrame{
 
                 Movie neo = new Movie(t,d,a,c,p,y,dur);
 
-                neo.addMovieToFile();
-            }
-        });
+                boolean result = neo.addMovieToFile();
+                if(result==true)
+                    JOptionPane.showMessageDialog(newWindow, "Adding a movie successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(newWindow, "Adding a movie not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
-        back = new JButton("Back");
-        this.add(back);
-        back.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+
             }
         });
 

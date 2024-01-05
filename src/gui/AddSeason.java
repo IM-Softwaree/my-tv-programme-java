@@ -32,7 +32,7 @@ public class AddSeason extends JFrame {
         panel.add(label2);
         panel.add(title);
         this.add(panel);
-//AAAA
+
 
         // Button to add new season
         JButton addSeasonButton = new JButton("Add Season");
