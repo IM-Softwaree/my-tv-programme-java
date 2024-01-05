@@ -59,7 +59,7 @@ public class Movie extends Video
         }
 
         for (Movie movie : movies) {
-            if(movie.getTitle().equals(this.getTitle()))  //an i tainia iparxei min kaneis tpt
+            if((movie.getTitle()).toUpperCase().equals((this.getTitle()).toUpperCase()))  //an i tainia iparxei min kaneis tpt
                 result=false;
         }
 

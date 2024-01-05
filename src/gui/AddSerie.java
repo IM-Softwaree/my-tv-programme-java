@@ -97,7 +97,7 @@ public class AddSerie extends JFrame {
                 if(result)
                     JOptionPane.showMessageDialog(newWindow, "Adding a serie successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(newWindow, "Adding a serie not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(newWindow, "Adding a serie NOT successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
@@ -119,7 +119,7 @@ public class AddSerie extends JFrame {
                 if(result2)
                     JOptionPane.showMessageDialog(newWindow, "Adding a season successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(newWindow, "Adding a season not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(newWindow, "Adding a season NOT successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
@@ -149,7 +149,7 @@ public class AddSerie extends JFrame {
                 if(result3)
                     JOptionPane.showMessageDialog(newWindow, "Adding an episode successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(newWindow, "Adding an episode not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(newWindow, "Adding an episode NOT successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
@@ -164,7 +164,7 @@ public class AddSerie extends JFrame {
         this.add(back);
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                 dispose();
+                dispose();
             }
         });
 
