@@ -92,7 +92,7 @@ public class Serie extends Video {
     }
 
 
-    public void addSeasonToFile(Serie ex,Season f)
+    public void addSeasonToFile(String ex,Season f)
     {
         ArrayList<Serie> series = new ArrayList<>();
 
@@ -113,24 +113,14 @@ public class Serie extends Video {
             ee.printStackTrace();
         }
 
-        boolean pass=true;
+
         for (Serie serie : series) {
-            if(serie.getTitle().equals(ex.getTitle()))
+
+            if(serie.getTitle().equals(ex))
             {
-                pass=false;
-                serie.setDescription(ex.getDescription());
-                serie.setAppropriateness(ex.getAppropriateness());
-                serie.setCategory(ex.getCategory());
-                serie.setProtagonists(ex.getProtagonists());
-
                 serie.setSeasons(f);
-
-                //episodes
             }
         }
-
-        if(pass==true)
-            series.add(this);
 
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
             for (Serie serie : series) {

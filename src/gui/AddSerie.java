@@ -95,19 +95,13 @@ public class AddSerie extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
-                String d = description.getText();
-                String a = appropriateness.getText();
-                String c = category.getText();
-                String p = protagonists.getText();
-
-                neo = new Serie(t,d,a,c,p);
 
                 int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
                 int seasonYear = Integer.parseInt(JOptionPane.showInputDialog("Enter season year:"));
 
                 Season newSeason = new Season(seasonNumber,seasonYear);
 
-                neo.addSeasonToFile(neo,newSeason);  //!!!APPEND TO BINARY FILE
+                neo.addSeasonToFile(t,newSeason);  //!!!APPEND TO BINARY FILE
 
             }
         });
