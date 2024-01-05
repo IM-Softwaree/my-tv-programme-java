@@ -119,12 +119,6 @@ public class AddSerie extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
-                String d = description.getText();
-                String a = appropriateness.getText();
-                String c = category.getText();
-                String p = protagonists.getText();
-
-                neo = new Serie(t,d,a,c,p);
 
                 int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
 
@@ -133,7 +127,7 @@ public class AddSerie extends JFrame {
 
                 Episode newEp = new Episode(episodeName,episodeDuration);
 
-                neo.addEpisodeToFile(neo,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
+                neo.addEpisodeToFile(t,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
 
             }
         });
