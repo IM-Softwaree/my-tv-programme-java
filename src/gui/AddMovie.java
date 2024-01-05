@@ -100,9 +100,6 @@ public class AddMovie extends JFrame{
             }
         });
 
-    //    JLabel labelB = new JLabel("                                                    ");
-    //    this.add(labelB);
-
         save = new JButton("Save");
 
         this.add(save);
@@ -131,64 +128,5 @@ public class AddMovie extends JFrame{
 
         setVisible(true);
     }
-
-
-    /* private void openNewWindowError() {
-
-        // Create and configure a new JFrame for the new window
-        JFrame newWindow = new JFrame("ADDING A MOVIE NOT SUCCESSFUL");
-        newWindow.setSize(new Dimension(300, 200));
-        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create a button on the bottom
-        JButton actionButton2 = new JButton("PRESS HERE TO CONTINUE");
-        actionButton2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Action to perform when the "PRESS HERE TO CONTINUE" button is clicked
-                // Dispose of the current JFrame (make it disappear)
-                newWindow.dispose();
-            }
-        });
-
-        // Show the message dialog
-        JOptionPane.showMessageDialog(newWindow, "ADDING A MOVIE NOT SUCCESSFUL!!!", "Message", JOptionPane.INFORMATION_MESSAGE);
-
-        // Add the button and label to the frame
-        newWindow.setLayout(new BorderLayout());
-        newWindow.add(actionButton2, BorderLayout.SOUTH);
-
-        // Make the new window visible
-        newWindow.setVisible(true);
-    }
-
-    private void openNewWindowSuccess() {
-
-        // Create and configure a new JFrame for the new window
-        JFrame newWindow = new JFrame("ADDING A MOVIE SUCCESSFUL");
-        newWindow.setSize(new Dimension(300, 200));
-        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create a button on the bottom
-        JButton actionButton2 = new JButton("PRESS HERE TO CONTINUE");
-        actionButton2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Action to perform when the "PRESS HERE TO CONTINUE" button is clicked
-                // Dispose of the current JFrame (make it disappear)
-                newWindow.dispose();
-            }
-        });
-
-        // Show the message dialog
-        JOptionPane.showMessageDialog(newWindow, "ADDING A MOVIE SUCCESSFUL!!!", "Message", JOptionPane.INFORMATION_MESSAGE);
-
-        // Add the button and label to the frame
-        newWindow.setLayout(new BorderLayout());
-        newWindow.add(actionButton2, BorderLayout.SOUTH);
-
-        // Make the new window visible
-        newWindow.setVisible(true);
-    } */
 
 }
