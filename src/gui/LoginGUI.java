@@ -255,6 +255,7 @@ public class LoginGUI extends JFrame {
         JFrame newWindow = new JFrame("Nextflix Admin");
         newWindow.setSize(new Dimension(300, 200));
         newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        newWindow.setLocationRelativeTo(null);
 
         // Create a button on the bottom
         JButton actionButton1 = new JButton("PRESS HERE TO CONTINUE");
@@ -293,6 +294,7 @@ public class LoginGUI extends JFrame {
         JFrame newWindow = new JFrame("Nextflix Subscriber");
         newWindow.setSize(new Dimension(300, 200));
         newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        newWindow.setLocationRelativeTo(null);
 
         // Create a button on the bottom
         JButton actionButton2 = new JButton("PRESS HERE TO CONTINUE");
