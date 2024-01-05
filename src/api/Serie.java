@@ -50,12 +50,8 @@ public class Serie extends Video {
         }
 
         for (Serie serie : series) {
-            if (serie.getTitle().equals(ex.getTitle())) {
+            if ((serie.getTitle().toUpperCase()).equals(ex.getTitle().toUpperCase())) {
                 pass = false;
-            //    serie.setDescription(ex.getDescription());
-            //    serie.setAppropriateness(ex.getAppropriateness());
-            //    serie.setCategory(ex.getCategory());
-            //    serie.setProtagonists(ex.getProtagonists());
             }
         }
 
@@ -124,7 +120,7 @@ public class Serie extends Video {
 
         for (Serie serie : series) {
 
-            if(serie.getTitle().equals(ex))  //an i seira iparxei bale season k graxtin sto file
+            if(((serie.getTitle()).toUpperCase()).equals(ex.toUpperCase()))  //an i seira iparxei bale season k graxtin sto file
             {
                 serie.setSeasons(f);
                 pass=true;
@@ -193,7 +189,7 @@ public class Serie extends Video {
 
         for (Serie serie : series) {
 
-            if(serie.getTitle().equals(ex))
+            if((serie.getTitle().toUpperCase()).equals(ex.toUpperCase()))
             {
                 for (Season season : serie.getSeasons()) {
                     if(season.getNumber()==f) {

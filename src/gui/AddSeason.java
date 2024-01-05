@@ -60,7 +60,7 @@ public class AddSeason extends JFrame {
                 if(result)
                     JOptionPane.showMessageDialog(newWindow, "Adding a season successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(newWindow, "Adding a season NOT successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(newWindow, "Adding a season NOT successful (Serie does not exist)", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
@@ -86,7 +86,7 @@ public class AddSeason extends JFrame {
                 if(res)
                     JOptionPane.showMessageDialog(newWindow, "Adding an episode successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(newWindow, "Adding an episode NOT successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(newWindow, "Adding an episode NOT successful (Season/Serie does not exist)", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });

@@ -120,7 +120,7 @@ public class AddMovie extends JFrame{
                 if(result==true)
                     JOptionPane.showMessageDialog(newWindow, "Adding a movie successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
-                    JOptionPane.showMessageDialog(newWindow, "Adding a movie NOT successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(newWindow, "Adding a movie NOT successful (Movie already exists)", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
