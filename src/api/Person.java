@@ -90,7 +90,7 @@ public class Person {
         {
             ArrayList<Video> all = new ArrayList<>();
 
-            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
                 while (true) {  // repeat until end of file
                     Movie temp = (Movie) oos.readObject();  //read obj
                     all.add(temp);
@@ -101,7 +101,7 @@ public class Person {
                 ee.printStackTrace();
             }
 
-            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
                 while (true) {  // repeat until end of file
                     Serie temp = (Serie) oos.readObject();  //read obj
                     all.add(temp);
@@ -121,7 +121,7 @@ public class Person {
         }
 
             if(!(obj instanceof Serie)) {  //diladi einai Video h Movie
-                try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+                try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
                     //ta diabazo apo to binary file Movies
 
@@ -154,7 +154,7 @@ public class Person {
                 return searchResults;
             }
 
-            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
                 //ta diabazo apo to binary file Series
 

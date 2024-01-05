@@ -32,7 +32,7 @@ public class Serie extends Video {
 
         ArrayList<Serie> series = new ArrayList<>();
 
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
             //ta diabazo ola apo to binary file Series
 
@@ -58,7 +58,7 @@ public class Serie extends Video {
         if (pass) {
             series.add(this);
 
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
                 for (Serie serie : series) {
                     oos.writeObject(serie);
                 }
@@ -70,7 +70,7 @@ public class Serie extends Video {
         return pass;
 /**
          //!!!!!!!!!!!!!!!!!!
-         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
          while (true) {  // repeat until end of file
          Serie temp = (Serie) oos.readObject();  //read obj
@@ -100,7 +100,7 @@ public class Serie extends Video {
 
         ArrayList<Serie> series = new ArrayList<>();
 
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
             //ta diabazo ola apo to binary file Series
 
@@ -128,7 +128,7 @@ public class Serie extends Video {
         }
 
         if(pass) {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
                 for (Serie serie : series) {
                     oos.writeObject(serie);
                 }
@@ -141,7 +141,7 @@ public class Serie extends Video {
 
 /**
          //!!!!!!!!!!!!!!!!!!
-         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
          while (true) {  // repeat until end of file
          Serie temp = (Serie) oos.readObject();  //read obj
@@ -170,7 +170,7 @@ public class Serie extends Video {
 
         ArrayList<Serie> series = new ArrayList<>();
 
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
             //ta diabazo ola apo to binary file Series
 
@@ -201,7 +201,7 @@ public class Serie extends Video {
         }
 
         if(pass) {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
                 for (Serie serie : series) {
                     oos.writeObject(serie);
                 }
@@ -212,7 +212,7 @@ public class Serie extends Video {
 
 
  //!!!!!!!!!!!!!!!!!!
- try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+ try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
  while (true) {  // repeat until end of file
  Serie temp = (Serie) oos.readObject();  //read obj

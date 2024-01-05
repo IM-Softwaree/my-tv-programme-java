@@ -33,15 +33,13 @@ public class Movie extends Video
         return this.movieDuration;
     }
 
-
-    //NA ALLAXO TO ARXEIO STO KANONIKO STO TELOS!!!!!!!!!!!
     public boolean addMovieToFile()
     {
         boolean result=true;  //theoro oti i tainia den iparxei
 
         ArrayList<Movie> movies = new ArrayList<>();
 
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
             //ta diabazo ola apo to binary file Series
 
@@ -67,7 +65,7 @@ public class Movie extends Video
         {
             movies.add(this);
 
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("MoviesTEST.dat"))) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
                 for (Movie movie : movies) {
                     oos.writeObject(movie);
                 }
@@ -79,7 +77,7 @@ public class Movie extends Video
         return result;
         /**
         //!!!!!!!!!!!!!!!!!!TEST
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
             while (true) {  // repeat until end of file
                 Movie temp = (Movie) oos.readObject();  //read obj
