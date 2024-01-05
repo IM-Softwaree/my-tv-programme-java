@@ -100,7 +100,6 @@ public class AddMovie extends JFrame{
                 Movie neo = new Movie(t,d,a,c,p,y,dur);
 
                 neo.addMovieToFile();
-
             }
         });
 
