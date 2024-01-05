@@ -95,26 +95,18 @@ public class AddSerie extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
-                String d = description.getText();
-                String a = appropriateness.getText();
-                String c = category.getText();
-                String p = protagonists.getText();
-
-                neo = new Serie(t,d,a,c,p);
 
                 int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
                 int seasonYear = Integer.parseInt(JOptionPane.showInputDialog("Enter season year:"));
 
                 Season newSeason = new Season(seasonNumber,seasonYear);
 
-                neo.addSeasonToFile(neo,newSeason);  //!!!APPEND TO BINARY FILE
+                neo.addSeasonToFile(t,newSeason);  //!!!APPEND TO BINARY FILE
 
             }
         });
 
         this.add(addSeasonButton);
-
-
 
 
         JLabel labelC = new JLabel("    To add an episode click bellow:    ");
@@ -127,12 +119,6 @@ public class AddSerie extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
-                String d = description.getText();
-                String a = appropriateness.getText();
-                String c = category.getText();
-                String p = protagonists.getText();
-
-                neo = new Serie(t,d,a,c,p);
 
                 int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
 
@@ -141,14 +127,12 @@ public class AddSerie extends JFrame {
 
                 Episode newEp = new Episode(episodeName,episodeDuration);
 
-                neo.addEpisodeToFile(neo,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
+                neo.addEpisodeToFile(t,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
 
             }
         });
 
         this.add(addEpisodeButton);
-
-
 
 
         JLabel labelB = new JLabel("                                                    ");
@@ -161,8 +145,6 @@ public class AddSerie extends JFrame {
                  dispose();
             }
         });
-
-
 
         setVisible(true);
     }

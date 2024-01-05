@@ -10,12 +10,12 @@ public class AddObject extends JFrame {
     public void add()
     {
         JRadioButton movie, serie, season, episode;
-        JButton next;
+        JButton next,back;
 
         setTitle("Add a new object");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(300, 200));
+        this.setSize(new Dimension(280, 200));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
@@ -27,12 +27,26 @@ public class AddObject extends JFrame {
         season = new JRadioButton("Season");
         episode = new JRadioButton("Episode");
 
+
         next = new JButton("Next");
 
         this.add(movie);
         this.add(serie);
         this.add(season);
         this.add(episode);
+
+
+        back = new JButton("Back");
+        this.add(back);
+
+        JLabel labelB = new JLabel("                                         ");
+        this.add(labelB);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
         this.add(next);
 
         ButtonGroup group = new ButtonGroup();
@@ -52,11 +66,12 @@ public class AddObject extends JFrame {
                  {
                      new AddSerie();
                  }
-                 /**
-                 else if(choice3.isSelected())
+
+                 else if(season.isSelected())
                  {
 
                  }
+                 /**
                  else
                  {
 
@@ -65,7 +80,6 @@ public class AddObject extends JFrame {
 
             }
         });
-
 
 
         setVisible(true);
