@@ -48,6 +48,7 @@ public class Video implements Serializable {
         this.averageRatingForSearch=x;
     }
 
+
     public float findAverageRating()
     {
         int sum=0;

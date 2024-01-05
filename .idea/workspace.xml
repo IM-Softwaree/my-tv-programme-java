@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="DGFD">
-      <change beforePath="$PROJECT_DIR$/src/api/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddSerie.java" afterDir="false" />
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="messages">
+      <change afterPath="$PROJECT_DIR$/src/gui/SearchVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AdminGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdminGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,20 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00007" summary="a">
-      <created>1704117680304</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1704117680304</updated>
-    </task>
-    <task id="LOCAL-00008" summary="a">
-      <created>1704127994871</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1704127994871</updated>
     </task>
     <task id="LOCAL-00009" summary="a">
       <created>1704128674416</created>
@@ -431,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1704464661196</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="messages">
+      <created>1704465165685</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1704465165685</updated>
+    </task>
+    <task id="LOCAL-00057" summary="messages">
+      <created>1704465412586</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1704465412586</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -444,7 +446,8 @@
     <MESSAGE value="it works on my computer" />
     <MESSAGE value="DEN KANEI UPDATE" />
     <MESSAGE value="DGFD" />
-    <option name="LAST_COMMIT_MESSAGE" value="DGFD" />
+    <MESSAGE value="messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="messages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
