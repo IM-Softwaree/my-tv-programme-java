@@ -253,8 +253,23 @@ public class LoginGUI extends JFrame {
 
         // Create and configure a new JFrame for the new window
         JFrame newWindow = new JFrame("Nextflix Admin");
-        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setSize(new Dimension(300, 200));
         newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a button on the bottom
+        JButton actionButton1 = new JButton("PRESS HERE TO CONTINUE");
+        actionButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Action to perform when the "PRESS HERE TO CONTINUE" button is clicked
+                SwingUtilities.invokeLater(() -> {
+                    new AdminGUI().admin();
+                });
+
+                // Dispose of the current JFrame (make it disappear)
+                newWindow.dispose();
+            }
+        });
 
         // Show the message dialog
         JOptionPane.showMessageDialog(newWindow, "YOU HAVE SUCCESSFULLY LOGGED IN AS AN ADMIN", "Message", JOptionPane.INFORMATION_MESSAGE);
@@ -262,18 +277,37 @@ public class LoginGUI extends JFrame {
         JLabel welcomeLabel = new JLabel("WELCOME DEAR ADMIN");
         welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        newWindow.add(welcomeLabel);
+        // Add the button and label to the frame
+        newWindow.setLayout(new BorderLayout());
+        newWindow.add(actionButton1, BorderLayout.SOUTH);
+        newWindow.add(welcomeLabel, BorderLayout.CENTER);
 
         // Make the new window visible
         newWindow.setVisible(true);
     }
 
+    //-----------------------------------------------------------------------
     private void openNewWindowUser() {
 
         // Create and configure a new JFrame for the new window
         JFrame newWindow = new JFrame("Nextflix Subscriber");
-        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setSize(new Dimension(300, 200));
         newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Create a button on the bottom
+        JButton actionButton2 = new JButton("PRESS HERE TO CONTINUE");
+        actionButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Action to perform when the "PRESS HERE TO CONTINUE" button is clicked
+                SwingUtilities.invokeLater(() -> {
+                    new SubscriberGUI().subscriber();
+                });
+
+                // Dispose of the current JFrame (make it disappear)
+                newWindow.dispose();
+            }
+        });
 
         // Show the message dialog
         JOptionPane.showMessageDialog(newWindow, "YOU HAVE SUCCESSFULLY LOGGED IN AS A SUBSCRIBER", "Message", JOptionPane.INFORMATION_MESSAGE);
@@ -281,7 +315,10 @@ public class LoginGUI extends JFrame {
         JLabel welcomeLabel = new JLabel("WELCOME DEAR SUBSCRIBER");
         welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        newWindow.add(welcomeLabel);
+        // Add the button and label to the frame
+        newWindow.setLayout(new BorderLayout());
+        newWindow.add(actionButton2, BorderLayout.SOUTH);
+        newWindow.add(welcomeLabel, BorderLayout.CENTER);
 
         // Make the new window visible
         newWindow.setVisible(true);

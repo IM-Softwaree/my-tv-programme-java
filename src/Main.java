@@ -12,12 +12,11 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-       /* SwingUtilities.invokeLater(() -> {
+        SwingUtilities.invokeLater(() -> {
             LoginGUI loginGUI = new LoginGUI();
             loginGUI.start();
         });
-*/
-        new AdminGUI().admin();
+
 
         /**
         Video MovieForSearch = new Video(null,null,null,null,null);
