@@ -86,7 +86,7 @@ public class AddMovie extends JFrame{
         save = new JButton("Save");
 
         this.add(save);
-
+        //AAA
         save.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();

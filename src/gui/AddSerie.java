@@ -66,7 +66,7 @@ public class AddSerie extends JFrame {
         panel5.add(protagonists);
         this.add(panel5);
 
-
+//AAAA
         save = new JButton("Save");
         this.add(save);
 
