@@ -8,59 +8,78 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddSeason extends JFrame {
-
+    private Serie neo = new Serie() ;
     public AddSeason()
     {
-        JTextField number, year;
-        JButton ok,addepisode;
+        JTextField title;
+        JButton back;
+        JPanel panel;
 
         setTitle("Add a new season");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setSize(new Dimension(300, 200));
+        this.setSize(new Dimension(400, 200));
         this.setResizable(true);
         this.setLayout(new FlowLayout());
 
-        JLabel label1 = new JLabel("Give season information");
+        JLabel label1 = new JLabel("Give the name of the serie you want to add seasons and episodes:");
         this.add(label1);
 
-        number = new JTextField("NUMBER");
-        number.setPreferredSize(new Dimension(100, number.getPreferredSize().height));
+        panel = new JPanel();
+        JLabel label2 = new JLabel("Title:");
+        title = new JTextField();
+        title.setPreferredSize(new Dimension(100, title.getPreferredSize().height));
+        panel.add(label2);
+        panel.add(title);
+        this.add(panel);
 
-        year = new JTextField("YEAR");
-        year.setPreferredSize(new Dimension(100, year.getPreferredSize().height));
 
-        ok = new JButton("Ok");
-
-        this.add(number);
-        this.add(year);
-        this.add(ok);
-
-        ok.addActionListener(new ActionListener() {
+        // Button to add new season
+        JButton addSeasonButton = new JButton("Add Season");
+        addSeasonButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                int n = Integer.parseInt(number.getText());
-                int y = Integer.parseInt(year.getText());
+                String t = title.getText();
 
-                Season neo = new Season(n,y);
+                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
+                int seasonYear = Integer.parseInt(JOptionPane.showInputDialog("Enter season year:"));
 
-               // s.setSeasons(neo);
+                Season newSeason = new Season(seasonNumber,seasonYear);
 
-                dispose();
+                neo.addSeasonToFile(t,newSeason);  //!!!APPEND TO BINARY FILE
+
             }
         });
 
-        addepisode = new JButton("Add an episode");
-        this.add(addepisode);
-        addepisode.addActionListener(new ActionListener() {
+        this.add(addSeasonButton);
+
+
+        // Button to add new episode
+        JButton addEpisodeButton = new JButton("Add Episode");
+        addEpisodeButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                int n = Integer.parseInt(number.getText());
-                int y = Integer.parseInt(year.getText());
+                String t = title.getText();
 
-                Season neo = new Season(n,y);
+                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
 
-                Episode fak =  new AddEpisode().addEpisode();
+                String episodeName = JOptionPane.showInputDialog("Enter episode name:");
+                int episodeDuration = Integer.parseInt(JOptionPane.showInputDialog("Enter episode duration:"));
 
-                System.out.println(fak.getName()+" "+fak.getDuration());
+                Episode newEp = new Episode(episodeName,episodeDuration);
+
+                neo.addEpisodeToFile(t,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
+
+            }
+        });
+
+        this.add(addEpisodeButton);
+
+        back = new JButton("Back");
+        this.add(back);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
             }
         });
 
