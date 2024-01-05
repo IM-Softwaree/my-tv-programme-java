@@ -83,6 +83,35 @@ public class Person {
         if(obj.getAverageRatingForSearch()!=-1)
             criteria++;
 
+        //return evrything an criteria==0
+        if (criteria==0)
+        {
+            ArrayList<Video> all = new ArrayList<>();
+
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
+                while (true) {  // repeat until end of file
+                    Movie temp = (Movie) oos.readObject();  //read obj
+                    all.add(temp);
+                }
+            } catch (EOFException end) {
+                // System.out.println("Reached the end of file");
+            } catch (IOException | ClassNotFoundException ee) {
+                ee.printStackTrace();
+            }
+
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
+                while (true) {  // repeat until end of file
+                    Serie temp = (Serie) oos.readObject();  //read obj
+                    all.add(temp);
+                }
+            } catch (EOFException end) {
+                // System.out.println("Reached the end of file");
+            } catch (IOException | ClassNotFoundException ee) {
+                ee.printStackTrace();
+            }
+
+            return all;
+        }
 
             if(!(obj instanceof Serie)) {  //diladi einai Video h Movie
                 try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {

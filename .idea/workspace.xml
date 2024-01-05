@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="messages">
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SearchVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchVideo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00010" summary="aA">
-      <created>1704129970711</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1704129970711</updated>
     </task>
     <task id="LOCAL-00011" summary="aA">
       <created>1704135359337</created>
@@ -432,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704473970026</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="search">
+      <created>1704488725300</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1704488725300</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -446,7 +445,8 @@
     <MESSAGE value="DEN KANEI UPDATE" />
     <MESSAGE value="DGFD" />
     <MESSAGE value="messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="messages" />
+    <MESSAGE value="search" />
+    <option name="LAST_COMMIT_MESSAGE" value="search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
