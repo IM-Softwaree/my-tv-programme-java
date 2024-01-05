@@ -145,7 +145,11 @@ public class AddSerie extends JFrame {
 
                 Episode newEp = new Episode(episodeName,episodeDuration);
 
-                neo.addEpisodeToFile(t,seasonNumber,newEp);  //!!!APPEND TO BINARY FILE
+                boolean result3 = neo.addEpisodeToFile(t,seasonNumber,newEp);
+                if(result3)
+                    JOptionPane.showMessageDialog(newWindow, "Adding an episode successful", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(newWindow, "Adding an episode not successful", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });

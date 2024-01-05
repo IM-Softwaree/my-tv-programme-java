@@ -168,8 +168,10 @@ public class Serie extends Video {
 */
     }
 
-    public void addEpisodeToFile(String ex,int f,Episode m)
+    public boolean addEpisodeToFile(String ex,int f,Episode m)
     {
+        boolean pass = false;  //ipotheto oti i seira den iparxei
+
         ArrayList<Serie> series = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
@@ -194,20 +196,23 @@ public class Serie extends Video {
             if(serie.getTitle().equals(ex))
             {
                 for (Season season : serie.getSeasons()) {
-                    if(season.getNumber()==f)
+                    if(season.getNumber()==f) {
                         season.setEpisodes(m);
+                        pass=true;
+                    }
                 }
             }
         }
 
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
-            for (Serie serie : series) {
-                oos.writeObject(serie);
+        if(pass) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("SeriesTEST.dat"))) {
+                for (Serie serie : series) {
+                    oos.writeObject(serie);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-
 
 
  //!!!!!!!!!!!!!!!!!!
@@ -233,8 +238,8 @@ public class Serie extends Video {
  }
 
 
+       return pass;
     }
-
 
 
 }
