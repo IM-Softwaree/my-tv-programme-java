@@ -110,7 +110,7 @@ public class AddSerie extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
 
-                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
+                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number(Integer): "));
                 int seasonYear = Integer.parseInt(JOptionPane.showInputDialog("Enter season year:"));
 
                 Season newSeason = new Season(seasonNumber,seasonYear);
@@ -138,10 +138,10 @@ public class AddSerie extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String t = title.getText();
 
-                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number:"));
+                int seasonNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter season number(Integer):"));
 
                 String episodeName = JOptionPane.showInputDialog("Enter episode name:");
-                int episodeDuration = Integer.parseInt(JOptionPane.showInputDialog("Enter episode duration:"));
+                int episodeDuration = Integer.parseInt(JOptionPane.showInputDialog("Enter episode duration(In minutes):"));
 
                 Episode newEp = new Episode(episodeName,episodeDuration);
 
