@@ -11,6 +11,8 @@ public class Person {
     private String password;
     private String username;
 
+    public Person(){}
+
     public Person(String username, String password){
         this.password = password;
         this.username = username;
@@ -110,16 +112,21 @@ public class Person {
                 ee.printStackTrace();
             }
 
+            //TEST
+            for (Video video : all) {
+                System.out.println(video.getTitle()+" "+video.getCategory());
+            }
+
             return all;
         }
 
             if(!(obj instanceof Serie)) {  //diladi einai Video h Movie
-                try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
+                try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("MoviesTEST.dat"))) {
 
                     //ta diabazo apo to binary file Movies
 
                     while (true) {  // repeat until end of file
-                        Video temp = (Video) oos.readObject();  //read obj
+                        Movie temp = (Movie) oos.readObject();  //read obj
 
                         check = searchVideoHelper(obj, temp);
 
@@ -128,19 +135,26 @@ public class Person {
                     }
 
                 } catch (EOFException end) {
-                    System.out.println("Reached the end of file");
+                 //   System.out.println("Reached the end of file");
 
                 } catch (IOException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             }
 
+
+        //TEST
+        for (Video searchResult : searchResults) {
+            System.out.println(searchResult.getTitle()+" "+searchResult.getCategory());
+        }
+
+
             if(obj instanceof Movie)
             {
                 return searchResults;
             }
 
-            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("SeriesTEST.dat"))) {
 
                 //ta diabazo apo to binary file Series
 
@@ -154,11 +168,20 @@ public class Person {
                 }
 
             } catch (EOFException end) {
-                System.out.println("Reached the end of file");
+             //   System.out.println("Reached the end of file");
 
             }catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
+
+
+
+       //TEST
+        for (Video searchResult : searchResults) {
+            System.out.println(searchResult.getTitle()+" "+searchResult.getCategory());
+        }
+
+
 
             return searchResults;
 

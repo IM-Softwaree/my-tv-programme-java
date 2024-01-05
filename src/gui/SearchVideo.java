@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SearchVideo extends JFrame{
+    private Person person = new Person();
     public SearchVideo()
     {
         JTextField title, appropriateness,category, protagonists, rating;
@@ -77,21 +78,120 @@ public class SearchVideo extends JFrame{
 
         movie.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String tit;
+                String ap;
+                String cat;
+                String pro;
+                float rat;
 
+                if(title.getText().isEmpty())
+                    tit=null;
+                else
+                    tit=title.getText();
+
+                if(appropriateness.getText().isEmpty())
+                    ap=null;
+                else
+                    ap=appropriateness.getText();
+
+                if(category.getText().isEmpty())
+                    cat=null;
+                else
+                    cat=category.getText();
+
+                if(protagonists.getText().isEmpty())
+                    pro=null;
+                else
+                    pro=protagonists.getText();
+
+                if(rating.getText().isEmpty())
+                    rat=-1;
+                else
+                    rat=Float.parseFloat(rating.getText());
+
+                Movie send = new Movie(tit,null,ap,cat,pro,0,0);
+                send.setAverageRatingForSearch(rat);
+                person.searchVideo(send);
 
             }
         });
 
         serie.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String tit;
+                String ap;
+                String cat;
+                String pro;
+                float rat;
 
+                if(title.getText().isEmpty())
+                    tit=null;
+                else
+                    tit=title.getText();
+
+                if(appropriateness.getText().isEmpty())
+                    ap=null;
+                else
+                    ap=appropriateness.getText();
+
+                if(category.getText().isEmpty())
+                    cat=null;
+                else
+                    cat=category.getText();
+
+                if(protagonists.getText().isEmpty())
+                    pro=null;
+                else
+                    pro=protagonists.getText();
+
+                if(rating.getText().isEmpty())
+                    rat=-1;
+                else
+                    rat=Float.parseFloat(rating.getText());
+
+                Serie send = new Serie(tit,null,ap,cat,pro);
+                send.setAverageRatingForSearch(rat);
+                person.searchVideo(send);
 
             }
         });
 
         all.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                String tit;
+                String ap;
+                String cat;
+                String pro;
+                float rat;
 
+                if(title.getText().isEmpty())
+                    tit=null;
+                else
+                    tit=title.getText();
+
+                if(appropriateness.getText().isEmpty())
+                    ap=null;
+                else
+                    ap=appropriateness.getText();
+
+                if(category.getText().isEmpty())
+                    cat=null;
+                else
+                    cat=category.getText();
+
+                if(protagonists.getText().isEmpty())
+                    pro=null;
+                else
+                    pro=protagonists.getText();
+
+                if(rating.getText().isEmpty())
+                    rat=-1;
+                else
+                    rat=Float.parseFloat(rating.getText());
+
+                Video send = new Video(tit,null,ap,cat,pro);
+                send.setAverageRatingForSearch(rat);
+                person.searchVideo(send);
 
             }
         });
@@ -99,4 +199,5 @@ public class SearchVideo extends JFrame{
 
         setVisible(true);
     }
+
 }
