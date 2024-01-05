@@ -58,12 +58,10 @@ public class AddObject extends JFrame {
                 {
                     new AddMovie().addMovie();
                 }
-
                  else if(serie.isSelected())
                  {
                      new AddSerie();
                  }
-
                  else
                  {
                      new AddSeason();
