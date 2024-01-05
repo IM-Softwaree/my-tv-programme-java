@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="it works on my computer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddSerie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AddEpisode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,7 +411,21 @@
       <option name="project" value="LOCAL" />
       <updated>1704450240532</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="it works on my computer">
+      <created>1704450741546</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1704450741546</updated>
+    </task>
+    <task id="LOCAL-00048" summary="it works on my computer">
+      <created>1704453837350</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1704453837350</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -11,6 +11,8 @@ public class Serie extends Video {
 
     ArrayList<Season> seasons = new ArrayList<>();
 
+    public Serie(){}
+
     public Serie(String t, String d, String a, String c, String p) {
         super(t, d, a, c, p);
     }
