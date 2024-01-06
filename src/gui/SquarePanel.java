@@ -35,7 +35,7 @@ class SquarePanel extends JPanel {
         detailsWindow.setSize(new Dimension(700, 200));
         detailsWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-     //   detailsWindow.setLayout(new BoxLayout(detailsWindow, BoxLayout.Y_AXIS));
+       // JButton edit;
 
         if(tempVideo instanceof Movie){     // FOR MOVIES
 
@@ -89,6 +89,16 @@ class SquarePanel extends JPanel {
 
                 i++;
             }
+
+            /**
+            edit = new JButton("Edit");
+            panel.add(edit);
+            edit.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+
+                }
+            });
+             */
 
             detailsWindow.add(panel);
 
