@@ -43,19 +43,19 @@ public class Person {
     {
         int check=0;
 
-        if(obj.getTitle()!=null && temp.getTitle().contains(obj.getTitle()) )  //to exei epilexei o xristis gia search k einai paromoia
+        if(obj.getTitle()!=null && ((temp.getTitle()).toUpperCase()).contains((obj.getTitle()).toUpperCase()) )  //to exei epilexei o xristis gia search k einai paromoia
         {
             check++;
         }
-        if(obj.getProtagonists()!=null && temp.getProtagonists().contains(obj.getProtagonists()) )
+        if(obj.getProtagonists()!=null && ((temp.getProtagonists()).toUpperCase()).contains((obj.getProtagonists()).toUpperCase()) )
         {
             check++;
         }
-        if(obj.getAppropriateness()!=null && temp.getAppropriateness().equals(obj.getAppropriateness()) )
+        if(obj.getAppropriateness()!=null && ((temp.getAppropriateness()).toUpperCase()).contains((obj.getAppropriateness()).toUpperCase()) )
         {
             check++;
         }
-        if(obj.getCategory()!=null && temp.getCategory().equals(obj.getCategory()) )
+        if(obj.getCategory()!=null && ((temp.getCategory()).toUpperCase()).contains((obj.getCategory()).toUpperCase()) )
         {
             check++;
         }
