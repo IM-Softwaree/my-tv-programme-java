@@ -17,7 +17,7 @@ public class WatchListGUI extends JFrame {
 
         ArrayList<Video> videos = Video.returnAllVideos();
         for (Video tempVideo : videos){
-            addSquare(squaresPanel, tempVideo.getTitle());
+            addSquare(squaresPanel, tempVideo);
         }
 
         JScrollPane scrollPane = new JScrollPane(squaresPanel);
@@ -29,9 +29,11 @@ public class WatchListGUI extends JFrame {
         setVisible(true);
     }
 
-    private void addSquare(JPanel panel, String squareName) {
-        SquarePanel squarePanel = new SquarePanel(squareName);
+    private void addSquare(JPanel panel, Video tempVideo) {
+        SquarePanel squarePanel = new SquarePanel(tempVideo);
         squarePanel.setPreferredSize(new Dimension(400, 200)); // Adjust size as needed
         panel.add(squarePanel);
     }
+
+
 }
