@@ -129,9 +129,9 @@ public class Serie extends Video {
      * It firstly reads all the objects from the file and saves them in an Arraylist<Serie> called series.
      * Then it checks each serie title, to see if it is equal to the serie title we want to add the new season.
      * If the serie existed, and we added the new season, then write the list of series back to our file.
-     * @param ex
-     * @param f
-     * @return
+     * @param ex The name of the serie we want to add a new season
+     * @param f The new object Season we want to add
+     * @return True if the serie existed, and we added the season and false otherwise
      */
     public boolean addSeasonToFile(String ex,Season f)
     {
@@ -201,29 +201,41 @@ public class Serie extends Video {
 */
     }
 
+    /**
+     * Function that adds a new episode to a season of an existing serie and then writes the altered object Serie back to the binary file Serie.dat.
+     * It returns true if the appending was successful and false if it was not, meaning that no object
+     * Serie with the same title or Season with the same number existed in the file.
+     * It firstly reads all the objects from the file and saves them in an Arraylist<Serie> called series.
+     * Then it checks each serie title and each season number, to see if it is equal to the serie title and the
+     * season number we want to add the new episode.
+     * If the serie existed, and we added the new episode, then write the list of series back to our file.
+     * @param ex The name of the serie we want to add a new episode
+     * @param f The number of the season we want to add a new episode
+     * @param m The new object Episode we want to add
+     * @return True if the serie existed, and we added the episode and false otherwise
+     */
     public boolean addEpisodeToFile(String ex,int f,Episode m)
     {
-        boolean pass = false;  //ipotheto oti i seira den iparxei
+        boolean pass = false;   //first assumption is that the serie does not already exist
 
         ArrayList<Serie> series = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
-            //ta diabazo ola apo to binary file Series
-
             while (true) {  // repeat until end of file
-                Serie temp = (Serie) oos.readObject();  //read obj
+                Serie temp = (Serie) oos.readObject();  //read object
 
                 series.add(temp);
             }
 
         } catch (EOFException end) {
-            // System.out.println("Reached the end of file");
+            //Reached the end of file
 
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
         }
 
+        //Check all the series to see if the serie and the season number already exists, and if it does add the new season
         for (Serie serie : series) {
 
             if((serie.getTitle().toUpperCase()).equals(ex.toUpperCase()))
@@ -237,6 +249,7 @@ public class Serie extends Video {
             }
         }
 
+        //If the serie existed, and we added the new episode then write all the series back to the file
         if(pass) {
             try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
                 for (Serie serie : series) {
@@ -247,7 +260,7 @@ public class Serie extends Video {
             }
         }
 
-
+/**
  //!!!!!!!!!!!!!!!!!!
  try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
@@ -269,7 +282,7 @@ public class Serie extends Video {
  } catch (IOException | ClassNotFoundException ee) {
  ee.printStackTrace();
  }
-
+*/
 
        return pass;
     }

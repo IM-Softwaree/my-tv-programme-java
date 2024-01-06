@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="search">
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Series.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Series.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Assessment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Episode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Season.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00016" summary="aA">
-      <created>1704202504534</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1704202504534</updated>
     </task>
     <task id="LOCAL-00017" summary="gui">
       <created>1704205453702</created>
@@ -434,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704547096849</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="javadoc">
+      <created>1704551517245</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551517245</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -450,7 +453,8 @@
     <MESSAGE value="messages" />
     <MESSAGE value="a little javadoc" />
     <MESSAGE value="search" />
-    <option name="LAST_COMMIT_MESSAGE" value="search" />
+    <MESSAGE value="javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

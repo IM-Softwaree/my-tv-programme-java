@@ -160,7 +160,7 @@ public class Video implements Serializable {
      * @param username The name of the subscriber making the assessment
      * @param text The comments of the subscriber making the assessment
      * @param rating The rating given by the subscriber making the assessment
-     * @param date The date when the subscriber makde the assessment
+     * @param date The date when the subscriber made the assessment
      */
     public void addAssessment(String username,String text, int rating, String date)
     {
