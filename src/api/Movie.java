@@ -67,38 +67,39 @@ public class Movie extends Video
     /**
      * Function that appends an object Movie to the binary file Movies.dat. It returns true if the appending was
      * successful and false if it was not, meaning that another object Movie with the same title already existed in the file.
-     *
-     * @return
+     * In order to append, it firstly reads all the objects from the file and saves them in an Arraylist<Movie> called
+     * movies. Then it checks each movie title, to see if it is equal to the new movie we want to add. If the movie does
+     * not exist, we can add it to the list of movies and then write the list to our file.
+     * @return True if the movie did not already exist and was added to the file and false otherwise
      */
     public boolean addMovieToFile()
     {
-        boolean result=true;  //theoro oti i tainia den iparxei
+        boolean result=true;  //first assumption is that the movie does not already exist
 
         ArrayList<Movie> movies = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
-            //ta diabazo ola apo to binary file Series
-
             while (true) {  // repeat until end of file
-                Movie temp = (Movie) oos.readObject();  //read obj
+                Movie temp = (Movie) oos.readObject();  //read object
 
                 movies.add(temp);
             }
-
         } catch (EOFException end) {
-            // System.out.println("Reached the end of file");
+            // Reached the end of file
 
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
         }
 
+        //Check all the movies to see if the new movie already exists
         for (Movie movie : movies) {
-            if((movie.getTitle()).toUpperCase().equals((this.getTitle()).toUpperCase()))  //an i tainia iparxei min kaneis tpt
+            if((movie.getTitle()).toUpperCase().equals((this.getTitle()).toUpperCase()))
                 result=false;
         }
 
-        if(result==true)  //an den iparxei balti
+        //If the movie did not exist, then add it
+        if(result)
         {
             movies.add(this);
 
