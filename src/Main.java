@@ -16,7 +16,7 @@ public class Main {
             LoginGUI loginGUI = new LoginGUI();
             loginGUI.start();
 
-            new SearchVideo();
+            //new SearchVideo();
         });
 
 

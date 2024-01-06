@@ -1,6 +1,6 @@
 package api;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -176,6 +176,35 @@ public class Video implements Serializable {
     {
         ArrayList<Video> similar = new ArrayList<>();
         return similar;
+    }
+
+    public static ArrayList<Video> returnAllVideos()
+    {
+        ArrayList<Video> all = new ArrayList<>();
+
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
+            while (true) {  // repeat until end of file
+                Movie temp = (Movie) oos.readObject();  //read obj
+                all.add(temp);
+            }
+        } catch (EOFException end) {
+            // System.out.println("Reached the end of file");
+        } catch (IOException | ClassNotFoundException ee) {
+            ee.printStackTrace();
+        }
+
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
+            while (true) {  // repeat until end of file
+                Serie temp = (Serie) oos.readObject();  //read obj
+                all.add(temp);
+            }
+        } catch (EOFException end) {
+            // System.out.println("Reached the end of file");
+        } catch (IOException | ClassNotFoundException ee) {
+            ee.printStackTrace();
+        }
+
+        return all;
     }
 
 }

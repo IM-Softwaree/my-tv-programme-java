@@ -2,6 +2,9 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+
+import api.*;
 public class WatchListGUI extends JFrame {
 
     public WatchListGUI() {
@@ -12,9 +15,9 @@ public class WatchListGUI extends JFrame {
         JPanel squaresPanel = new JPanel();
         squaresPanel.setLayout(new GridLayout(0, 5)); // Set 4 columns
 
-        // Create and add 20 black squares with different names
-        for (int i = 1; i <= 100; i++) {
-            addSquare(squaresPanel, "Square " + i);
+        ArrayList<Video> videos = Video.returnAllVideos();
+        for (Video tempVideo : videos){
+            addSquare(squaresPanel, tempVideo.getTitle());
         }
 
         JScrollPane scrollPane = new JScrollPane(squaresPanel);
