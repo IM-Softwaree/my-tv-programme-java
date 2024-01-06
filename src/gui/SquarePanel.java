@@ -34,7 +34,7 @@ class SquarePanel extends JPanel {
         JFrame detailsWindow = new JFrame(squareName + " Details");
         detailsWindow.setSize(new Dimension(300, 150));
         detailsWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setLayout(new FlowLayout());
+        detailsWindow.setLayout(new FlowLayout());
 
         if(tempVideo instanceof Movie){     // FOR MOVIES
 
@@ -76,11 +76,13 @@ class SquarePanel extends JPanel {
             JLabel label5 = new JLabel("Protagonists : " + tempVideo.getProtagonists());
             detailsWindow.add(label5);
 
+            /**
             JLabel label6 = new JLabel("Seasons : " + ((Serie) tempVideo).getSeasons());
             detailsWindow.add(label6);
 
             JLabel label7 = new JLabel("Episodes : " );
             detailsWindow.add(label7);
+             */
 
         }
 
