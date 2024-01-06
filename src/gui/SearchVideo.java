@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class SearchVideo extends JFrame{
-    private Person person = new Person();
+    private Video person = new Video();
     public SearchVideo()
     {
         JTextField title, appropriateness,category, protagonists, rating;
@@ -126,7 +126,6 @@ public class SearchVideo extends JFrame{
                     JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
                 {
-                    // Option 1: See list of movies and series
                     SwingUtilities.invokeLater(() -> {
                         WatchListGUI watchListGUI = new WatchListGUI(res);
                     });
@@ -175,7 +174,6 @@ public class SearchVideo extends JFrame{
                     JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
                 {
-                    // Option 1: See list of movies and series
                     SwingUtilities.invokeLater(() -> {
                         WatchListGUI watchListGUI = new WatchListGUI(res);
                     });
@@ -225,7 +223,6 @@ public class SearchVideo extends JFrame{
                     JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
                 {
-                    // Option 1: See list of movies and series
                     SwingUtilities.invokeLater(() -> {
                         WatchListGUI watchListGUI = new WatchListGUI(res);
                     });
