@@ -68,28 +68,41 @@ class SquarePanel extends JPanel {
 
         }else if(tempVideo instanceof Serie){    // FOR SERIES
 
+            // Create a JPanel to hold the labels
+            JPanel panel = new JPanel();
+            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
             JLabel label1 = new JLabel("Title : " + tempVideo.getTitle());
-            detailsWindow.add(label1);
+            panel.add(label1);
 
             JLabel label2 = new JLabel("Description : " + tempVideo.getDescription());
-            detailsWindow.add(label2);
+            panel.add(label2);
 
             JLabel label3 = new JLabel("Appropriateness : " + tempVideo.getAppropriateness());
-            detailsWindow.add(label3);
+            panel.add(label3);
 
             JLabel label4 = new JLabel("Category : " + tempVideo.getCategory());
-            detailsWindow.add(label4);
+            panel.add(label4);
 
             JLabel label5 = new JLabel("Protagonists : " + tempVideo.getProtagonists());
-            detailsWindow.add(label5);
+            panel.add(label5);
 
-            /**
-            JLabel label6 = new JLabel("Seasons : " + ((Serie) tempVideo).getSeasons());
-            detailsWindow.add(label6);
+            for (Season season : ((Serie) tempVideo).getSeasons()) {
+                JLabel label6 = new JLabel("Season : " + season.getNumber());
+                panel.add(label6);
+                JLabel label7 = new JLabel("Season's year: " + season.getYear());
+                panel.add(label7);
 
-            JLabel label7 = new JLabel("Episodes : " );
-            detailsWindow.add(label7);
-             */
+                for (Episode episode : season.getEpisodes()) {
+                    JLabel label8 = new JLabel("Episode's name: " + episode.getName());
+                    panel.add(label8);
+                    JLabel label9 = new JLabel("Episode's duration: " + episode.getDuration());
+                    panel.add(label9);
+
+                }
+            }
+
+            detailsWindow.add(panel);
 
         }
 
