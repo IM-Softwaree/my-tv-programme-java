@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SearchVideo extends JFrame{
     private Person person = new Person();
@@ -14,6 +15,15 @@ public class SearchVideo extends JFrame{
         JButton movie,serie,all;
         JPanel panel,panel3,panel4,panel5,panel6;
 
+        JFrame newWindow = new JFrame("Search result");
+        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setLocationRelativeTo(null);
+
+        // Set default close operation to EXIT_ON_CLOSE
+        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set layout manager for the new window
+        newWindow.setLayout(new FlowLayout());
 
         setTitle("Search");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -111,7 +121,16 @@ public class SearchVideo extends JFrame{
 
                 Movie send = new Movie(tit,null,ap,cat,pro,0,0);
                 send.setAverageRatingForSearch(rat);
-                person.searchVideo(send);
+                ArrayList<Video> res =  person.searchVideo(send);
+                if(res.size()==0)
+                    JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                {
+                    //TEST
+                    for (Video re : res) {
+                        System.out.println(re.getTitle()+" "+re.getCategory());
+                    }
+                }
 
             }
         });
@@ -151,7 +170,9 @@ public class SearchVideo extends JFrame{
 
                 Serie send = new Serie(tit,null,ap,cat,pro);
                 send.setAverageRatingForSearch(rat);
-                person.searchVideo(send);
+                ArrayList<Video> res = person.searchVideo(send);
+                if(res.size()==0)
+                    JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });
@@ -191,7 +212,9 @@ public class SearchVideo extends JFrame{
 
                 Video send = new Video(tit,null,ap,cat,pro);
                 send.setAverageRatingForSearch(rat);
-                person.searchVideo(send);
+                ArrayList<Video> res = person.searchVideo(send);
+                if(res.size()==0)
+                    JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
 
             }
         });

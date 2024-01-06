@@ -112,11 +112,6 @@ public class Person {
                 ee.printStackTrace();
             }
 
-            //TEST
-            for (Video video : all) {
-                System.out.println(video.getTitle()+" "+video.getCategory());
-            }
-
             return all;
         }
 
@@ -142,13 +137,6 @@ public class Person {
                 }
             }
 
-
-        //TEST
-        for (Video searchResult : searchResults) {
-            System.out.println(searchResult.getTitle()+" "+searchResult.getCategory());
-        }
-
-
             if(obj instanceof Movie)
             {
                 return searchResults;
@@ -173,15 +161,6 @@ public class Person {
             }catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
-
-
-
-       //TEST
-        for (Video searchResult : searchResults) {
-            System.out.println(searchResult.getTitle()+" "+searchResult.getCategory());
-        }
-
-
 
             return searchResults;
 
