@@ -32,50 +32,39 @@ class SquarePanel extends JPanel {
 
         // Create and configure a new JFrame for the details window
         JFrame detailsWindow = new JFrame(squareName + " Details");
-        detailsWindow.setSize(new Dimension(500, 300));
+        detailsWindow.setSize(new Dimension(700, 200));
         detailsWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        detailsWindow.setLayout(new FlowLayout());
+
+     //   detailsWindow.setLayout(new BoxLayout(detailsWindow, BoxLayout.Y_AXIS));
 
         if(tempVideo instanceof Movie){     // FOR MOVIES
 
-            JLabel label1 = new JLabel("Title : " + tempVideo.getTitle());
-            detailsWindow.add(label1);
+            // Create a JPanel to hold the labels
+            JPanel panel = new JPanel();
+            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-            JLabel labelB = new JLabel("                                                    ");
-            detailsWindow.add(labelB);
+            JLabel label1 = new JLabel("Title : " + tempVideo.getTitle());
+            panel.add(label1);
 
             JLabel label2 = new JLabel("Description : " + tempVideo.getDescription());
-            detailsWindow.add(label2);
-
-            JLabel labelC = new JLabel("                                                    ");
-            detailsWindow.add(labelC);
+            panel.add(label2);
 
             JLabel label3 = new JLabel("Appropriateness : " + tempVideo.getAppropriateness());
-            detailsWindow.add(label3);
-
-            JLabel labelD = new JLabel("                                                    ");
-            detailsWindow.add(labelD);
+            panel.add(label3);
 
             JLabel label4 = new JLabel("Category : " + tempVideo.getCategory());
-            detailsWindow.add(label4);
-
-            JLabel labelE = new JLabel("                                                    ");
-            detailsWindow.add(labelE);
+            panel.add(label4);
 
             JLabel label5 = new JLabel("Protagonists : " + tempVideo.getProtagonists());
-            detailsWindow.add(label5);
-
-            JLabel labelF = new JLabel("                                                    ");
-            detailsWindow.add(labelF);
+            panel.add(label5);
 
             JLabel label6 = new JLabel("Duration : " + ((Movie) tempVideo).getMovieDuration());
-            detailsWindow.add(label6);
-
-            JLabel labelG = new JLabel("                                                    ");
-            detailsWindow.add(labelG);
+            panel.add(label6);
 
             JLabel label7 = new JLabel("Year Of First Appearance : " + ((Movie) tempVideo).getYearOfFirstAppearance());
-            detailsWindow.add(label7);
+            panel.add(label7);
+
+            detailsWindow.add(panel);
 
         }else if(tempVideo instanceof Serie){    // FOR SERIES
 
