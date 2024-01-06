@@ -8,7 +8,7 @@ import api.*;
 public class WatchListGUI extends JFrame {
 
     public WatchListGUI() {
-        setTitle("Scrollable Black Squares");
+        setTitle("List of movies and series");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
