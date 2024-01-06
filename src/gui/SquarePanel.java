@@ -64,6 +64,32 @@ class SquarePanel extends JPanel {
             JLabel label7 = new JLabel("Year Of First Appearance : " + ((Movie) tempVideo).getYearOfFirstAppearance());
             panel.add(label7);
 
+            JLabel labelA = new JLabel("Number of assessments: " + tempVideo.getAssessments().size());
+            panel.add(labelA);
+
+            JLabel labelB = new JLabel("Average rating: " + tempVideo.findAverageRating());
+            panel.add(labelB);
+
+            int i=1;
+            for (Assessment assessment : tempVideo.getAssessments()) {
+                JLabel labelC = new JLabel("Assessment " +i);
+                panel.add(labelC);
+
+                JLabel labelG = new JLabel("Date: " + assessment.getDate());
+                panel.add(labelG);
+
+                JLabel labelD = new JLabel("User's name: " + assessment.getUsername());
+                panel.add(labelD);
+
+                JLabel labelE = new JLabel("Comments: " + assessment.getText());
+                panel.add(labelE);
+
+                JLabel labelF = new JLabel("Rating: " + assessment.getRating());
+                panel.add(labelF);
+
+                i++;
+            }
+
             detailsWindow.add(panel);
 
         }else if(tempVideo instanceof Serie){    // FOR SERIES
@@ -100,6 +126,32 @@ class SquarePanel extends JPanel {
                     panel.add(label9);
 
                 }
+            }
+
+            JLabel labelA = new JLabel("Number of assessments: " + tempVideo.getAssessments().size());
+            panel.add(labelA);
+
+            JLabel labelB = new JLabel("Average rating: " + tempVideo.findAverageRating());
+            panel.add(labelB);
+
+            int i=1;
+            for (Assessment assessment : tempVideo.getAssessments()) {
+                JLabel labelC = new JLabel("Assessment " +i);
+                panel.add(labelC);
+
+                JLabel labelG = new JLabel("Date: " + assessment.getDate());
+                panel.add(labelG);
+
+                JLabel labelD = new JLabel("User's name: " + assessment.getUsername());
+                panel.add(labelD);
+
+                JLabel labelE = new JLabel("Comments: " + assessment.getText());
+                panel.add(labelE);
+
+                JLabel labelF = new JLabel("Rating: " + assessment.getRating());
+                panel.add(labelF);
+
+                i++;
             }
 
             detailsWindow.add(panel);

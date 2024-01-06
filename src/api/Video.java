@@ -155,6 +155,11 @@ public class Video implements Serializable {
         return this.averageRatingForSearch;
     }
 
+    public ArrayList<Assessment> getAssessments()
+    {
+        return this.assessments;
+    }
+
     /**
      * Function that adds a new assessment to the list of the assessments of the Video
      * @param username The name of the subscriber making the assessment
