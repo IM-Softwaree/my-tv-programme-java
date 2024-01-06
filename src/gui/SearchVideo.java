@@ -173,6 +173,14 @@ public class SearchVideo extends JFrame{
                 ArrayList<Video> res = person.searchVideo(send);
                 if(res.size()==0)
                     JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                {
+                    // Option 1: See list of movies and series
+                    SwingUtilities.invokeLater(() -> {
+                        WatchListGUI watchListGUI = new WatchListGUI(res);
+                    });
+                    dispose();
+                }
 
             }
         });
@@ -215,6 +223,14 @@ public class SearchVideo extends JFrame{
                 ArrayList<Video> res = person.searchVideo(send);
                 if(res.size()==0)
                     JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
+                else
+                {
+                    // Option 1: See list of movies and series
+                    SwingUtilities.invokeLater(() -> {
+                        WatchListGUI watchListGUI = new WatchListGUI(res);
+                    });
+                    dispose();
+                }
 
             }
         });
