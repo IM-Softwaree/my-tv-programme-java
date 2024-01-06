@@ -36,8 +36,10 @@ public class SubscriberGUI extends JFrame {
                 });
                 break;
             case 1:
-                // Option 2: Search bar
-                JOptionPane.showMessageDialog(null, "Opening the search bar.");
+                // Option 2: See list of movies and series
+                SwingUtilities.invokeLater(() -> {
+                    SearchVideo searchVideo  = new SearchVideo();
+                });
                 break;
             default:
                 // Handle unexpected option
