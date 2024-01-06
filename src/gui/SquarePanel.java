@@ -32,7 +32,7 @@ class SquarePanel extends JPanel {
 
         // Create and configure a new JFrame for the details window
         JFrame detailsWindow = new JFrame(squareName + " Details");
-        detailsWindow.setSize(new Dimension(300, 150));
+        detailsWindow.setSize(new Dimension(500, 300));
         detailsWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         detailsWindow.setLayout(new FlowLayout());
 
@@ -41,20 +41,38 @@ class SquarePanel extends JPanel {
             JLabel label1 = new JLabel("Title : " + tempVideo.getTitle());
             detailsWindow.add(label1);
 
+            JLabel labelB = new JLabel("                                                    ");
+            detailsWindow.add(labelB);
+
             JLabel label2 = new JLabel("Description : " + tempVideo.getDescription());
             detailsWindow.add(label2);
+
+            JLabel labelC = new JLabel("                                                    ");
+            detailsWindow.add(labelC);
 
             JLabel label3 = new JLabel("Appropriateness : " + tempVideo.getAppropriateness());
             detailsWindow.add(label3);
 
+            JLabel labelD = new JLabel("                                                    ");
+            detailsWindow.add(labelD);
+
             JLabel label4 = new JLabel("Category : " + tempVideo.getCategory());
             detailsWindow.add(label4);
+
+            JLabel labelE = new JLabel("                                                    ");
+            detailsWindow.add(labelE);
 
             JLabel label5 = new JLabel("Protagonists : " + tempVideo.getProtagonists());
             detailsWindow.add(label5);
 
+            JLabel labelF = new JLabel("                                                    ");
+            detailsWindow.add(labelF);
+
             JLabel label6 = new JLabel("Duration : " + ((Movie) tempVideo).getMovieDuration());
             detailsWindow.add(label6);
+
+            JLabel labelG = new JLabel("                                                    ");
+            detailsWindow.add(labelG);
 
             JLabel label7 = new JLabel("Year Of First Appearance : " + ((Movie) tempVideo).getYearOfFirstAppearance());
             detailsWindow.add(label7);
