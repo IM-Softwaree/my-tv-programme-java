@@ -51,7 +51,10 @@ public class AdminGUI extends JFrame {
 
                 else if(choice2.isSelected())
                 {
-                    //LIST OF MOVIES AND SERIES
+                    // Option 1: See list of movies and series
+                    SwingUtilities.invokeLater(() -> {
+                        WatchListGUI watchListGUI = new WatchListGUI();
+                    });
                 }
                 else
                 {
