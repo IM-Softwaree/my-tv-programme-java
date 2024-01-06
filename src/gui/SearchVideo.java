@@ -12,7 +12,7 @@ public class SearchVideo extends JFrame{
     public SearchVideo()
     {
         JTextField title, appropriateness,category, protagonists, rating;
-        JButton movie,serie,all;
+        JButton movie,serie,all,back;
         JPanel panel,panel3,panel4,panel5,panel6;
 
         JFrame newWindow = new JFrame("Search result");
@@ -219,6 +219,14 @@ public class SearchVideo extends JFrame{
             }
         });
 
+
+        back = new JButton("Back");
+        this.add(back);
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
 
         setVisible(true);
     }
