@@ -38,40 +38,26 @@ class SquarePanel extends JPanel {
 
         if(tempVideo instanceof Movie){     // FOR MOVIES
 
-            // Add a label with the description
-            JLabel titleLabel = new JLabel("Description: This is the details for " + squareName);
-            titleLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(titleLabel);
+            JLabel label1 = new JLabel("Title : " + tempVideo.getTitle());
+            detailsWindow.add(label1);
 
-            // Add a label with the description
-            JLabel descriptionLabel = new JLabel("Description: This is the details for " + squareName);
-            descriptionLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(descriptionLabel);
+            JLabel label2 = new JLabel("Description : " + tempVideo.getDescription());
+            detailsWindow.add(label2);
 
-            // Add a label with the description
-            JLabel appropriatetenessLabel = new JLabel("Description: This is the details for " + squareName);
-            appropriatetenessLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(appropriatetenessLabel);
+            JLabel label3 = new JLabel("Appropriateness : " + tempVideo.getAppropriateness());
+            detailsWindow.add(label3);
 
-            // Add a label with the description
-            JLabel categoryLabel = new JLabel("Description: This is the details for " + squareName);
-            categoryLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(categoryLabel);
+            JLabel label4 = new JLabel("Category : " + tempVideo.getCategory());
+            detailsWindow.add(label4);
 
-            // Add a label with the description
-            JLabel protagonistsLabel = new JLabel("Description: This is the details for " + squareName);
-            protagonistsLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(protagonistsLabel);
+            JLabel label5 = new JLabel("Protagonists : " + tempVideo.getProtagonists());
+            detailsWindow.add(label5);
 
-            // Add a label with the description
-            JLabel yearOfFirstAppearenceLabel = new JLabel("Description: This is the details for " + squareName);
-            yearOfFirstAppearenceLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(yearOfFirstAppearenceLabel);
+            JLabel label6 = new JLabel("Duration : " + ((Movie) tempVideo).getMovieDuration());
+            detailsWindow.add(label6);
 
-            // Add a label with the description
-            JLabel moviedurationLabel = new JLabel("Description: This is the details for " + squareName);
-            moviedurationLabel.setHorizontalAlignment(JLabel.CENTER);
-            detailsWindow.add(moviedurationLabel);
+            JLabel label7 = new JLabel("Year Of First Appearance : " + ((Movie) tempVideo).getYearOfFirstAppearance());
+            detailsWindow.add(label7);
 
         }else if(tempVideo instanceof Serie){    // FOR SERIES
 
