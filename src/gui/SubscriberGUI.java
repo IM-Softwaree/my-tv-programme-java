@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class SubscriberGUI extends JFrame {
 
-    public void subscriber(){
+    public void subscriber() {
 
         Object[] options = {"See list of movies and series", "Search bar"};
 
@@ -21,12 +21,29 @@ public class SubscriberGUI extends JFrame {
                 options,
                 options[0]);
 
-        if (result == JOptionPane.CLOSED_OPTION) {
-            // User closed the dialog
-            System.out.println("Dialog closed");
-        } else {
-            // User made a selection
-            System.out.println("Selected: " + options[result]);
+        if (result != JOptionPane.CLOSED_OPTION) {
+            handleSelection(result);
+        }
+
+    }
+
+    private void handleSelection(int optionIndex) {
+        switch (optionIndex) {
+            case 0:
+                // Option 1: See list of movies and series
+                SwingUtilities.invokeLater(() -> {
+                    WatchListGUI watchListGUI = new WatchListGUI();
+                });
+                break;
+            case 1:
+                // Option 2: Search bar
+                JOptionPane.showMessageDialog(null, "Opening the search bar.");
+                break;
+            default:
+                // Handle unexpected option
+                JOptionPane.showMessageDialog(null, "Unexpected option selected.");
+                break;
         }
     }
+
 }
