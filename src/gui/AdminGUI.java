@@ -55,7 +55,10 @@ public class AdminGUI extends JFrame {
                 }
                 else
                 {
-                    //SEARCH
+                    // Option 1: See list of movies and series
+                    SwingUtilities.invokeLater(() -> {
+                        SearchVideo searchVideo  = new SearchVideo();
+                    });
                 }
 
             }

@@ -126,12 +126,12 @@ public class SearchVideo extends JFrame{
                     JOptionPane.showMessageDialog(newWindow, "No matching result found", "Message", JOptionPane.INFORMATION_MESSAGE);
                 else
                 {
-                    //TEST
-                    for (Video re : res) {
-                        System.out.println(re.getTitle()+" "+re.getCategory());
-                    }
+                    // Option 1: See list of movies and series
+                    SwingUtilities.invokeLater(() -> {
+                        WatchListGUI watchListGUI = new WatchListGUI(res);
+                    });
+                    dispose();
                 }
-
             }
         });
 

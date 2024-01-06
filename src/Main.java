@@ -15,8 +15,6 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             LoginGUI loginGUI = new LoginGUI();
             loginGUI.start();
-
-            //new SearchVideo();
         });
 
 
