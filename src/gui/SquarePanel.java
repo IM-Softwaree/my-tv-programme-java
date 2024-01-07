@@ -162,6 +162,16 @@ class SquarePanel extends JPanel {
         {
             JButton edit = new JButton("Edit");
             detailsWindow.add(edit);
+            edit.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+
+                    if(tempVideo instanceof Movie){
+
+                    }
+
+
+                }
+            });
         }
         else
         {
