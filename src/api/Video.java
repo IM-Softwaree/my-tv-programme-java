@@ -378,44 +378,71 @@ public class Video implements Serializable {
 
 
     /**
-     *
-     * @param old
+     * Function that replaces an old video (movie/serie) from the files, with a new edited one
+     * @param old the video (movie or serie) we edited and want to replace
      */
     public void editingMovie(Video old)
     {
-        //diabazo ta panta ap ta arxeia
         ArrayList<Video> all = new ArrayList<>();
 
-        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
-            while (true) {  // repeat until end of file
-                Movie temp = (Movie) oos.readObject();  //read obj
-                all.add(temp);
+        //read all the objects from the file Movies.dat or Series.dat
+        if(old instanceof Movie) {
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
+                while (true) {  // repeat until end of file
+                    Movie temp = (Movie) oos.readObject();  //read obj
+                    all.add(temp);
+                }
+            } catch (EOFException end) {
+                // System.out.println("Reached the end of file");
+            } catch (IOException | ClassNotFoundException ee) {
+                ee.printStackTrace();
             }
-        } catch (EOFException end) {
-            // System.out.println("Reached the end of file");
-        } catch (IOException | ClassNotFoundException ee) {
-            ee.printStackTrace();
+        }
+        else {
+            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
+                while (true) {  // repeat until end of file
+                    Serie temp = (Serie) oos.readObject();  //read obj
+                    all.add(temp);
+                }
+            } catch (EOFException end) {
+                // System.out.println("Reached the end of file");
+            } catch (IOException | ClassNotFoundException ee) {
+                ee.printStackTrace();
+            }
         }
 
+        //find the old video
         Iterator<Video> iterator = all.iterator();
         while (iterator.hasNext()) {
             Video video = iterator.next();
-            //tsekaro poio einai iso me to old
             if (video.getTitle().equals(old.getTitle())) {
-                iterator.remove(); // Remove the old video
-                all.add(this);     // Add the new video
-                break;             // Exit the loop after replacing the video
+                iterator.remove(); //remove the old video
+                all.add(this);     //add the new video
+                break;             //end the loop
             }
         }
 
-        //ta xanagrafo sto arxeio
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
-            for (Video video : all) {
-                oos.writeObject(video);
-            }
+        //write again all the objects to the file
+        if(old instanceof Movie) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
+                for (Video video : all) {
+                    oos.writeObject(video);
+                }
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
+                for (Video video : all) {
+                    oos.writeObject(video);
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
     }
