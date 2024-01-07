@@ -2,6 +2,7 @@ package api;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Class that implements a video. A Video consists of a title, a description, an appropriateness level, a category,
@@ -354,15 +355,15 @@ public class Video implements Serializable {
             ee.printStackTrace();
         }
 
-        int i=0;
-        //tsekaro poio einai iso me to old
-        for (Video video : all) {
-            if(video.getTitle().equals(old.getTitle()))
-            {
-                all.remove(i);  //afairo to old
-                all.add(i,this);  //bazo to neo
+        Iterator<Video> iterator = all.iterator();
+        while (iterator.hasNext()) {
+            Video video = iterator.next();
+            //tsekaro poio einai iso me to old
+            if (video.getTitle().equals(old.getTitle())) {
+                iterator.remove(); // Remove the old video
+                all.add(this);     // Add the new video
+                break;             // Exit the loop after replacing the video
             }
-            i++;
         }
 
         //ta xanagrafo sto arxeio
