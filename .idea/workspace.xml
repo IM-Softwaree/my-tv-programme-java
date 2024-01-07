@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="meh">
+      <change afterPath="$PROJECT_DIR$/test/api/EpisodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AdminGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdminGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SearchVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchVideo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SquarePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/WatchListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/WatchListGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -53,6 +58,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="api" />
       <recent name="" />
     </key>
   </component>
@@ -87,13 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00027" summary="guiIII">
-      <created>1704284365947</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1704284365947</updated>
     </task>
     <task id="LOCAL-00028" summary="guiIII">
       <created>1704289496068</created>
@@ -431,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704569909949</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="meh">
+      <created>1704571900360</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1704571900360</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

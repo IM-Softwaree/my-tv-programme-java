@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import api.*;
 public class WatchListGUI extends JFrame {
 
-    public WatchListGUI() {
+    public WatchListGUI(String who) {
         setTitle("List of movies and series");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -19,7 +19,7 @@ public class WatchListGUI extends JFrame {
 
         ArrayList<Video> videos = Video.returnAllVideos();
         for (Video tempVideo : videos){
-            addSquare(squaresPanel, tempVideo);
+            addSquare(squaresPanel, tempVideo, who);
         }
 
         JScrollPane scrollPane = new JScrollPane(squaresPanel);
@@ -31,7 +31,7 @@ public class WatchListGUI extends JFrame {
         setVisible(true);
     }
 
-    public WatchListGUI(ArrayList<Video> searchList) {
+    public WatchListGUI(ArrayList<Video> searchList,String who) {
         setTitle("List of movies and series after the search");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -42,7 +42,7 @@ public class WatchListGUI extends JFrame {
 
 
         for (Video tempVideo : searchList){
-            addSquare(squaresPanel, tempVideo);
+            addSquare(squaresPanel, tempVideo, who);
         }
 
         JScrollPane scrollPane1 = new JScrollPane(squaresPanel);
@@ -57,7 +57,7 @@ public class WatchListGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Option 1: See list of movies and series
                 SwingUtilities.invokeLater(() -> {
-                    SearchVideo searchVideo  = new SearchVideo();
+                    SearchVideo searchVideo  = new SearchVideo(who);
                 });
                 dispose();
             }
@@ -74,8 +74,8 @@ public class WatchListGUI extends JFrame {
         setVisible(true);
     }
 
-    private void addSquare(JPanel panel, Video tempVideo) {
-        SquarePanel squarePanel = new SquarePanel(tempVideo);
+    private void addSquare(JPanel panel, Video tempVideo, String who) {
+        SquarePanel squarePanel = new SquarePanel(tempVideo,who);
         squarePanel.setPreferredSize(new Dimension(400, 200)); // Adjust size as needed
         panel.add(squarePanel);
     }

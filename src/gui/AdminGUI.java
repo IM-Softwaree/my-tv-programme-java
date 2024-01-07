@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AdminGUI extends JFrame {
+    private String who= "admin";
 
     public void admin()
     {
@@ -52,13 +53,13 @@ public class AdminGUI extends JFrame {
                 else if(choice2.isSelected())
                 {
                     SwingUtilities.invokeLater(() -> {
-                        WatchListGUI watchListGUI = new WatchListGUI();
+                        WatchListGUI watchListGUI = new WatchListGUI(who);
                     });
                 }
                 else
                 {
                     SwingUtilities.invokeLater(() -> {
-                        SearchVideo searchVideo  = new SearchVideo();
+                        SearchVideo searchVideo  = new SearchVideo(who);
                     });
                 }
 

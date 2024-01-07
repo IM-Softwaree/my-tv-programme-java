@@ -11,7 +11,7 @@ import api.*;
 class SquarePanel extends JPanel {
     private String squareName;
 
-    public SquarePanel(Video tempVideo) {
+    public SquarePanel(Video tempVideo,String who) {
         this.squareName = tempVideo.getTitle();
         setPreferredSize(new Dimension(400, 200));
         setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
@@ -20,7 +20,7 @@ class SquarePanel extends JPanel {
         detailsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                showDetails(tempVideo);
+                showDetails(tempVideo,who);
             }
         });
 
@@ -28,14 +28,12 @@ class SquarePanel extends JPanel {
         add(detailsButton, BorderLayout.SOUTH);
     }
 
-    private void showDetails(Video tempVideo) {
+    private void showDetails(Video tempVideo,String who) {
 
         // Create and configure a new JFrame for the details window
         JFrame detailsWindow = new JFrame(squareName + " Details");
         detailsWindow.setSize(new Dimension(700, 200));
         detailsWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-       // JButton edit;
 
         if(tempVideo instanceof Movie){     // FOR MOVIES
 
@@ -89,16 +87,6 @@ class SquarePanel extends JPanel {
 
                 i++;
             }
-
-            /**
-            edit = new JButton("Edit");
-            panel.add(edit);
-            edit.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-
-                }
-            });
-             */
 
             detailsWindow.add(panel);
 
@@ -167,6 +155,17 @@ class SquarePanel extends JPanel {
             detailsWindow.add(panel);
 
         }
+
+        //Buttons for admins or subscribers
+        if(who.equals("admin"))
+        {
+            System.out.println(who);
+        }
+        else
+        {
+            System.out.println(who);
+        }
+
 
         // Make the details window visible
         detailsWindow.setLocationRelativeTo(null);

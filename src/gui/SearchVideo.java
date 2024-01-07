@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class SearchVideo extends JFrame{
     private Video person = new Video();
-    public SearchVideo()
+    public SearchVideo(String who)
     {
         JTextField title, appropriateness,category, protagonists, rating;
         JButton movie,serie,all,back;
@@ -127,7 +127,7 @@ public class SearchVideo extends JFrame{
                 else
                 {
                     SwingUtilities.invokeLater(() -> {
-                        WatchListGUI watchListGUI = new WatchListGUI(res);
+                        WatchListGUI watchListGUI = new WatchListGUI(res,who);
                     });
                     dispose();
                 }
@@ -175,7 +175,7 @@ public class SearchVideo extends JFrame{
                 else
                 {
                     SwingUtilities.invokeLater(() -> {
-                        WatchListGUI watchListGUI = new WatchListGUI(res);
+                        WatchListGUI watchListGUI = new WatchListGUI(res,who);
                     });
                     dispose();
                 }
@@ -224,7 +224,7 @@ public class SearchVideo extends JFrame{
                 else
                 {
                     SwingUtilities.invokeLater(() -> {
-                        WatchListGUI watchListGUI = new WatchListGUI(res);
+                        WatchListGUI watchListGUI = new WatchListGUI(res,who);
                     });
                     dispose();
                 }

@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SubscriberGUI extends JFrame {
+    private String who= "subscriber";
 
     public void subscriber() {
 
@@ -32,13 +33,12 @@ public class SubscriberGUI extends JFrame {
             case 0:
                 // Option 1: See list of movies and series
                 SwingUtilities.invokeLater(() -> {
-                    WatchListGUI watchListGUI = new WatchListGUI();
+                    WatchListGUI watchListGUI = new WatchListGUI(who);
                 });
                 break;
             case 1:
-                // Option 2: See list of movies and series
                 SwingUtilities.invokeLater(() -> {
-                    SearchVideo searchVideo  = new SearchVideo();
+                    SearchVideo searchVideo  = new SearchVideo(who);
                 });
                 break;
             default:
