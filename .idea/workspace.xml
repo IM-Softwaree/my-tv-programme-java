@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="meh">
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="BUTTONSSSS">
       <change afterPath="$PROJECT_DIR$/test/api/EpisodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AdminGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdminGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SearchVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchVideo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SquarePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/WatchListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/WatchListGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00028" summary="guiIII">
-      <created>1704289496068</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1704289496068</updated>
     </task>
     <task id="LOCAL-00029" summary="guiIII">
       <created>1704290189800</created>
@@ -437,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704571900360</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="BUTTONSSSS">
+      <created>1704638791558</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1704638791558</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -457,7 +453,8 @@
     <MESSAGE value="tetragona" />
     <MESSAGE value="assessment" />
     <MESSAGE value="meh" />
-    <option name="LAST_COMMIT_MESSAGE" value="meh" />
+    <MESSAGE value="BUTTONSSSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUTTONSSSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

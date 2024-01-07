@@ -32,8 +32,9 @@ class SquarePanel extends JPanel {
 
         // Create and configure a new JFrame for the details window
         JFrame detailsWindow = new JFrame(squareName + " Details");
-        detailsWindow.setSize(new Dimension(700, 200));
+        detailsWindow.setSize(new Dimension(1500, 1000));
         detailsWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        detailsWindow.setLayout(new FlowLayout());
 
         if(tempVideo instanceof Movie){     // FOR MOVIES
 
@@ -159,7 +160,8 @@ class SquarePanel extends JPanel {
         //Buttons for admins or subscribers
         if(who.equals("admin"))
         {
-            System.out.println(who);
+            JButton edit = new JButton("Edit");
+            detailsWindow.add(edit);
         }
         else
         {
