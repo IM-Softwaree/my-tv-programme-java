@@ -2,17 +2,22 @@ package api;
 
 import java.io.*;
 
+/**
+ * Class used for the initialization of the binary file Movies.dat and Series.dat with objects
+ */
 public class FirstInitializationOfSeriesMovies {
     public FirstInitializationOfSeriesMovies()
     {
+        //Make two objects Subscriber to add them favourite movies and series
         Subscriber subscriber1 = new Subscriber("user1", "password1", "name1", "surname1");
         Subscriber subscriber2 = new Subscriber("user2", "password2", "name2", "surname2");
 
-        //ARXIKOPOISI ARXEIOU MOVIES
+        //Initialization of Movies.dat
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
 
-            //ftiaxno antikeimena Movie
+            //Make objects Movie
             Movie a = new Movie("Barbie","Barbie suffers a crisis that leads her to question her world and her existence.","PG-13","Comedy","Margot Robbie,Ryan Gosling",2023,114);
+           //Add to  each object an assessment
             a.addAssessment("name1","Amazing!",5,"3/10/2023");
             a.addAssessment("name2","Boring...",2,"15/11/2023");
 
@@ -32,10 +37,11 @@ public class FirstInitializationOfSeriesMovies {
             e.addAssessment("name1","Mediocre",3,"2/10/2000");
             e.addAssessment("name2","Okay...",2,"7/9/2001");
 
+            //Add subscriber's favourites
             subscriber1.addFavourite(a);
             subscriber2.addFavourite(b);
 
-            //ta grafo sto binary file Movies
+            //Write them to the binary file Movies.dat
             oos.writeObject(a);
             oos.writeObject(b);
             oos.writeObject(c);
@@ -46,15 +52,17 @@ public class FirstInitializationOfSeriesMovies {
             e.printStackTrace();
         }
 
-        //ARXIKOPOISI ARXEIOU SERIES
+        //Initialization of Series.dat
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Series.dat"))) {
 
-            //ftiaxno antikeimena Serie Season k Episode
+            //Make objects Serie, Season and Episode
             Serie a = new Serie("Mindhunter","In the late 1970s, two FBI agents broaden the realm of criminal science by investigating the psychology behind murder and end up getting too close to real-life monsters.","TV-MA","Drama","Jonathan Groff,Anna Torv");
             a.addAssessment("name1","I AM IN LOVE!! KEEP GOING",5,"15/10/2023");
             a.addAssessment("name2","Nice job",5,"27/12/2023");
 
+            //Add to each Serie Seasons
             Season a_1 = new Season(1,2017);
+            //Add to each Season Episodes
             Episode one = new Episode("Episode 1",60);
             a_1.setEpisodes(one);
             Episode two = new Episode("Episode 2",56);
@@ -268,7 +276,7 @@ public class FirstInitializationOfSeriesMovies {
             subscriber1.addFavourite(c);
             subscriber2.addFavourite(a);
 
-            //ta grafo sto binary file Series
+            //Write them to the binary file Series.dat
             oos.writeObject(a);
             oos.writeObject(b);
             oos.writeObject(c);
