@@ -165,11 +165,7 @@ class SquarePanel extends JPanel {
             edit.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
 
-                    if(tempVideo instanceof Movie){
                         new EditMovie(tempVideo,tempVideo);
-
-                    }
-
 
                 }
             });
