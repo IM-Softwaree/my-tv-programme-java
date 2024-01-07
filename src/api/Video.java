@@ -338,4 +338,47 @@ public class Video implements Serializable {
 
     }
 
+    public void editingMovie(Video old)
+    {
+        //diabazo ta panta ap ta arxeia
+        ArrayList<Video> all = new ArrayList<>();
+
+        try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
+            while (true) {  // repeat until end of file
+                Movie temp = (Movie) oos.readObject();  //read obj
+                all.add(temp);
+            }
+        } catch (EOFException end) {
+            // System.out.println("Reached the end of file");
+        } catch (IOException | ClassNotFoundException ee) {
+            ee.printStackTrace();
+        }
+
+        int i=0;
+        //tsekaro poio einai iso me to old
+        for (Video video : all) {
+            if(video.getTitle().equals(old.getTitle()))
+            {
+                all.remove(i);  //afairo to old
+                all.add(this);  //bazo to neo
+            }
+            i++;
+        }
+
+        //ta xanagrafo sto arxeio
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Movies.dat"))) {
+            for (Video video : all) {
+                oos.writeObject(video);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+
+
 }
