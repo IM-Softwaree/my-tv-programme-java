@@ -9,7 +9,7 @@ public class EditMovie extends JFrame {
 
     public EditMovie(Video toedit,Video old)
     {
-        JRadioButton title, des,ap,cat,prot, year,dur;
+        JRadioButton title, des,ap,cat,prot;
         JButton next;
 
         setTitle("Edit Movie");
@@ -28,8 +28,6 @@ public class EditMovie extends JFrame {
         ap = new JRadioButton("Appropriateness");
         cat = new JRadioButton("Category");
         prot = new JRadioButton("Protagonists");
-        year = new JRadioButton("Year of first appearance");
-        dur = new JRadioButton("Duration");
 
 
         next = new JButton("Next");
@@ -39,8 +37,6 @@ public class EditMovie extends JFrame {
         this.add(ap);
         this.add(cat);
         this.add(prot);
-        this.add(year);
-        this.add(dur);
 
         this.add(next);
 
@@ -50,8 +46,6 @@ public class EditMovie extends JFrame {
         group.add(ap);
         group.add(cat);
         group.add(prot);
-        group.add(year);
-        group.add(dur);
 
         next.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -67,23 +61,18 @@ public class EditMovie extends JFrame {
                 }
                 else if(ap.isSelected())
                 {
-
+                    new EditAppropriateness(toedit,old);
+                    dispose();
                 }
                 else if(cat.isSelected())
                 {
-
+                    new EditCategory(toedit,old);
+                    dispose();
                 }
                 else if(prot.isSelected())
                 {
-
-                }
-                else if(year.isSelected())
-                {
-
-                }
-                else
-                {
-                  //  new AddSeason();
+                    new EditProtagonists(toedit,old);
+                    dispose();
                 }
 
             }

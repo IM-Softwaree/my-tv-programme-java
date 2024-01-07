@@ -360,7 +360,7 @@ public class Video implements Serializable {
             if(video.getTitle().equals(old.getTitle()))
             {
                 all.remove(i);  //afairo to old
-                all.add(this);  //bazo to neo
+                all.add(i,this);  //bazo to neo
             }
             i++;
         }
