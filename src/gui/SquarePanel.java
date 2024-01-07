@@ -13,6 +13,8 @@ class SquarePanel extends JPanel {
 
     public SquarePanel(Video tempVideo,String who) {
         this.squareName = tempVideo.getTitle();
+        setLayout(new FlowLayout());
+
         setPreferredSize(new Dimension(400, 200));
         setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
 
@@ -24,8 +26,25 @@ class SquarePanel extends JPanel {
             }
         });
 
-        setLayout(new BorderLayout());
-        add(detailsButton, BorderLayout.SOUTH);
+        //setLayout(new BorderLayout());
+        //add(detailsButton, BorderLayout.SOUTH);
+
+        JButton adder, delete;
+        adder = new JButton("Add to Favourites");
+        delete = new JButton("Delete from Favourites");
+
+        JLabel labelB = new JLabel("                                                                                                            ");
+        this.add(labelB);
+        JLabel labelA = new JLabel("                                                                                                            ");
+        this.add(labelA);
+        JLabel labelC = new JLabel("                                                                                                            ");
+        this.add(labelC);
+
+
+        add(adder);
+        add(delete);
+        add(detailsButton);
+
     }
 
     private void showDetails(Video tempVideo,String who) {
