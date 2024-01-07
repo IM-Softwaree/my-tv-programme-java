@@ -5,27 +5,19 @@
  * ************* ΜΗ ΣΒΗΣΕΤΕ ΑΥΤΗ ΤΗΝ ΚΛΑΣΗ ************
  */
 
-import api.*;
 import gui.*;
 import javax.swing.*;
 
 public class Main {
+    /**
+     * We call the constructor of class "LoginGUI" using the parameter "loginGUI" and the GUI of the programme starts
+     * @param args arguments
+     */
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(() -> {
             LoginGUI loginGUI = new LoginGUI();
             loginGUI.start();
         });
-
-
-        /**
-        Video MovieForSearch = new Video(null,null,null,null,null);
-        MovieForSearch.setAverageRatingForSearch(5);
-
-        Admin aaa =  new Admin("aaaa","eee");
-        for (Video video : aaa.searchVideo(MovieForSearch)) {
-            System.out.println(video.getTitle()+" "+video.getCategory());
-        }
-         */
     }
 }
