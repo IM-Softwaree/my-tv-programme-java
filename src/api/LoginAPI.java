@@ -22,15 +22,10 @@ public class LoginAPI {
         boolean fileExists = Files.exists(filePath);
 
         if (fileExists) {
-            // PROSTHIKI XRHSTWN STO FILE "Subscribers.txt"
-            FirstInitializationForAdminsSubscribers.addSubscriberViaCommandLine();
             System.out.println("File '" + fileName + "' exists.\n");
         } else {
             // 1H ARXIKOPOIHSH TWN ARXEIWN GIA TOUS SUBSCRIBERS TOUS ADMINS KAI TWN FAVOURITES
             FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
-
-            // PROSTHIKI XRHSTWN STO FILE "Subscribers.txt"
-            PersonAdderToFile fileWriter = new PersonAdderToFile();
             System.out.println("File '" + fileName + "' does not exist.\n");
         }
     }

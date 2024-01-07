@@ -13,8 +13,6 @@ class SquarePanel extends JPanel {
 
     public SquarePanel(Video tempVideo,String who) {
         this.squareName = tempVideo.getTitle();
-        setLayout(new FlowLayout());
-
         setPreferredSize(new Dimension(400, 200));
         setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
 
@@ -26,25 +24,8 @@ class SquarePanel extends JPanel {
             }
         });
 
-        //setLayout(new BorderLayout());
-        //add(detailsButton, BorderLayout.SOUTH);
-
-        JButton adder, delete;
-        adder = new JButton("Add to Favourites");
-        delete = new JButton("Delete from Favourites");
-
-        JLabel labelB = new JLabel("                                                                                                            ");
-        this.add(labelB);
-        JLabel labelA = new JLabel("                                                                                                            ");
-        this.add(labelA);
-        JLabel labelC = new JLabel("                                                                                                            ");
-        this.add(labelC);
-
-
-        add(adder);
-        add(delete);
-        add(detailsButton);
-
+        setLayout(new BorderLayout());
+        add(detailsButton, BorderLayout.SOUTH);
     }
 
     private void showDetails(Video tempVideo,String who) {
@@ -185,6 +166,7 @@ class SquarePanel extends JPanel {
                 public void actionPerformed(ActionEvent e) {
 
                     if(tempVideo instanceof Movie){
+                        // new EditMovie(tempVideo,tempVideo);
 
                     }
 
@@ -194,7 +176,12 @@ class SquarePanel extends JPanel {
         }
         else
         {
-            System.out.println(who);
+            JButton adder, delete;
+            adder = new JButton("Add to Favourites");
+            delete = new JButton("Delete from Favourites");
+
+            detailsWindow.add(adder);
+            detailsWindow.add(delete);
         }
 
 

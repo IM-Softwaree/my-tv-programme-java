@@ -1,16 +1,13 @@
 package gui;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class SubscriberGUI extends JFrame {
     private String who= "subscriber";
 
     public void subscriber() {
 
-        Object[] options = {"See list of movies and series", "Search bar"};
+        Object[] options = {"See list of movies and series", "Search bar", "See list of favourites"};
 
         int result = JOptionPane.showOptionDialog(
                 null,
@@ -39,6 +36,12 @@ public class SubscriberGUI extends JFrame {
             case 1:
                 SwingUtilities.invokeLater(() -> {
                     SearchVideo searchVideo  = new SearchVideo(who);
+                });
+                break;
+            case 2:
+                // Option 3: See list of movies and series
+                SwingUtilities.invokeLater(() -> {
+                    subscriber();
                 });
                 break;
             default:
