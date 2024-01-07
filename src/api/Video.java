@@ -184,28 +184,33 @@ public class Video implements Serializable {
         return similar;
     }
 
+
+    /**
+     * Function that returns a list of all the movies and series from the files Movies.dat and Series.dat
+     * @return the list of all the movies and series
+     */
     public static ArrayList<Video> returnAllVideos()
     {
         ArrayList<Video> all = new ArrayList<>();
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
             while (true) {  // repeat until end of file
-                Movie temp = (Movie) oos.readObject();  //read obj
+                Movie temp = (Movie) oos.readObject();  //read object
                 all.add(temp);
             }
         } catch (EOFException end) {
-            // System.out.println("Reached the end of file");
+            //Reached the end of file
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
         }
 
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
             while (true) {  // repeat until end of file
-                Serie temp = (Serie) oos.readObject();  //read obj
+                Serie temp = (Serie) oos.readObject();  //read object
                 all.add(temp);
             }
         } catch (EOFException end) {
-            // System.out.println("Reached the end of file");
+            //Reached the end of file
         } catch (IOException | ClassNotFoundException ee) {
             ee.printStackTrace();
         }
@@ -213,11 +218,22 @@ public class Video implements Serializable {
         return all;
     }
 
+
+    /**
+     *Function used in the method searchVideo that compares two objects and returns the number of the criteria fulfilled
+     * If the obj's fields for the title/protagonists/appropriateness/category are null or minimum average rating is -1,
+     * means that they are not criteria for the search, and we do not take then into consideration. Othewise,
+     * we make each string with capital letters for better results, and compare the counterpart fields of the two objects.
+     * @param obj first object we want to compare
+     * @param temp second object we want to compare
+     * @return the number of the criteria fulfilled
+     */
     public int searchVideoHelper(Video obj,Video temp)
     {
-        int check=0;
+        int check=0;  //first assumption is that no criteria are fulfilled
 
-        if(obj.getTitle()!=null && ((temp.getTitle()).toUpperCase()).contains((obj.getTitle()).toUpperCase()) )  //to exei epilexei o xristis gia search k einai paromoia
+
+        if(obj.getTitle()!=null && ((temp.getTitle()).toUpperCase()).contains((obj.getTitle()).toUpperCase()) )
         {
             check++;
         }
@@ -241,10 +257,23 @@ public class Video implements Serializable {
         return check;
     }
 
+
+    /**
+     *Function that searches for a Video. It uses a variable "criteria" to hold the number of the criteria used in the search
+     * (title/protagonists/appropriateness/category/minimum average rating).
+     * "check" is a variable that holds how many criteria are fulfilled each time, as we compare objects from the files with the given one.
+     * If no criteria was defined, it returns all the movies and series we have at the binary files Movies.dat and Series.dat.
+     * The function has a parameter Video obj. If we want to search for a movie, then we check if obj is an object of the class Movie,
+     * if we want to search for a serie, we check if obj is an object from the class Serie. Otherwise, if obj is an object from class Video
+     * that means we want to search for both movies and series.
+     * @param obj the video we want to find
+     * @return the list of the search results(all the movies/series that the function found)
+     */
     public ArrayList<Video> searchVideo (Video obj)
     {
         ArrayList<Video> searchResults = new ArrayList<>();
-        int criteria=0;
+
+        int criteria=0; //variable that keeps the number of the criteria used for the search
         int check=0;
 
         if(obj.getTitle()!=null)
@@ -258,29 +287,29 @@ public class Video implements Serializable {
         if(obj.getAverageRatingForSearch()!=-1)
             criteria++;
 
-        //return evrything an criteria==0
+        //return everything if criteria==0
         if (criteria==0)
         {
             ArrayList<Video> all = new ArrayList<>();
 
             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
                 while (true) {  // repeat until end of file
-                    Movie temp = (Movie) oos.readObject();  //read obj
+                    Movie temp = (Movie) oos.readObject();  //read object
                     all.add(temp);
                 }
             } catch (EOFException end) {
-                // System.out.println("Reached the end of file");
+                //Reached the end of file
             } catch (IOException | ClassNotFoundException ee) {
                 ee.printStackTrace();
             }
 
             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
                 while (true) {  // repeat until end of file
-                    Serie temp = (Serie) oos.readObject();  //read obj
+                    Serie temp = (Serie) oos.readObject();  //read object
                     all.add(temp);
                 }
             } catch (EOFException end) {
-                // System.out.println("Reached the end of file");
+                //Reached the end of file
             } catch (IOException | ClassNotFoundException ee) {
                 ee.printStackTrace();
             }
@@ -288,57 +317,70 @@ public class Video implements Serializable {
             return all;
         }
 
-        if(!(obj instanceof Serie)) {  //diladi einai Video h Movie
+        //if obj is a Video or a Movie
+        if(!(obj instanceof Serie)) {
             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
 
-                //ta diabazo apo to binary file Movies
+                //read everything from the file Movies.dat
 
                 while (true) {  // repeat until end of file
                     Movie temp = (Movie) oos.readObject();  //read obj
 
+                    //compare the 2 objects
                     check = searchVideoHelper(obj, temp);
 
+                    //if it is what we are looking for add it to the list of search results
                     if (check == criteria)
                         searchResults.add(temp);
                 }
 
             } catch (EOFException end) {
-                //   System.out.println("Reached the end of file");
+                // Reached the end of file
 
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
         }
 
+        //If the obj was a movie return the list of search results and do not continue below
         if(obj instanceof Movie)
         {
             return searchResults;
         }
 
+        //if obj is a Video or a Serie, we must search and the binary file Series.dat
         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
 
-            //ta diabazo apo to binary file Series
+            //read everything from the file Series.dat
 
             while(true) {  // repeat until end of file
-                Serie temp = (Serie) oos.readObject();  //read obj
+                Serie temp = (Serie) oos.readObject();  //read object
 
+                //compare the 2 objects
                 check = searchVideoHelper(obj,temp);
 
+                //if it is what we are looking for add it to the list of search results
                 if(check==criteria)
                     searchResults.add(temp);
             }
 
         } catch (EOFException end) {
-            //   System.out.println("Reached the end of file");
+            //Reached the end of file
 
         }catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
+        //If the obj was a Video or a serie return the list of search results
         return searchResults;
 
     }
 
+
+    /**
+     *
+     * @param old
+     */
     public void editingMovie(Video old)
     {
         //diabazo ta panta ap ta arxeia
@@ -376,10 +418,7 @@ public class Video implements Serializable {
             e.printStackTrace();
         }
 
-
     }
-
-
 
 
 }
