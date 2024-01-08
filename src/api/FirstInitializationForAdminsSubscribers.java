@@ -1,11 +1,16 @@
 package api;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
+
+/**
+ *
+ */
 
 public class FirstInitializationForAdminsSubscribers {
 
+    /**
+     *
+     */
 
     // KENOS CONSTRUCTOR POU KALEITE THN 1H FORA GIA ARXIKOPOIHSH
     public FirstInitializationForAdminsSubscribers() {

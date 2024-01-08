@@ -80,4 +80,52 @@ public class WatchListGUI extends JFrame {
         panel.add(squarePanel);
     }
 
+
+    private void addSquare(JPanel panel, Video tempVideo, String who, String userName) {
+        SquarePanel squarePanel = new SquarePanel(tempVideo,who, userName);
+        squarePanel.setPreferredSize(new Dimension(400, 200)); // Adjust size as needed
+        panel.add(squarePanel);
+    }
+
+    public WatchListGUI(String userName, boolean bool) {
+        setTitle("List of Favourites for User : ");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        String favs = Favourites.getFavourites(userName);
+        JLabel label = new JLabel(favs);
+        label.setHorizontalAlignment(JLabel.CENTER);
+        label.setVerticalAlignment(JLabel.CENTER);
+
+        add(label, BorderLayout.CENTER);
+
+        // Set the size of the JFrame
+        setSize(600, 400); // Adjust the width and height as needed
+
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    public WatchListGUI(String who, String userName, boolean bool1 , char char2) {
+        setTitle("List of movies and series");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        JPanel squaresPanel = new JPanel();
+        squaresPanel.setLayout(new GridLayout(0, 5)); // Set 4 columns
+
+        ArrayList<Video> videos = Video.returnAllVideos();
+        for (Video tempVideo : videos){
+            addSquare(squaresPanel, tempVideo, who, userName);
+        }
+
+        JScrollPane scrollPane = new JScrollPane(squaresPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+        add(scrollPane, BorderLayout.CENTER);
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
 }

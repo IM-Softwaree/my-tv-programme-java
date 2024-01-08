@@ -28,6 +28,57 @@ class SquarePanel extends JPanel {
         add(detailsButton, BorderLayout.SOUTH);
     }
 
+    public SquarePanel(Video tempVideo, String who, String userName) {
+        this.squareName = tempVideo.getTitle();
+        setPreferredSize(new Dimension(400, 200));
+        setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+
+        JButton detailsButton = new JButton("See Details");
+        detailsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showDetails(tempVideo, who);
+            }
+        });
+
+        // Create two additional buttons
+        JButton button1 = new JButton("Add Favourite");
+        JButton button2 = new JButton("Delete Favourite");
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Favourites.addFavourite(userName, tempVideo.getTitle());
+                // Show the message dialog
+                JOptionPane.showMessageDialog(SquarePanel.this, "Added to Favourites", "Success", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Favourites.deleteFavourite(userName, tempVideo.getTitle());
+                // Show the message dialog
+                JOptionPane.showMessageDialog(SquarePanel.this, "Deleted from Favourites", "Success", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
+        JLabel labelB = new JLabel("                                                 ");
+        this.add(labelB);
+        JLabel labelA = new JLabel("                                                 ");
+        this.add(labelA);
+        JLabel labelC = new JLabel("                                                ");
+        this.add(labelC);
+        JLabel labelD = new JLabel("                                                ");
+        this.add(labelD);
+
+        // Add buttons to the panel
+        setLayout(new FlowLayout());
+        add(detailsButton);
+        add(button1);
+        add(button2);
+    }
+
     private void showDetails(Video tempVideo,String who) {
 
         // Create and configure a new JFrame for the details window
@@ -170,16 +221,6 @@ class SquarePanel extends JPanel {
                 }
             });
         }
-        else
-        {
-            JButton adder, delete;
-            adder = new JButton("Add to Favourites");
-            delete = new JButton("Delete from Favourites");
-
-            detailsWindow.add(adder);
-            detailsWindow.add(delete);
-        }
-
 
         // Make the details window visible
         detailsWindow.setLocationRelativeTo(null);

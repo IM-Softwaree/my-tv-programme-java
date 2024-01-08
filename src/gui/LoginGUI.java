@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import api.LoginAPI;
 import api.PersonAdderToFile;
 
+
 public class LoginGUI extends JFrame {
 
     public void start() {
@@ -86,7 +87,7 @@ public class LoginGUI extends JFrame {
                     openNewWindowAdmin();
                 } else if (LoginAPI.isAdminUserNothing(text1, text2) == 'U'){
                     // Action to perform when the "Log In" button is clicked
-                    openNewWindowUser();
+                    openNewWindowUser(text1);
                 } else {
                     // Show the message dialog
                     JOptionPane.showMessageDialog(newWindow, "WRONG USERNAME OR PASSWORD", "Message", JOptionPane.INFORMATION_MESSAGE);
@@ -288,7 +289,7 @@ public class LoginGUI extends JFrame {
     }
 
     //-----------------------------------------------------------------------
-    private void openNewWindowUser() {
+    private void openNewWindowUser(String userName) {
 
         // Create and configure a new JFrame for the new window
         JFrame newWindow = new JFrame("Nextflix Subscriber");
@@ -303,7 +304,7 @@ public class LoginGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Action to perform when the "PRESS HERE TO CONTINUE" button is clicked
                 SwingUtilities.invokeLater(() -> {
-                    new SubscriberGUI().subscriber();
+                    new SubscriberGUI().subscriber(userName);
                 });
 
                 // Dispose of the current JFrame (make it disappear)

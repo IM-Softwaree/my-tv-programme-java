@@ -14,7 +14,7 @@ public class Person {
     public Person(){}
 
     /**
-     * Constructor that takes has 2 arguments "username" and "password"
+     * Constructor that takes has 2 arguments "username" and "password".
      * @param username which is the username of a Person
      * @param password which is the password of a Person
      */
@@ -24,7 +24,7 @@ public class Person {
     }
 
     /**
-     * Function that returns the password of a Person
+     * Function that returns the password of a Person.
      * @return "password" which is a String
      */
     public String getPassword(){
@@ -32,7 +32,7 @@ public class Person {
     }
 
     /**
-     * Function that changes the password of a Person and has 1 argument "password"
+     * Function that changes the password of a Person and has 1 argument "password".
      * @param password which is a String
      */
     public void setPassword(String password){
@@ -40,7 +40,7 @@ public class Person {
     }
 
     /**
-     * Function that returns the username of a Person
+     * Function that returns the username of a Person.
      * @return username which is a String
      */
     public String getUserame(){
@@ -48,7 +48,7 @@ public class Person {
     }
 
     /**
-     * Function that changes the username of a Person and has 1 argument "username"
+     * Function that changes the username of a Person and has 1 argument "username".
      * @param username which is a String
      */
     public void setUserame(String username){

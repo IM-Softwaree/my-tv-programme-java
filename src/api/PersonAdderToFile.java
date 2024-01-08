@@ -3,10 +3,21 @@ package api;
 import java.io.*;
 import java.util.HashSet;
 
+/**
+ *
+ */
 public class PersonAdderToFile {
 
+    /**
+     *
+     */
     public PersonAdderToFile() {}
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     public static boolean findUsername(String username){
         HashSet<String> allUsernames = getAdminSubscriberUsernames(); // Static Method
         for (String tempUsername : allUsernames) {
@@ -18,6 +29,10 @@ public class PersonAdderToFile {
         return true;
     }
 
+    /**
+     *
+     * @return
+     */
     // SYNARTHSH POU DEXETAI 2 ONOMATA ARXEIEWN 1 GIA ADMINS KAI 1 GIA SUBSCRIBERS TA DIAVAZEI KAI EPISTREFEI ENA HASHMAP ME OLA TA USERNAME(ADMIN KAI SUBSCRIBER)
     private static HashSet<String> getAdminSubscriberUsernames() {
 
@@ -48,6 +63,13 @@ public class PersonAdderToFile {
         return allUsernames;
     }
 
+    /**
+     *
+     * @param userName
+     * @param password
+     * @param name
+     * @param surName
+     */
     public static void addSubscriberViaForm(String userName,String password, String name, String surName){
 
         //File for Subscribers

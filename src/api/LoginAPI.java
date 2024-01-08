@@ -7,8 +7,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ *
+ */
 public class LoginAPI {
 
+    /**
+     *
+     */
     public LoginAPI(){
         //Initialization of files Movies.dat and Series.dat
         FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
@@ -30,6 +36,12 @@ public class LoginAPI {
         }
     }
 
+    /**
+     *
+     * @param tempStr
+     * @param tempPassword
+     * @return
+     */
     public static char isAdminUserNothing(String tempStr, String tempPassword){
         if(isAdmin(tempStr, tempPassword)){
             return 'A';
@@ -39,6 +51,12 @@ public class LoginAPI {
         return 'N';
     }
 
+    /**
+     *
+     * @param tempAdmin
+     * @param tempPassword
+     * @return
+     */
     private static boolean isAdmin(String tempAdmin, String tempPassword){
         try (BufferedReader buffer = new BufferedReader(new FileReader("Admins.txt"))) {
             String line = buffer.readLine();
@@ -56,6 +74,12 @@ public class LoginAPI {
         return false;
     }
 
+    /**
+     *
+     * @param tempUser
+     * @param tempPassword
+     * @return
+     */
     private static boolean isUser(String tempUser, String tempPassword){
         try (BufferedReader buffer = new BufferedReader(new FileReader("Subscribers.txt"))) {
             String line = buffer.readLine();

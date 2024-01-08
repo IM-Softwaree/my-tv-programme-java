@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class Main {
     /**
-     * We call the constructor of class "LoginGUI" using the parameter "loginGUI" and the GUI of the programme starts
+     * We call the constructor of class "LoginGUI" using the parameter "loginGUI" and the GUI of the programme starts.
      * @param args arguments
      */
     public static void main(String[] args) {
