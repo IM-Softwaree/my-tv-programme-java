@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="IMc44">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Favourites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Favourites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/FirstInitializationForAdminsSubscribers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FirstInitializationForAdminsSubscribers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/LoginAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/LoginAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LoginGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SquarePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/WatchListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/WatchListGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00033" summary="gfsgsg">
-      <created>1704319737041</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1704319737041</updated>
     </task>
     <task id="LOCAL-00034" summary="gfsgsg">
       <created>1704368625103</created>
@@ -434,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704717123568</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="IMc44">
+      <created>1704717525294</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1704717525294</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
