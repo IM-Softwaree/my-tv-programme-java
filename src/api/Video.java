@@ -413,13 +413,15 @@ public class Video implements Serializable {
 
         //find the old video
         Iterator<Video> iterator = all.iterator();
+        int i=0;
         while (iterator.hasNext()) {
             Video video = iterator.next();
             if (video.getTitle().equals(old.getTitle())) {
                 iterator.remove(); //remove the old video
-                all.add(this);     //add the new video
+                all.add(i,this);     //add the new video
                 break;             //end the loop
             }
+            i++;
         }
 
         //write again all the objects to the file
@@ -444,6 +446,7 @@ public class Video implements Serializable {
                 e.printStackTrace();
             }
         }
+
 
     }
 
