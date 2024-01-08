@@ -4,52 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="IMc55">
-      <change afterPath="$PROJECT_DIR$/test/api/AdminTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/FavouritesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/FirstInitializationForAdminsSubscribersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/LoginAPITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/PersonAdderToFileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/PersonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/SubscriberTest.java" afterDir="false" />
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="finalgui">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Assessment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Episode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Favourites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Favourites.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/FirstInitializationForAdminsSubscribers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FirstInitializationForAdminsSubscribers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/FirstInitializationOfSeriesMovies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/FirstInitializationOfSeriesMovies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/LoginAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/LoginAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/PersonAdderToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/PersonAdderToFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Season.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddAsessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddAsessment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddSeason.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddSeason.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AddSerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddSerie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/AdminGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdminGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditAppropriateness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditAppropriateness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditProtagonists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditProtagonists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LoginGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SearchVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchVideo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SquarePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SquarePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SubscriberGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/WatchListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/WatchListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/AdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/AdminTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/AssessmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/AssessmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/EpisodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/EpisodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/FavouritesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/FavouritesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/FirstInitializationForAdminsSubscribersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/FirstInitializationForAdminsSubscribersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/FirstInitializationOfSeriesMoviesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/FirstInitializationOfSeriesMoviesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/LoginAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/LoginAPITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/MovieTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/PersonAdderToFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/PersonAdderToFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/PersonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/SeasonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/SeasonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/SerieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/SerieTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/api/SubscriberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/SubscriberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/api/VideoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/VideoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,9 +36,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk-17/lib/src.zip!/java.base/java/lang/String.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -104,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.api in MyTV">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MyTV" />
@@ -175,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.api in MyTV" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.VideoTest" />
         <item itemvalue="JUnit.VideoTest.testEditingMovie" />
         <item itemvalue="JUnit.VideoTest.testSearchVideo" />
@@ -191,20 +157,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
-    </task>
-    <task id="LOCAL-00041" summary="XXXXXXXXXXX">
-      <created>1704391259688</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1704391259688</updated>
-    </task>
-    <task id="LOCAL-00042" summary="XXXXXXXXXXX">
-      <created>1704391320616</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1704391320616</updated>
     </task>
     <task id="LOCAL-00043" summary="XXXXXXXXXXX">
       <created>1704409346581</created>
@@ -535,13 +487,24 @@
       <option name="project" value="LOCAL" />
       <updated>1704745760260</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="finalapi">
+      <created>1704746666851</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1704746666851</updated>
+    </task>
+    <task id="LOCAL-00091" summary="finalgui">
+      <created>1704746776875</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1704746776875</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="a" />
-    <MESSAGE value="aA" />
-    <MESSAGE value="gui" />
     <MESSAGE value="guiIII" />
     <MESSAGE value="gfsgsg" />
     <MESSAGE value="XXXXXXXXXXX" />
@@ -564,7 +527,10 @@
     <MESSAGE value="IMc51" />
     <MESSAGE value="testakia" />
     <MESSAGE value="IMc55" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMc55" />
+    <MESSAGE value="final" />
+    <MESSAGE value="finalapi" />
+    <MESSAGE value="finalgui" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalgui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

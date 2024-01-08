@@ -46,4 +46,3 @@ public class PersonTest {
         assertEquals("pass456", person.getPassword());
     }
 }
-//
