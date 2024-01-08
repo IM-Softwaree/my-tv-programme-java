@@ -221,6 +221,18 @@ class SquarePanel extends JPanel {
                 }
             });
         }
+        else  //AAAAAAAAAA
+        {
+            JButton add = new JButton("Add Assessment");
+            detailsWindow.add(add);
+            add.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+
+                    new AddAsessment(tempVideo);
+
+                }
+            });
+        }
 
         // Make the details window visible
         detailsWindow.setLocationRelativeTo(null);
