@@ -73,5 +73,5 @@ public class AddObject extends JFrame {
         setVisible(true);
     }
 
-
 }
+//

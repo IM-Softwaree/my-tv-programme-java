@@ -29,12 +29,12 @@ public class LoginAPI {
         boolean fileExists1 = Files.exists(filePath1);
 
         if (fileExists1) {
-            System.out.println("File Movies/Series' exists.\n");
+            System.out.println("File Movies/Series' exists.");
         } else {
             // 1H ARXIKOPOIHSH TWN ARXEIWN GIA TOUS SUBSCRIBERS TOUS ADMINS KAI TWN FAVOURITES
             //Initialization of files Movies.dat and Series.dat
             FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
-            System.out.println("File Movies/Series' does not exist.\n");
+            System.out.println("File Movies/Series' does not exist.");
         }
 
 
@@ -48,11 +48,11 @@ public class LoginAPI {
         boolean fileExists = Files.exists(filePath);
 
         if (fileExists) {
-            System.out.println("File Subscribers/Admins' exists.\n");
+            System.out.println("File Subscribers/Admins' exists.");
         } else {
             // 1H ARXIKOPOIHSH TWN ARXEIWN GIA TOUS SUBSCRIBERS TOUS ADMINS KAI TWN FAVOURITES
             FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
-            System.out.println("File Subscribers/Admins' does not exist.\n");
+            System.out.println("File Subscribers/Admins' does not exist.");
         }
     }
 
@@ -117,4 +117,4 @@ public class LoginAPI {
         return false;
     }
 }
-
+//

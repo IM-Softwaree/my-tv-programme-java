@@ -36,7 +36,7 @@ public class Favourites {
      * @param tempSubscriber the name of the user
      * @param tempFavourite the name of the movie/series to be deleted
      */
-    private static void findLineForUserAdd(String tempSubscriber, String tempFavourite){
+    public static void findLineForUserAdd(String tempSubscriber, String tempFavourite){
         ArrayList<String> allLines = new ArrayList<>();
         try (BufferedReader buffer = new BufferedReader(new FileReader("Favourites.txt"))) {
             String line = buffer.readLine();
@@ -74,7 +74,7 @@ public class Favourites {
      * @param tempSubscriber the name of the user
      * @param tempFavourite the name of the movie/series to be deleted
      */
-    private static void findLineForUserDelete(String tempSubscriber, String tempFavourite){
+    public static void findLineForUserDelete(String tempSubscriber, String tempFavourite){
         ArrayList<String> allLines = new ArrayList<>();
         try (BufferedReader buffer = new BufferedReader(new FileReader("Favourites.txt"))) {
             String line = buffer.readLine();
@@ -109,7 +109,7 @@ public class Favourites {
      * This Function rewrites the file "Favourites.txt" so that the movie/series is deleted from it
      * @param newLinesToWrite is an ArrayList<String> which stores the lines of the new file we want to write to "Favourites.txt"
      */
-    private static void reWriteLines(ArrayList<String> newLinesToWrite){
+    public static void reWriteLines(ArrayList<String> newLinesToWrite){
         // New file for favourites
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("Favourites.txt"))) {
             for(String newLine : newLinesToWrite){
@@ -149,3 +149,4 @@ public class Favourites {
         return result;
     }
 }
+//

@@ -37,7 +37,7 @@ public class PersonAdderToFile {
      * @return allUsernames HashSet<String> in which are stored all the usernames
      */
     // SYNARTHSH POU DEXETAI 2 ONOMATA ARXEIEWN 1 GIA ADMINS KAI 1 GIA SUBSCRIBERS TA DIAVAZEI KAI EPISTREFEI ENA HASHMAP ME OLA TA USERNAME(ADMIN KAI SUBSCRIBER)
-    private static HashSet<String> getAdminSubscriberUsernames() {
+    public static HashSet<String> getAdminSubscriberUsernames() {
 
         HashSet<String> allUsernames = new HashSet<>();
         try (BufferedReader buffer = new BufferedReader(new FileReader("Admins.txt"))) {
@@ -88,5 +88,5 @@ public class PersonAdderToFile {
     }
 
 }
-
+//
 

@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import api.*;
 public class WatchListGUI extends JFrame {
@@ -89,7 +91,7 @@ public class WatchListGUI extends JFrame {
 
     public WatchListGUI(String userName, boolean bool) {
         setTitle("List of Favourites for User : ");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Set to DISPOSE_ON_CLOSE
         setLayout(new BorderLayout());
 
         String favs = Favourites.getFavourites(userName);
@@ -104,6 +106,16 @@ public class WatchListGUI extends JFrame {
 
         setLocationRelativeTo(null);
         setVisible(true);
+
+        // Add a window listener to handle window closing
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                dispose();
+                // Call your function here before closing the window
+                new SubscriberGUI().subscriber(userName);
+            }
+        });
     }
 
     public WatchListGUI(String who, String userName, boolean bool1 , char char2) {
@@ -127,5 +139,5 @@ public class WatchListGUI extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
 }
+//
