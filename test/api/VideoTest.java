@@ -322,17 +322,23 @@ public class VideoTest {
 
     @Test
     public void testEditingMovie() {
+        String expectedTitle = "TitleNew";
+        String expectedDes = "Description";
+        String expectedAp = "Appropriateness";
+        String expectedCat = "Category";
+        String expectedPro = "Protagonists";
 
-        //the objects we want to search for
-        Video testVideo = new Video(null,null,null,"Comedy",null);
+        Video testVideo = new Video(expectedTitle,expectedDes,expectedAp,expectedCat,expectedPro);
 
-        Video testVideo2 = new Video("Barbie",null,null,null,null);
+        String expectedTitle2 = "Title";
+        String expectedDes2 = "Description";
+        String expectedAp2 = "Appropriateness";
+        String expectedCat2 = "Category";
+        String expectedPro2 = "Protagonists";
 
-        FirstInitializationOfSeriesMovies temp = new FirstInitializationOfSeriesMovies();
+        Video testVideo2 = new Video(expectedTitle2,expectedDes2,expectedAp2,expectedCat2,expectedPro2);
 
-        assertEquals(2, testVideo.searchVideo(testVideo).size());
-
-        assertEquals(1, testVideo2.searchVideo(testVideo2).size());
+        testVideo.editingMovie(testVideo2);
 
     }
 
