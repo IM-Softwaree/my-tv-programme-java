@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="testakia">
+    <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="IMc44">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/AssessmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/AssessmentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk-17/lib/src.zip!/java.base/java/lang/String.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,7 +44,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Evangelia/Desktop/lab-GUI-Calculator-solved2-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JAVA PROGRAMMES/test22&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -57,93 +59,26 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AssessmentTest">
-    <configuration name="AssessmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.AssessmentTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssessmentTest.testGetUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MyTV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.AssessmentTest" />
-      <option name="METHOD_NAME" value="testGetUsername" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssessmentTest.testSetDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.AssessmentTest" />
-      <option name="METHOD_NAME" value="testSetDate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssessmentTest.testSetRating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.AssessmentTest" />
-      <option name="METHOD_NAME" value="testSetRating" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssessmentTest.testSetText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.AssessmentTest" />
-      <option name="METHOD_NAME" value="testSetText" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AssessmentTest" />
-        <item itemvalue="JUnit.AssessmentTest.testGetUsername" />
-        <item itemvalue="JUnit.AssessmentTest.testSetDate" />
-        <item itemvalue="JUnit.AssessmentTest.testSetRating" />
-        <item itemvalue="JUnit.AssessmentTest.testSetText" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in MyTV" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +90,69 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698704670560</updated>
+    </task>
+    <task id="LOCAL-00033" summary="gfsgsg">
+      <created>1704319737041</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1704319737041</updated>
+    </task>
+    <task id="LOCAL-00034" summary="gfsgsg">
+      <created>1704368625103</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704368625103</updated>
+    </task>
+    <task id="LOCAL-00035" summary="gfsgsg">
+      <created>1704379698986</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1704379698986</updated>
+    </task>
+    <task id="LOCAL-00036" summary="gfsgsg">
+      <created>1704382775235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1704382775235</updated>
+    </task>
+    <task id="LOCAL-00037" summary="gfsgsg">
+      <created>1704384360363</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704384360363</updated>
+    </task>
+    <task id="LOCAL-00038" summary="gfsgsg">
+      <created>1704389308978</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1704389308978</updated>
+    </task>
+    <task id="LOCAL-00039" summary="gfsgsg">
+      <created>1704389742198</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1704389742198</updated>
+    </task>
+    <task id="LOCAL-00040" summary="XXXXXXXXXXX">
+      <created>1704390342705</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1704390342705</updated>
+    </task>
+    <task id="LOCAL-00041" summary="XXXXXXXXXXX">
+      <created>1704391259688</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1704391259688</updated>
     </task>
     <task id="LOCAL-00042" summary="XXXXXXXXXXX">
       <created>1704391320616</created>
@@ -408,98 +406,35 @@
       <option name="project" value="LOCAL" />
       <updated>1704638791558</updated>
     </task>
-    <task id="LOCAL-00078" summary="BUTTONSSSS">
-      <created>1704639292597</created>
+    <task id="LOCAL-00078" summary="IMc40">
+      <created>1704642671929</created>
       <option name="number" value="00078" />
       <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
-      <updated>1704639292597</updated>
+      <updated>1704642671929</updated>
     </task>
-    <task id="LOCAL-00079" summary="BUTTONSSSS">
-      <created>1704639672265</created>
+    <task id="LOCAL-00079" summary="IMc41">
+      <created>1704646106046</created>
       <option name="number" value="00079" />
       <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1704639672265</updated>
+      <updated>1704646106046</updated>
     </task>
-    <task id="LOCAL-00080" summary="BUTTONSSSS">
-      <created>1704646719785</created>
+    <task id="LOCAL-00080" summary="IMc42">
+      <created>1704648644137</created>
       <option name="number" value="00080" />
       <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
-      <updated>1704646719785</updated>
+      <updated>1704648644137</updated>
     </task>
-    <task id="LOCAL-00081" summary="EDIT MOVIE">
-      <created>1704648299552</created>
+    <task id="LOCAL-00081" summary="IMc44">
+      <created>1704717123568</created>
       <option name="number" value="00081" />
       <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
-      <updated>1704648299552</updated>
+      <updated>1704717123568</updated>
     </task>
-    <task id="LOCAL-00082" summary="EDIT MOVIE">
-      <created>1704648490151</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1704648490151</updated>
-    </task>
-    <task id="LOCAL-00083" summary="EDIT MOVIE">
-      <created>1704655859097</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1704655859097</updated>
-    </task>
-    <task id="LOCAL-00084" summary="javadoc">
-      <created>1704659671145</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1704659671145</updated>
-    </task>
-    <task id="LOCAL-00085" summary="javadoc">
-      <created>1704661704617</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1704661704617</updated>
-    </task>
-    <task id="LOCAL-00086" summary="javadoc">
-      <created>1704663438667</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1704663438667</updated>
-    </task>
-    <task id="LOCAL-00087" summary="testakia">
-      <created>1704664224454</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1704664224454</updated>
-    </task>
-    <task id="LOCAL-00088" summary="testakia">
-      <created>1704665725629</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1704665725629</updated>
-    </task>
-    <task id="LOCAL-00089" summary="testakia">
-      <created>1704666463805</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1704666463805</updated>
-    </task>
-    <task id="LOCAL-00090" summary="testakia">
-      <created>1704666996203</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1704666996203</updated>
-    </task>
-    <option name="localTasksCounter" value="91" />
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -515,14 +450,16 @@
     <MESSAGE value="messages" />
     <MESSAGE value="a little javadoc" />
     <MESSAGE value="search" />
+    <MESSAGE value="javadoc" />
     <MESSAGE value="tetragona" />
     <MESSAGE value="assessment" />
     <MESSAGE value="meh" />
     <MESSAGE value="BUTTONSSSS" />
-    <MESSAGE value="EDIT MOVIE" />
-    <MESSAGE value="javadoc" />
-    <MESSAGE value="testakia" />
-    <option name="LAST_COMMIT_MESSAGE" value="testakia" />
+    <MESSAGE value="IMc40" />
+    <MESSAGE value="IMc41" />
+    <MESSAGE value="IMc42" />
+    <MESSAGE value="IMc44" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMc44" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
