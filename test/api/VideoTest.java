@@ -1,6 +1,8 @@
 package api;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class VideoTest {
@@ -240,7 +242,98 @@ public class VideoTest {
 
     }
 
+    @Test
+    public void testAddAssessments() {
+        String expectedTitle = "Title";
+        String expectedDes = "Description";
+        String expectedAp = "Appropriateness";
+        String expectedCat = "Category";
+        String expectedPro = "Protagonists";
 
+        Video testVideo = new Video(expectedTitle,expectedDes,expectedAp,expectedCat,expectedPro);
 
+        testVideo.addAssessment("Name1","Text1",5,"1/1/2024");
+
+        assertEquals(1, testVideo.getAssessments().size());
+
+    }
+
+    @Test
+    public void testSimilarVideos() {
+        String expectedTitle = "Title";
+        String expectedDes = "Description";
+        String expectedAp = "Appropriateness";
+        String expectedCat = "Category";
+        String expectedPro = "Protagonists";
+
+        Video testVideo = new Video(expectedTitle,expectedDes,expectedAp,expectedCat,expectedPro);
+
+        ArrayList<Video> test = testVideo.similarVideos();
+
+        assertEquals(0, test.size());
+
+    }
+
+    @Test
+    public void testReturnAllVideos() {
+
+        FirstInitializationOfSeriesMovies test = new FirstInitializationOfSeriesMovies();
+
+        ArrayList<Video> all = Video.returnAllVideos();
+
+        assertEquals(10, all.size());
+
+    }
+
+    @Test
+    public void testSearchVideoHelper() {
+        String expectedTitle = "Title";
+        String expectedPro = "Protagonists";
+
+        Video testVideo = new Video(expectedTitle,null,null,null,expectedPro);
+
+        String expectedTitle2 = "Title";
+        String expectedDes = "Description";
+        String expectedAp = "Appropriateness";
+        String expectedCat = "Category";
+        String expectedPro2 = "Protagonists";
+
+        Video testVideo2 = new Video(expectedTitle2,expectedDes,expectedAp,expectedCat,expectedPro2);
+
+        assertEquals(2, testVideo2.searchVideoHelper(testVideo,testVideo2));
+
+    }
+
+    @Test
+    public void testSearchVideo() {
+
+        //the objects we want to search for
+        Video testVideo = new Video(null,null,null,"Comedy",null);
+
+        Video testVideo2 = new Video("Barbie",null,null,null,null);
+
+        FirstInitializationOfSeriesMovies temp = new FirstInitializationOfSeriesMovies();
+
+        assertEquals(2, testVideo.searchVideo(testVideo).size());
+
+        assertEquals(1, testVideo2.searchVideo(testVideo2).size());
+
+    }
+
+    @Test
+    public void testEditingMovie() {
+
+        //the objects we want to search for
+        Video testVideo = new Video(null,null,null,"Comedy",null);
+
+        Video testVideo2 = new Video("Barbie",null,null,null,null);
+
+        FirstInitializationOfSeriesMovies temp = new FirstInitializationOfSeriesMovies();
+
+        assertEquals(2, testVideo.searchVideo(testVideo).size());
+
+        assertEquals(1, testVideo2.searchVideo(testVideo2).size());
+
+    }
 
 }

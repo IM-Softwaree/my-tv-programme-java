@@ -393,10 +393,11 @@ public class Video implements Serializable {
                     all.add(temp);
                 }
             } catch (EOFException end) {
-                // System.out.println("Reached the end of file");
+                // Reached the end of file
             } catch (IOException | ClassNotFoundException ee) {
                 ee.printStackTrace();
             }
+
         }
         else {
             try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
@@ -405,7 +406,7 @@ public class Video implements Serializable {
                     all.add(temp);
                 }
             } catch (EOFException end) {
-                // System.out.println("Reached the end of file");
+                //"Reached the end of file
             } catch (IOException | ClassNotFoundException ee) {
                 ee.printStackTrace();
             }
@@ -446,7 +447,6 @@ public class Video implements Serializable {
                 e.printStackTrace();
             }
         }
-
 
     }
 
