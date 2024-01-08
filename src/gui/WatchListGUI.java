@@ -140,4 +140,3 @@ public class WatchListGUI extends JFrame {
         setVisible(true);
     }
 }
-//

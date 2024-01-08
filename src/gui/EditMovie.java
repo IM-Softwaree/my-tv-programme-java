@@ -82,4 +82,3 @@ public class EditMovie extends JFrame {
     }
 
 }
-//

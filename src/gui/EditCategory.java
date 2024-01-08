@@ -53,4 +53,3 @@ public class EditCategory extends JFrame{
         setVisible(true);
     }
 }
-//

@@ -248,4 +248,3 @@ class SquarePanel extends JPanel {
         g.drawString(squareName, 10, 20);
     }
 }
-//

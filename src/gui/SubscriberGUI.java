@@ -52,4 +52,3 @@ public class SubscriberGUI extends JFrame {
     }
 
 }
-//
