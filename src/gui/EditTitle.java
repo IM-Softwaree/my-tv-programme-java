@@ -11,6 +11,16 @@ public class EditTitle extends JFrame{
         JTextField title;
         JButton ok;
 
+        JFrame newWindow = new JFrame("Edit");
+        newWindow.setSize(new Dimension(400, 300));
+        newWindow.setLocationRelativeTo(null);
+
+        // Set default close operation to EXIT_ON_CLOSE
+        newWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set layout manager for the new window
+        newWindow.setLayout(new FlowLayout());
+
         setTitle("Edit Title");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -33,6 +43,7 @@ public class EditTitle extends JFrame{
 
                 toedit.setTitle(title.getText());
                 toedit.editingMovie(old);
+                JOptionPane.showMessageDialog(newWindow, "Editing successful", "Message", JOptionPane.INFORMATION_MESSAGE);
                 dispose();
 
             }

@@ -14,7 +14,7 @@ public class Assessment implements Serializable {
     private String date;
 
     /**
-     * Constructor of an Episode
+     * Constructor of an Assessment
      * @param u The name of the subscriber making the assessment
      * @param t The comments of the subscriber making the assessment
      * @param r The rating given by the subscriber making the assessment
