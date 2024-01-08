@@ -8,14 +8,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * This class represents the 'log in'
+ * This class represents the 'log in' and is used to First initialize the files
  */
 public class LoginAPI {
 
     /**
      * Constructor of LoginAPI
-     * This function calls function  FirstInitializationOfSeriesMovies() and the first initialization of files "Movies.dat", "Series.dat" and
-     * also calls FirstInitializationForAdminsSubscribers() to initialize files "Subscribers.txt" and "Admins.txt"
+     * This function checks if it is the FIRST TIME we run the programme and if is it
+     * calls function  FirstInitializationOfSeriesMovies() and the first initialization of files "Movies.dat", "Series.dat" and
+     * also calls FirstInitializationForAdminsSubscribers() to initialize files "Subscribers.txt" and "Admins.txt".
+     * If not it prints the message "File Movies/Series' exists." and does not reinitialize the files
      */
     public LoginAPI(){
         String fileName1 = "Movies.dat"; // VLEPW AN TO ARXEIO YPARXEI KAI AN DEN TOTE TO DHMIOYRGW ALLIWS TO ANOIGW GIA EGRAFH H ANAGNWSH
@@ -55,10 +57,10 @@ public class LoginAPI {
     }
 
     /**
-     *
+     * This Function has 2 arguments type String and calls functions isAdmin() and isUser to see what type of person this is
      * @param tempStr
      * @param tempPassword
-     * @return
+     * @return a char that represents if he is a user 'U', an Admin ''
      */
     public static char isAdminUserNothing(String tempStr, String tempPassword){
         if(isAdmin(tempStr, tempPassword)){
@@ -70,10 +72,10 @@ public class LoginAPI {
     }
 
     /**
-     *
-     * @param tempAdmin
-     * @param tempPassword
-     * @return
+     * This Function checks if the person who tries to log in as admin gave correct username and password by reading the file "Admins.txt"
+     * @param tempAdmin is the username of the person who tries to log in as admin
+     * @param tempPassword is the password of the person who tries to log in as admin
+     * @return true if his username and password are found in the file (he is an admin), false if not
      */
     private static boolean isAdmin(String tempAdmin, String tempPassword){
         try (BufferedReader buffer = new BufferedReader(new FileReader("Admins.txt"))) {
@@ -93,10 +95,10 @@ public class LoginAPI {
     }
 
     /**
-     *
-     * @param tempUser
-     * @param tempPassword
-     * @return
+     * This Function checks if the person who tries to log in as subscriber gave correct username and password by reading the file "Subscribers.txt"
+     * @param tempUser is the username of the person who tries to log in as user
+     * @param tempPassword is the password of the person who tries to log in as user
+     * @return true if his username and password are found in the file (he is a user), false if not
      */
     private static boolean isUser(String tempUser, String tempPassword){
         try (BufferedReader buffer = new BufferedReader(new FileReader("Subscribers.txt"))) {
