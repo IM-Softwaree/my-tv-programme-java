@@ -74,4 +74,3 @@ public class Subscriber extends Person {
         return this.favourites;
     }
 }
-//
