@@ -287,62 +287,6 @@ public class FirstInitializationOfSeriesMovies {
             e.printStackTrace();
         }
 
-
-        /**
-         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Movies.dat"))) {
-
-         //ta diabazo apo to binary file Movies kai ta emfanizo stin othoni
-
-         Movie temp= (Movie) oos.readObject();
-         System.out.println(temp.getTitle() +" "+ temp.getDescription() +" "+ temp.getYearOfFirstAppearance());
-
-
-         Movie temp2= (Movie) oos.readObject();
-         System.out.println(temp2.getAppropriateness() +" "+ temp2.getCategory() +" "+ temp2.getProtagonists() +" "+ temp2.getMovieDuration());
-
-         } catch (IOException | ClassNotFoundException e) {
-         e.printStackTrace();
-         }
-         */
-
-
-        /**
-         try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream("Series.dat"))) {
-
-         //ta diabazo apo to binary file Series kai ta emfanizo stin othoni
-
-         Serie temp= (Serie) oos.readObject();
-         System.out.println(temp.getTitle() +" "+ temp.getDescription());
-
-         for (Season season : temp.getSeasons()) {
-         System.out.println(season.getNumber() +" "+ season.getYear());
-         for(Episode episode: season.getEpisodes())
-         System.out.println(episode.getName() +" "+ episode.getDuration() );
-         }
-
-         Serie temp2= (Serie) oos.readObject();
-         System.out.println(temp2.getAppropriateness() +" "+ temp2.getCategory() +" "+ temp2.getProtagonists());
-
-         for (Season season : temp2.getSeasons()) {
-         System.out.println(season.getNumber() +" "+ season.getYear());
-         }
-
-         } catch (IOException | ClassNotFoundException e) {
-         e.printStackTrace();
-         }
-         */
-
-
-        /**
-        for (Video favourite : subscriber1.getFavourites()) {
-            System.out.println("Favourite1 " + favourite.getTitle());
-        }
-        for (Video favourite : subscriber2.getFavourites()) {
-            System.out.println("Favourite2 " + favourite.getTitle());
-        }
-         */
-
-
     }
 
 }
