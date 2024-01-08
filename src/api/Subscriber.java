@@ -3,7 +3,7 @@ package api;
 import java.util.ArrayList;
 
 /**
- * Class "Subscriber" that represents a Subscriber/User and extends class Person
+ * Class "Subscriber" that represents a Subscriber/User and inherits fields class Person
  */
 public class Subscriber extends Person {
 

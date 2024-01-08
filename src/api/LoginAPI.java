@@ -8,16 +8,34 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- *
+ * This class represents the 'log in'
  */
 public class LoginAPI {
 
     /**
-     *
+     * Constructor of LoginAPI
+     * This function calls function  FirstInitializationOfSeriesMovies() and the first initialization of files "Movies.dat", "Series.dat" and
+     * also calls FirstInitializationForAdminsSubscribers() to initialize files "Subscribers.txt" and "Admins.txt"
      */
     public LoginAPI(){
-        //Initialization of files Movies.dat and Series.dat
-        FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
+        String fileName1 = "Movies.dat"; // VLEPW AN TO ARXEIO YPARXEI KAI AN DEN TOTE TO DHMIOYRGW ALLIWS TO ANOIGW GIA EGRAFH H ANAGNWSH
+
+        // Convert the file name to a Path object
+        Path filePath1 = Paths.get(fileName1);
+
+        // Check if the file exists
+        boolean fileExists1 = Files.exists(filePath1);
+
+        if (fileExists1) {
+            System.out.println("File Movies/Series' exists.\n");
+        } else {
+            // 1H ARXIKOPOIHSH TWN ARXEIWN GIA TOUS SUBSCRIBERS TOUS ADMINS KAI TWN FAVOURITES
+            //Initialization of files Movies.dat and Series.dat
+            FirstInitializationOfSeriesMovies in= new FirstInitializationOfSeriesMovies();
+            System.out.println("File Movies/Series' does not exist.\n");
+        }
+
+
 
         String fileName = "Subscribers.txt"; // VLEPW AN TO ARXEIO YPARXEI KAI AN DEN TOTE TO DHMIOYRGW ALLIWS TO ANOIGW GIA EGRAFH H ANAGNWSH
 
@@ -28,11 +46,11 @@ public class LoginAPI {
         boolean fileExists = Files.exists(filePath);
 
         if (fileExists) {
-            System.out.println("File '" + fileName + "' exists.\n");
+            System.out.println("File Subscribers/Admins' exists.\n");
         } else {
             // 1H ARXIKOPOIHSH TWN ARXEIWN GIA TOUS SUBSCRIBERS TOUS ADMINS KAI TWN FAVOURITES
             FirstInitializationForAdminsSubscribers apiStart = new  FirstInitializationForAdminsSubscribers();
-            System.out.println("File '" + fileName + "' does not exist.\n");
+            System.out.println("File Subscribers/Admins' does not exist.\n");
         }
     }
 
@@ -98,6 +116,3 @@ public class LoginAPI {
     }
 }
 
-/**
- *
- */

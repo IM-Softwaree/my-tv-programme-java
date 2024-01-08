@@ -3,13 +3,14 @@ package api;
 import java.io.*;
 
 /**
- *
+ * This class is used only once at the start to Initialize for First time and create the files  "Admins.txt" (will have 2 admins and 2 passwords for them),
+ * "Subscribers.txt" (will have 2 subscribers and 2 passwords for them) and "Favourites.txt" (will have 2 usernames of subscribers and 2 favourite movies/series for each one of them)
  */
 
 public class FirstInitializationForAdminsSubscribers {
 
     /**
-     *
+     * This function is used for creation of three files "Subscribers.txt", "Admins.txt" and "Favourites.txt" and writes to them initial data (2 admins, 2 users and 2 favourites for each user)
      */
 
     // KENOS CONSTRUCTOR POU KALEITE THN 1H FORA GIA ARXIKOPOIHSH
@@ -59,6 +60,3 @@ public class FirstInitializationForAdminsSubscribers {
 
     }
 }
-/**
- *
- */

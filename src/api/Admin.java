@@ -1,7 +1,7 @@
 package api;
 
 /**
- * Class "Admin" that represents an Admin and extends class Person
+ * Class "Admin" that represents an Admin and inherits fields class Person
  */
 public class Admin extends Person {
     /**
