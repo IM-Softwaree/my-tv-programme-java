@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4962100c-d0a3-448f-8930-2e998309a824" name="Changes" comment="finalgui">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/AdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/AdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/AssessmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/AssessmentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/EpisodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/EpisodeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/FavouritesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/FavouritesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/FirstInitializationForAdminsSubscribersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/FirstInitializationForAdminsSubscribersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/FirstInitializationOfSeriesMoviesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/FirstInitializationOfSeriesMoviesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/LoginAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/LoginAPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/MovieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/PersonAdderToFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/PersonAdderToFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/PersonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/SeasonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/SeasonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/SerieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/SerieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/SubscriberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/SubscriberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/api/VideoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/api/VideoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/PersonAdderToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/PersonAdderToFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk-17/lib/src.zip!/java.base/java/lang/String.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,6 +68,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SerieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyTV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="api" />
+      <option name="MAIN_CLASS_NAME" value="api.SerieTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubscriberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyTV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="api" />
+      <option name="MAIN_CLASS_NAME" value="api.SubscriberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VideoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyTV" />
       <extension name="coverage">
@@ -89,38 +109,6 @@
       <option name="PACKAGE_NAME" value="api" />
       <option name="MAIN_CLASS_NAME" value="api.VideoTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VideoTest.testEditingMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.VideoTest" />
-      <option name="METHOD_NAME" value="testEditingMovie" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VideoTest.testSearchVideo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.VideoTest" />
-      <option name="METHOD_NAME" value="testSearchVideo" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,8 +132,8 @@
         <item itemvalue="JUnit.api in MyTV" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.VideoTest" />
-        <item itemvalue="JUnit.VideoTest.testEditingMovie" />
-        <item itemvalue="JUnit.VideoTest.testSearchVideo" />
+        <item itemvalue="JUnit.SubscriberTest" />
+        <item itemvalue="JUnit.SerieTest" />
       </list>
     </recent_temporary>
   </component>

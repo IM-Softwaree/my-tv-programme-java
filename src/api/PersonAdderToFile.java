@@ -85,6 +85,17 @@ public class PersonAdderToFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        //File for Favourites
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Favourites.txt", true))) {
+
+            // Write each line to the file
+            writer.write(userName);
+            writer.newLine(); // Add a new line
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
