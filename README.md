@@ -1,10 +1,42 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xnXsK7_R)
-# MyTV
+# My TV Programme (Java Desktop App)
 
-ℹ Work in groups (two students)  
-ℹ Please insert here your names and IDs (AEM)  
+A simplified subscription TV platform (Netflix-like) developed for the **Object-Oriented Programming** course (2023–2024).
 
-Team Member A: <Ιωακείμ> <Μερτέκης> <2905> \
-Team Member B: <Ευαγγελία> <Ανδριώτη> <4362> 
+## Features
+- Role-based access: **Admins** & **Subscribers**
+- Admin actions: add/edit/delete Movies/Series/Seasons/Episodes
+- Search with multiple filters (title/type/actor/category/age rating/min rating)
+- Reviews (1–5 stars + text), edit/delete by subscriber
+- Favorites list per subscriber
+- File-based persistence (data remains after restart)
 
-⚠ Please keep the submission deadline
+## Tech stack
+- Java (Desktop GUI)
+- OOP principles (inheritance/abstraction/encapsulation)
+- JUnit tests (for non-GUI classes)
+
+## Project structure
+- `src/api/` : application logic
+- `src/gui/` : GUI (Swing/JFrames)
+- `test/` : JUnit tests
+
+## Run
+1. Open the project in IntelliJ IDEA
+2. Set the JDK
+3. Run `src/Main.java`
+
+## Demo credentials (for testing only)
+- Admin:
+  - `admin1` / `password1`
+  - `admin2` / `password2`
+- Subscriber:
+  - `user1` / `password1`
+  - `user2` / `password2`
+
+## Notes
+- Data initialization & persistence are handled via the included `.txt` / `.dat` files.
+- This repository is published for portfolio purposes.
+
+## Author
+- <Ioakeim Mertekis>
+
