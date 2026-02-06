@@ -4,6 +4,8 @@ A simplified subscription TV platform (Netflix/Disney+ style) developed as a uni
 
 The application supports two roles (**Admins** and **Subscribers**) and provides content management (movies/series), advanced search, reviews, favorites, and file-based persistence.
 
+> UI/branding is used for educational purposes.
+
 ---
 
 ## Features
@@ -79,9 +81,38 @@ The project includes initial data and persistence files:
 
 ---
 
+## Screenshots
+> Quick walkthrough of the main user flows.
+
+### Authentication & Registration
+![Splash](docs/screenshots/01-splash.jpg)
+![Login](docs/screenshots/02-login.jpg)
+![Registration](docs/screenshots/03-register.jpg)
+![Subscription success](docs/screenshots/04-subscription-success.jpg)
+![Subscriber login success](docs/screenshots/05-login-success.jpg)
+
+### Subscriber Flow
+![Subscriber welcome](docs/screenshots/06-subscriber-welcome.jpg)
+![Subscriber menu](docs/screenshots/07-subscriber-menu.jpg)
+![Content grid](docs/screenshots/08-content-grid.jpg)
+![Details & reviews](docs/screenshots/09-series-details-reviews.jpg)
+![Favorites](docs/screenshots/10-favorites-list.jpg)
+
+### Search
+![Search form](docs/screenshots/11-search-form.jpg)
+
+### Admin Flow
+![Admin login success](docs/screenshots/12-admin-login-success.jpg)
+![Admin welcome](docs/screenshots/13-admin-welcome.jpg)
+![Admin actions](docs/screenshots/14-admin-actions-menu.jpg)
+![Select object to add](docs/screenshots/15-admin-add-object-select.jpg)
+![Add movie form](docs/screenshots/16-admin-add-movie-form.jpg)
+
+---
+
 ## Authors
 - **Ioakeim Mertekis**
-- **Evangelia Andrioti** 
+- **Evangelia Andrioti** (Greek: Ευαγγελία Ανδριώτη)
 
 ---
 
